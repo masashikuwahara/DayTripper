@@ -68,17 +68,17 @@ if ($page > 1) {
 
 $castles = $dbh->prepare(" SELECT id, title FROM cultures LIMIT {$start}, 10 ");
 
-print 'その他文化財一覧<br/><br/>';
+echo 'その他文化財一覧<br/><br/>';
 
-print '<form method="post" action="culturals_branch.php">';
-print '<input class="add" type="submit" name="add" value="文化財を追加する"><br />';
+echo '<form method="post" action="culturals_branch.php">';
+echo '<input class="add" type="submit" name="add" value="文化財を追加する"><br />';
 
 $castles->execute();
 $castles = $castles->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($castles as $post) {
-	print '<input type="radio" name="id" value="'.$post['id'].'">';
-	print $post['title']. '<br>';
+	echo '<input type="radio" name="id" value="'.$post['id'].'">';
+	echo $post['title']. '<br>';
 }
 
 $page_num = $dbh->prepare(" SELECT COUNT(*) id FROM cultures ");
@@ -90,7 +90,7 @@ $pagination = ceil($page_num / 10);
 }
 catch (Exception $e)
 {
-	print 'ただいま障害により大変ご迷惑をお掛けしております。';
+	echo 'ただいま障害により大変ご迷惑をお掛けしております。';
 	exit();
 }
 
@@ -101,12 +101,12 @@ catch (Exception $e)
 <?php } // End of for ?>
 
 <?php
-print '<br/>';
-print '<br/>';
-print '<input class="btn" type="submit" name="disp" value="参照">';
-print '<input class="btn" type="submit" name="edit" value="修正">';
-print '<input disabled class="btn" type="submit" name="delete" value="削除">';
-print '</form>';
+echo '<br/>';
+echo '<br/>';
+echo '<input class="btn" type="submit" name="disp" value="参照">';
+echo '<input class="btn" type="submit" name="edit" value="修正">';
+echo '<input disabled class="btn" type="submit" name="delete" value="削除">';
+echo '</form>';
 ?>
 
 <br />
