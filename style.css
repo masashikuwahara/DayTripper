@@ -1,0 +1,420 @@
+#logo {
+  max-width:50%;
+  display:block;
+  margin:0 auto;
+  font-size: 25px;
+  position: relative;
+  bottom: 5px;
+}
+
+  body {
+    margin: 0;
+    background-color: #f0f8ff;
+  }
+
+  header {
+    height: 60px;
+    width: 100%;
+    padding: 0px 15px;
+    background-color: #87ceeb;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+  } 
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #a9a9a9;
+    text-align: center;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+nav{
+ width: 100%;
+ height: 70px;
+ position: relative;
+}
+.drawer{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+ position: relative;
+ height: 70px;
+ padding: 0 1em;
+}
+
+/*ナビゲーション部分*/
+
+.menu ul li a {
+  display:block;
+  font-weight:bold;
+  padding: 2em;
+  color:#333;
+  text-decoration:none;
+  z-index: 999;
+}
+
+
+.menu ul li a:hover
+{background-color:rgba(0,0,0,0.5);
+color:orange;}
+
+li {
+  list-style: none;
+}
+
+
+.menu{
+  text-align:center;
+  background-color:rgba(248, 248, 250, 0.89);
+  transition: .5s ease;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);/*左に隠しておく*/
+}
+
+
+/*OPEN時の動き*/
+.menu.open {
+ -webkit-transform: translateX(0%);
+ transform: translateX(-4%);/*中身を表示（右へスライド）*/
+}
+
+/*トグルボタンのスタイルを指定*/
+.Toggle {
+    display: block;
+    position: fixed;    /* bodyに対しての絶対位置指定 */
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 3;
+  right:15px;
+}
+ 
+.Toggle span {
+    display: block;
+    position: absolute;
+    width: 50px;
+    border-bottom: solid 4px #333;
+    -webkit-transition: .35s ease-in-out; /*変化の速度を指定*/
+    -moz-transition: .35s ease-in-out;    /*変化の速度を指定*/
+    transition: .35s ease-in-out;     /*変化の速度を指定*/
+ 
+}
+ 
+.Toggle span:nth-child(1) {
+    top:5px;
+}
+ 
+.Toggle span:nth-child(2) {
+    top: 18px;
+}
+ 
+.Toggle span:nth-child(3) {
+    top: 32px;
+}
+ 
+.Toggle.active span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+ 
+/* 2番目と3番目のspanを45度に */
+.Toggle.active span:nth-child(2),
+.Toggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+  /* スライダー */
+  @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400|Roboto:400,700&display=swap");
+
+*:focus {
+  outline: none !important;
+}
+
+.swiper-container {
+  height: auto;
+  margin: 30px 0 0 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* スライダーの角を丸くする */
+.swiper-slide img {
+  border-radius: 10%;
+  width: 50%;
+}
+
+#app {
+  position: relative;
+  z-index: 0;
+  margin-top: 70px;
+}
+
+#title {
+  text-align: center;
+}
+
+.title {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.update {
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 3px double red;
+  width: 200px;
+  margin: 40px auto;
+}
+
+.info {
+  text-align: center;
+}
+
+.info2{
+  display: inline-block;
+  width: auto;
+}
+
+.info3{
+  display: flex;
+  padding:15px;
+  border-bottom:1px solid #000;
+}
+
+.label{
+  background-color:blue;
+  border-radius:3px;
+  color:#fff;
+  padding:2px 5px;
+  margin:0 20px;
+}
+
+.intro {
+  text-align: center;
+}
+
+.split {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.region {
+  color: darkcyan;
+  font-size: 25pt;
+  padding: 0;
+}
+
+.region:hover {
+  color: crimson;
+}
+
+/* ここからデスクトップ */
+@media screen and (min-width: 400px) {
+  body {
+    margin: 0;
+    background-color: #f0f8ff;
+  }
+
+  header {
+    height: 60px;
+    width: 100%;
+    padding: 0px 15px;
+    background-color: #87ceeb;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+  } 
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #a9a9a9;
+    text-align: center;
+  }
+  
+  nav{
+  display: flex;
+
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #logo {
+    max-width:50%;
+    display:block;
+    margin:0 auto;
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+  }
+  
+  .Toggle{
+  display: none;
+  }
+
+  .menu{
+  width: 100%;
+    background-color: transparent;
+    margin-top:0;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+
+  .menu ul{
+  height: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: relative;
+  right: 30px;
+  }
+  .menu ul li a{
+  padding: 0 1em;
+  border-bottom: none;
+
+  }
+    
+  .menu ul li a:hover
+  {
+    background-color:transparent;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  p {
+    white-space: pre-wrap
+  }
+  
+    /* スライダー */
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400|Roboto:400,700&display=swap");
+
+  *:focus {
+    outline: none !important;
+  }
+
+  .swiper-container {
+    height: auto;
+    margin: 30px 0 0 0;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* スライダーの角を丸くする */
+  .swiper-slide img {
+    border-radius: 10%;
+    width: 50%;
+  }
+
+  #app {
+    margin-top: 100px;
+  }
+
+  #title {
+    text-align: center;
+  }
+
+  #logo {
+    font-size: 25px;
+  }
+
+  .title {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .update {
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 3px double red;
+    width: 200px;
+    margin: 40px auto;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info2{
+    display: inline-block;
+    width: auto;
+  }
+
+  .info3{
+    display: flex;
+    padding:15px;
+    border-bottom:1px solid #000;
+  }
+
+  .label{
+    background-color:blue;
+    border-radius:3px;
+    color:#fff;
+    padding:2px 5px;
+    margin:0 20px;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .split {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+  }
+
+  .region {
+    color: darkcyan;
+    font-size: 25pt;
+    padding: 0;
+  }
+
+  .region:hover {
+    color: crimson;
+  }
+  
+}
