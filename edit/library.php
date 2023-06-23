@@ -6,16 +6,16 @@ function session(){
     if(isset($_SESSION['login'])==false)
     {
         header("Content-Type: text/html; charset=UTF-8");
-        print'ログインされていません。<br />';
-        print'<a href="login.html">ログイン画面へ</a>';
+        echo'ログインされていません。<br />';
+        echo'<a href="login.html">ログイン画面へ</a>';
         exit();
     }
     else
     {
     $user_name = mb_convert_encoding($user_name, "UTF-8", "auto");
-    print $user_name;
-    print'さんログイン中<br />';
-    print'<br />';
+    echo $user_name;
+    echo'さんログイン中<br />';
+    echo'<br />';
     }
 }
 

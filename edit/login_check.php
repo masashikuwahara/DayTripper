@@ -24,8 +24,8 @@ try
     if($rec==false)
     {
         header("Content-Type: text/html; charset=UTF-8");
-        print'スタッフコードかパスワードが間違っています。<br />';
-        print'<a href="login.html">戻る</a>';
+        echo'スタッフコードかパスワードが間違っています。<br />';
+        echo'<a href="login.html">戻る</a>';
     }
     else
     {
@@ -40,7 +40,7 @@ try
 }
 catch(Exception $e)
 {
-    print'ただいま障害により大変迷惑をおかけしております。';
+    echo'ただいま障害により大変迷惑をおかけしております。';
     exit();
 }
 

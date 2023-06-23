@@ -59,7 +59,7 @@
   </div>
   
   <form  style="text-align: center;" class="cp_ipradio" action="search.php" method="get">
-    <input class="sea" type="text" name="search" placeholder="キーワードを入力">
+    <input class="sea" type="text" name="s" placeholder="キーワードを入力">
     <input class="btn" type="submit" value="検索する">
   </form>
 
