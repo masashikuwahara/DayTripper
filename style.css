@@ -232,6 +232,35 @@ li {
   color: crimson;
 }
 
+/* 検索フォーム、ボタン */
+.sea {  
+  background-color: #fff4e1 ;
+  border-radius: 10px;
+  background: #fff4e1;
+  box-shadow: inset 7px 7px 14px #e8decd,
+              inset -7px -7px 14px #fffff5;
+  border: none;
+  width: 350px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.btn {
+  background-color: #4f313a;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  width: 70px;
+  height: 35px;
+}
+.btn:hover {
+  background-color: #ea5548;
+}
+.btn:active {
+  background-color: #ea5548;
+  position: relative;
+  top: 2px;
+}
+
 /* ここからデスクトップ */
 @media screen and (min-width: 400px) {
   body {
@@ -416,5 +445,34 @@ li {
   .region:hover {
     color: crimson;
   }
+
+  /* 検索フォーム、ボタン */
+.sea {  
+  background-color: #fff4e1 ;
+  border-radius: 10px;
+  background: #fff4e1;
+  box-shadow: inset 7px 7px 14px #e8decd,
+              inset -7px -7px 14px #fffff5;
+  border: none;
+  width: 350px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.btn {
+  background-color: #4f313a;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  width: 70px;
+  height: 35px;
+}
+.btn:hover {
+  background-color: #ea5548;
+}
+.btn:active {
+  background-color: #ea5548;
+  position: relative;
+  top: 2px;
+}
   
 }
