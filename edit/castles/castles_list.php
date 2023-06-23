@@ -48,7 +48,7 @@ session();
 try
 {
 
-require('../connect.php');
+require('../../connect.php');
 $dbh->query('SET NAMES utf8');
 $sql='SELECT id,title FROM 100castles WHERE 1';
 $stmt=$dbh->prepare($sql);

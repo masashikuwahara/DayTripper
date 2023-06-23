@@ -36,7 +36,7 @@ session();
         $castles_img4=$post['img4'];
         $castles_img5=$post['img5'];
 
-        require('../connect.php');
+        require('../../connect.php');
 
         $sql = 'UPDATE 100castles SET cas=?,title=?,structure=?,builder=?,year=?,
         lord=?,specify1=?,specify2=?,recommend=?,explan=?,access=?,

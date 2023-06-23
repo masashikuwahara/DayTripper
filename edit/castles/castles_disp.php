@@ -4,7 +4,7 @@ session();
 
 $castles_id=$_GET['id'];
 
-require('../connect.php');
+require('../../connect.php');
 $dbh->query('SET NAMES utf8');
 $sql = 'SELECT cas,title,structure,builder,year,lord,
 specify1,specify2,recommend,explan,access,img1,img2,img3,img4,img5

@@ -30,7 +30,7 @@ session();
         $castles_img4=$post['img4'];
         $castles_img5=$post['img5'];
 
-        require('../connect.php');
+        require('../../connect.php');
 
         $sql = 'INSERT INTO 100castles (cas,title,structure,builder,year,lord,
         specify1,specify2,recommend,explan,access,img1,img2,img3,img4,img5) 
