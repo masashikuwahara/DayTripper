@@ -261,6 +261,25 @@ li {
   top: 2px;
 }
 
+.btn {
+  margin-bottom: 100px;
+}
+
+.s {
+  margin-top: 50px;
+  font-size: 20pt;
+}
+
+.f {
+  font-size: 1.8rem;
+}
+
+.detail {
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 /* ここからデスクトップ */
 @media screen and (min-width: 400px) {
   body {
@@ -473,6 +492,22 @@ li {
   background-color: #ea5548;
   position: relative;
   top: 2px;
+}
+
+.s {
+  margin-top: 50px;
+  font-size: 20pt;
+}
+
+.f {
+  font-size: 1.8rem;
+}
+
+.detail {
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
   
 }
