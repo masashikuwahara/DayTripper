@@ -58,8 +58,9 @@
     </p> 
   </div>
   
+  <p style="text-align: center;">城や文化財を検索する</p>
   <form  style="text-align: center;" class="cp_ipradio" action="search.php" method="get">
-    <input class="sea" type="text" name="s" placeholder="キーワードを入力">
+    <input class="sea" type="text" name="s" placeholder="例:姫路城、出雲大社">
     <input class="btn" type="submit" value="検索する">
   </form>
 
