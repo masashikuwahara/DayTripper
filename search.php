@@ -28,7 +28,7 @@
       $stmt=$dbh->prepare("SELECT * FROM  100castles WHERE title like '%$my_sea%'");
       $stmt->execute();
       $t = $stmt->rowCount();
-      if($t != 0){
+      if($t > 0){
         while ($r = $stmt->fetch()){
           echo '<div class="f">';
           $img_name='<img style="width:120px" src="img/'.$r['img1'].'">';
@@ -57,7 +57,7 @@
     ?>
     <p style="text-align: center;">もう一度検索する</p>
     <form  style="text-align: center;" class="cp_ipradio" action="search.php" method="get">
-      <input class="sea" type="text" name="s" placeholder="キーワードを入力">
+      <input class="sea" type="text" name="s" placeholder="例:姫路城、出雲大社">
       <input class="btn" type="submit" value="検索する">
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
