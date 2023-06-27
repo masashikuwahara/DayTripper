@@ -41,19 +41,13 @@
           "<br />"."{$r['explan']}"."<hr>";
           echo '</div>';
           echo '</div>';
-        }
-        
+        } 
       }else{
-
         echo '見つかりませんでした';
-
       }
-
     }else{
-      
       echo 'キーワードを入力してください';
     }
-
     ?>
     <p style="text-align: center;">もう一度検索する</p>
     <form  style="text-align: center;" class="cp_ipradio" action="search.php" method="get">
