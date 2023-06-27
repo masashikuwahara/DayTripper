@@ -10,6 +10,7 @@
   body {
     margin: 0;
     background-color: #f0f8ff;
+    color: #333333;
   }
 
   header {
@@ -280,6 +281,8 @@ li {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+
 /* ここからデスクトップ */
 @media screen and (min-width: 400px) {
   body {
@@ -509,5 +512,55 @@ li {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-  
+
+.parent {
+  display: flex;
+}
+
+/* 城詳細ページ */
+.overall {
+  width: 800px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+th {
+  width: 90px;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-top: solid 1px #778ca3;
+ }
+ .table tr:nth-child(2n+1) {
+  background: #e9faf9;
+ }
+ .table th,.table td {
+  padding: 10px;
+  border-bottom: solid 1px #778ca3;
+ }
+
+ .cas_title {
+  margin-top: 100px;
+ }
+
+ .comment {
+  text-align: left;
+ }
+
+ .access {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 550;
+  text-decoration:underline double #4CB9F6;;
+ }
+
+ .map {
+  margin-bottom: 100px;
+ }
+
 }
