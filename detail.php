@@ -36,11 +36,12 @@ $castles_img5=$cas['img5'];
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-  <title>DayTripperの記録</title>
+  <title><?php echo $castles_title;?></title>
 </head>
 <body>
   <?php require('header.php'); ?>
-  <h1><?php echo $castles_title; ?></h1>
+  <div class="overall">
+  <h1 class="cas_title"><?php echo $castles_title; ?></h1>
     <br />
     <?php
     try{
@@ -139,37 +140,60 @@ $castles_img5=$cas['img5'];
     }
 
     ?>
-    <?php echo $disp_img1;?>
+    <!-- <?php echo $disp_img1;?>
     <?php echo $disp_img2;?>
     <?php echo $disp_img3;?>
     <?php echo $disp_img4;?>
-    <?php echo $disp_img5;?>
-    <h2>城郭構造</h2>
-    <?php echo $castles_structure;?>
-    <br />
-    <h2>築城主</h2>
-    <?php echo $castles_builder;?>
-    <br />
-    <h2>築城年</h2>
-    <?php echo $castles_year;?>
-    <br />
-    <h2>主な城主</h2>
-    <?php echo $castles_lord;?>
-    <br />
-    <h2>指定文化財</h2>
-    <?php echo $castles_specify1;?>
-    <br />
-    <?php echo $castles_specify2;?>
-    <br />
-    <h2>おすすめ度</h2>
-    <?php echo $castles_recommend;?>
-    <br />
-    <h2>解説</h2>
-    <?php echo $castles_explan;?>
-    <br />
-    <h2>アクセス</h2>
-    <?php echo $castles_access;?>
-    <br />
+    <?php echo $disp_img5;?> -->
+
+    
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>城郭構造</th>
+                <td><?php echo $castles_structure;?></td>
+            </tr>
+            <tr>
+                <th>築城主</th>
+                <td><?php echo $castles_builder;?></td>
+            </tr>
+            <tr>
+                <th>築城年</th>
+                <td><?php echo $castles_year;?></td>
+            </tr>
+            <tr>
+                <th>主な城主</th>
+                <td><?php echo $castles_lord;?></td>
+            </tr>
+            <tr>
+                <th>指定文化財</th>
+                <td><?php echo $castles_specify1;?></td>
+            </tr>
+            <tr>
+                <th>指定文化財2</th>
+                <td><?php echo $castles_specify2;?></td>
+            </tr>
+            <tr>
+                <th>おすすめ度</th>
+                <td><?php echo $castles_recommend;?></td>
+            </tr>
+            <tr>
+                <th>解説</th>
+                <td>
+                    <div class='comment'>
+                        <?php echo $castles_explan;?>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    注：おすすめ度はお城初心者に最適な度合いを表しています。
+    <div class="access">アクセス</div>
+    <div class="map">
+        <?php echo $castles_access;?>
+    </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="menu.js"></script>
