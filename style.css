@@ -282,6 +282,16 @@ li {
   white-space: nowrap;
 }
 
+.header_text{
+  margin-left: 10px;
+}
+
+.img_style{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  gap: 10px;
+}
+
 
 /* ここからデスクトップ */
 @media screen and (min-width: 400px) {
@@ -452,11 +462,11 @@ li {
     text-align: center;
   }
 
-  .split {
+  /* .split {
     display: flex;
     flex-direction:column;
     align-items: center;
-  }
+  } */
 
   .region {
     color: darkcyan;
@@ -562,5 +572,15 @@ th {
  .map {
   margin-bottom: 100px;
  }
+
+ .header_text{
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+ .img_style{
+  display: inline-block;
+  margin: 10px;
+}
 
 }
