@@ -37,7 +37,7 @@ session();
 <div class="form">
   <h1>城追加</h1>
   <form method="post" action="castles_add_check.php" enctype="multipart/form-data">
-    城番号を入力してください。100名城ca001～、続100名城se001～<br />
+    城番号を入力してください。100名城001～、続100名城101～<br />
     <input class="tex" type="text" name="cas" ><br />
     城名を入力してください。<br />
     <input class="tex" type="text" name="title" ><br />
