@@ -25,7 +25,7 @@
     echo "<div class='s'> 「{$s}」の検索結果</div>";
 
     if($_GET["s"] != ''){
-      $stmt=$dbh->prepare("SELECT * FROM  100castles WHERE title like '%$my_sea%'");
+      $stmt=$dbh->prepare("SELECT * FROM 100castles WHERE title like '%$my_sea%'");
       $stmt->execute();
       $t = $stmt->rowCount();
       if($t > 0){

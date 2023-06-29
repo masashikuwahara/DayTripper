@@ -9,18 +9,58 @@
 </head>
 <body>
 <?php include('header.php'); ?>
-
+<div class="header_text">
   <h1 class="title">続100名城</h1>
+  <?php
+    try
+    {
+      require('connect.php');
+      $dbh->query('SET NAMES utf8');
+      $sql='SELECT id,cas,title,img1 FROM 100castles WHERE cas >= 101 AND cas <= 200 ORDER BY cas ASC';
+      $stmt=$dbh->prepare($sql);
+      $stmt->execute();
 
-  <div class="split">
-    <?php echo '<a class="region" href="castle/sequel_hokkaido.php">北海道</a>' ?>
-    <?php echo '<a class="region" href="castle/sequel_tohoku.php">東北</a>' ?>
-    <?php echo '<a class="region" href="castle/sequel_kanto.php">関東</a>' ?>
-    <?php echo '<a class="region" href="castle/sequel_chubu.php">中部</a>' ?>
-    <?php echo '<a class="region" href="castle/sequel_kinki.php">近畿</a>' ?>
-    <?php echo '<a class="region" href="castle/sequel_chugoku.php">中国</a>' ?>
-    <?php echo '<a class="region" href="castle/sequel_shikoku.php">四国</a>' ?>
-    <?php echo '<a class="region" href="castle/sequel_kyushu.php">九州</a>' ?>
-  </div>
+      $dbh=null;
+
+      echo '続日本100名城のページです<br/>'.'いずれ全部行ってみたいです。<br />';
+
+      while(true)
+      {
+        $rec=$stmt->fetch(PDO::FETCH_ASSOC);
+        if($rec==false)
+        {
+          break;
+        }
+
+        if($rec['img1']=='')
+        {
+          $img_name='';
+        }
+        else
+        {
+          $img_name='<img style="width:360px" src="img/'.$rec['img1'].'">';
+        }
+
+        echo '<span class="img_style">'.
+            '<a href="detail.php?id='.$rec['id'].'">'.
+            $img_name.
+            '<br />'.
+            $rec['title'].
+              '</a>'.
+            '<br />'.
+            '</span>';
+      }
+
+      }
+      catch (Exception $e)
+      {
+        echo 'ただいま障害により大変ご迷惑をお掛けしております。';
+        exit();
+      }
+      ?>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="menu.js"></script>
 
   <?php include('footer.php'); ?>
