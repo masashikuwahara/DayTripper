@@ -186,7 +186,7 @@ li {
   font-size: 30px;
   border-bottom: 3px double red;
   width: 200px;
-  margin: 40px auto;
+  margin: 10px auto;
 }
 
 .info {
@@ -202,14 +202,6 @@ li {
   display: flex;
   padding:15px;
   border-bottom:1px solid #000;
-}
-
-.label{
-  background-color:blue;
-  border-radius:3px;
-  color:#fff;
-  padding:2px 5px;
-  margin:0 20px;
 }
 
 .intro {
@@ -244,6 +236,7 @@ li {
   height: 30px;
   margin-bottom: 10px;
 }
+
 .btn {
   background-color: #4f313a;
   border-radius: 20px;
@@ -252,13 +245,19 @@ li {
   width: 70px;
   height: 35px;
 }
+
 .btn:hover {
   background-color: #ea5548;
 }
+
 .btn:active {
   background-color: #ea5548;
   position: relative;
   top: 2px;
+}
+
+.cp_ipradio {
+  margin-bottom: -50px;
 }
 
 .btn {
@@ -279,10 +278,6 @@ li {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.header_text{
-  margin-left: 10px;
 }
 
 .img_style{
@@ -333,9 +328,9 @@ th {
  }
 
  .swiperOptions .swiper-slide img,
-.swiperThumbs .swiper-slide img{width: 100%;}
-.swiperThumbs {background-color: #f0f8ff;}
-.swiperOptions .swiper-slide {text-align: center;}
+ .swiperThumbs .swiper-slide img{width: 100%;}
+ .swiperThumbs {background-color: #f0f8ff;}
+ .swiperOptions .swiper-slide {text-align: center;}
 
 .swiperThumbs .swiper-slide {
   text-align: center;
@@ -346,7 +341,7 @@ th {
 
  /* 城一覧のページ */
  .header_text{
-  margin-left: 30px;
+  margin-left: 10px;
   margin-bottom: 20px;
 }
 
@@ -507,7 +502,7 @@ th {
     font-size: 30px;
     border-bottom: 3px double red;
     width: 200px;
-    margin: 40px auto;
+    margin: 10px auto;
   }
 
   .info {
@@ -565,6 +560,7 @@ th {
   height: 30px;
   margin-bottom: 10px;
 }
+
 .btn {
   background-color: #4f313a;
   border-radius: 20px;
@@ -573,13 +569,19 @@ th {
   width: 70px;
   height: 35px;
 }
+
 .btn:hover {
   background-color: #ea5548;
 }
+
 .btn:active {
   background-color: #ea5548;
   position: relative;
   top: 2px;
+}
+
+.cp_ipradio {
+  margin-bottom: -50px;
 }
 
 .s {
@@ -651,7 +653,7 @@ th {
 
  /* 城一覧のページ */
  .header_text{
-  margin-left: 30px;
+  margin-left: 10px;
   margin-bottom: 20px;
 }
 

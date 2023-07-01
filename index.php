@@ -64,13 +64,45 @@
     <input class="btn" type="submit" value="検索する">
   </form>
 
+  <?php
+    try
+    {
+      require('connect.php');
+      $dbh->query('SET NAMES utf8');
+      $sql='SELECT * FROM info ORDER BY id DESC ';
+      $stmt=$dbh->prepare($sql);
+      $stmt->execute();
+
+      $dbh=null;
+      ?>
+
   <p class="update">更新情報</p>
   <div class="info">
     <ul class="info2">
-      <li class="info3">
-        <div class="day">2023.6.5</div>
-        <div class="label">更新情報</div>
-        <div class="text">ページをオープンしました</div>
+        <?php 
+              while(true)
+              {
+                $rec=$stmt->fetch(PDO::FETCH_ASSOC);
+                if($rec==false)
+                {
+                  break;
+                }
+        
+                echo '<li class="info3">'.
+                $rec['day'].
+                '&nbsp;'.
+                $rec['information'].
+                '</li>';
+              }
+        
+              }
+              catch (Exception $e)
+              {
+                echo 'ただいま障害により大変ご迷惑をお掛けしております。';
+                exit();
+              }
+        
+        ?>
       </li>
     </ul>
   </div>
