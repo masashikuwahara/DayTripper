@@ -21,6 +21,7 @@
 <body>
   <?php require('header.php'); ?>
     <br />
+    <div class="header_text">
     <?php
     echo "<div class='s'> 「{$s}」の検索結果</div>";
 
@@ -54,6 +55,7 @@
       <input class="sea" type="text" name="s" placeholder="例:姫路城、出雲大社">
       <input class="btn" type="submit" value="検索する">
     </form>
+  </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="menu.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
