@@ -29,9 +29,12 @@
   </P>
 
   <H2>
-    旅してきて思ったこと
+    旅の心得？
   </H2>
   <P class="intro">
     ここに文章
   </P>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="menu.js"></script>
   <?php include('footer.php'); ?>
