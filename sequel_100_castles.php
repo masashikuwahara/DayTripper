@@ -9,8 +9,20 @@
 </head>
 <body>
 <?php include('header.php'); ?>
-<div class="header_text">
+<div class="castle_page">
   <h1 class="title">続100名城</h1>
+  
+  <div class="about">日本城郭協会が財団法人50周年の記念事業の一環として続日本100名城を
+    公募し、2017年4月6日に発表されました。数の関係から100名城で落選した城も候補に挙がり、
+    多数選定されています。</br>
+    選定基準は100名城と同じく
+    <ul>
+      <li>・優れた文化財・史跡</li>
+      <li>・著名な歴史の舞台</li>
+      <li>・時代・地域の代表</li>
+    </ul>
+      となっています。
+  </div>
   <?php
     try
     {
@@ -21,8 +33,6 @@
       $stmt->execute();
 
       $dbh=null;
-
-      echo '続日本100名城のページです<br/>'.'いずれ全部行ってみたいです。<br />';
 
       while(true)
       {
