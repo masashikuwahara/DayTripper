@@ -14,7 +14,6 @@ session();
     {
         $post=($_POST);
         $culturals_id=$post['id'];
-        $culturals_cul=$post['cul'];
         $culturals_title=$post['title'];
         $culturals_year=$post['year'];
         $culturals_specify=$post['specify'];
@@ -29,10 +28,9 @@ session();
 
         require('../connect.php');
 
-        $sql = 'UPDATE cultures SET cul=?,title=?,year=?,specify=?,explan=?,
+        $sql = 'UPDATE cultures SET title=?,year=?,specify=?,explan=?,
         access=?,img1=?,img2=?,img3=? WHERE id=?';
         $stmt = $dbh->prepare($sql);
-        $data[] = $culturals_cul;
         $data[] = $culturals_title;
         $data[] = $culturals_year;
         $data[] = $culturals_specify;

@@ -37,8 +37,6 @@ session();
 <div class="form">
   <h1>その他文化財追加</h1>
   <form method="post" action="culturals_add_check.php" enctype="multipart/form-data">
-    文化財番号を入力してください。cu001～<br />
-    <input class="tex" type="text" name="cul" ><br />
     文化財の名称を入力してください。<br />
     <input class="tex" type="text" name="title" ><br />
     作成年を入力してください。<br />

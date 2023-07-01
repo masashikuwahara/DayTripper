@@ -43,14 +43,13 @@ session();
 
         require('../connect.php');
         $dbh->query('SET NAMES utf8');
-        $sql = 'SELECT cul,title,year,specify,explan,access,
+        $sql = 'SELECT title,year,specify,explan,access,
         img1,img2,img3 FROM cultures WHERE id=?';
         $stmt = $dbh->prepare($sql);
         $data[]=$culturals_id;
         $stmt->execute($data);
         
         $cul =$stmt->fetch(PDO::FETCH_ASSOC);
-        $culturals_cul=$cul['cul'];
         $culturals_title=$cul['title'];
         $culturals_year=$cul['year'];
         $culturals_specify=$cul['specify'];
@@ -110,8 +109,6 @@ session();
       <input name="img_name_old1" type="hidden" value="<?php echo $culturals_img1_old;?>">
       <input name="img_name_old2" type="hidden" value="<?php echo $culturals_img2_old;?>">
       <input name="img_name_old3" type="hidden" value="<?php echo $culturals_img3_old;?>">
-      文化財番号を入力してください。cu001～<br />
-        <input class="tex" type="text" name="cul" value="<?php echo $culturals_cul; ?>"><br />
         文化財の名称を入力してください。<br />
         <input class="tex" type="text" name="title" value="<?php echo $culturals_title; ?>"><br />
         作成年を入力してください。<br />

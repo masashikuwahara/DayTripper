@@ -13,7 +13,6 @@ session();
     try
     {
         $post=($_POST);
-        $culturals_cul=$post['cul'];
         $culturals_title=$post['title'];
         $culturals_year=$post['year'];
         $culturals_specify=$post['specify'];
@@ -25,11 +24,10 @@ session();
 
         require('../connect.php');
 
-        $sql = 'INSERT INTO cultures (cul,title,year,specify,explan,access,
+        $sql = 'INSERT INTO cultures (title,year,specify,explan,access,
         img1,img2,img3) 
-        VALUES (?,?,?,?,?,?,?,?,?)';
+        VALUES (?,?,?,?,?,?,?,?)';
         $stmt = $dbh->prepare($sql);
-        $data[] = $culturals_cul;
         $data[] = $culturals_title;
         $data[] = $culturals_year;
         $data[] = $culturals_specify;

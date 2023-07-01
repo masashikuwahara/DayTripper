@@ -6,7 +6,7 @@ $culturals_id=$_GET['id'];
 
 require('../connect.php');
 $dbh->query('SET NAMES utf8');
-$sql = 'SELECT cul,title,year,specify,explan,access,
+$sql = 'SELECT title,year,specify,explan,access,
 img1,img2,img3 FROM cultures WHERE id=?';
 $stmt = $dbh->prepare($sql);
 $data[]=$culturals_id;

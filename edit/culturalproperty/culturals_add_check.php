@@ -25,7 +25,6 @@ session();
     <?php
 
     $post=sanitize($_POST);
-    $culturals_cul=$post['cul'];
     $culturals_title=$post['title'];
     $culturals_year=$post['year'];
     $culturals_specify=$post['specify'];
@@ -156,7 +155,6 @@ session();
     {
         echo'上記の内容を追加します。<br />';
         echo'<form method="post" action="culturals_add_done.php">';
-        echo'<input type="hidden" name="cul" value="'.$culturals_cul.'">';
         echo'<input type="hidden" name="title" value="'.$culturals_title.'">';
         echo'<input type="hidden" name="year" value="'.$culturals_year.'">';
         echo'<input type="hidden" name="specify" value="'.$culturals_specify.'">';

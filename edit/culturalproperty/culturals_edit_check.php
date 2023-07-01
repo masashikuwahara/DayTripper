@@ -26,7 +26,6 @@ session();
 
     $post=sanitize($_POST);
     $culturals_id=$post['id'];
-    $culturals_cul=$post['cul'];
     $culturals_title=$post['title'];
     $culturals_year=$post['year'];
     $culturals_specify=$post['specify'];
@@ -38,17 +37,6 @@ session();
     $culturals_img1=$_FILES['img1'];
     $culturals_img2=$_FILES['img2'];
     $culturals_img3=$_FILES['img3'];
-
-    if($culturals_cul=='')
-    {
-        echo'<p style="color:#ff0000">文化財番号が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'文化財番号:';
-        echo$culturals_cul;
-        echo'<br />';
-    }
 
     if($culturals_title=='')
     {
@@ -161,7 +149,6 @@ session();
         echo'上記の内容を追加します。<br />';
         echo'<form method="post" action="culturals_edit_done.php">';
         echo'<input type="hidden" name="id" value="'.$culturals_id.'">';
-        echo'<input type="hidden" name="cul" value="'.$culturals_cul.'">';
         echo'<input type="hidden" name="title" value="'.$culturals_title.'">';
         echo'<input type="hidden" name="year" value="'.$culturals_year.'">';
         echo'<input type="hidden" name="specify" value="'.$culturals_specify.'">';
