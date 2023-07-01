@@ -162,7 +162,6 @@ li {
 }
 /* スライダーの角を丸くする */
 .swiper-slide img {
-  border-radius: 10%;
   width: 50%;
 }
 
@@ -330,7 +329,20 @@ th {
  .cas_title {
   text-align: center;
   margin-top: 100px;
+  margin-bottom: -50px;
  }
+
+ .swiperOptions .swiper-slide img,
+.swiperThumbs .swiper-slide img{width: 100%;}
+.swiperThumbs {background-color: #f0f8ff;}
+.swiperOptions .swiper-slide {text-align: center;}
+
+.swiperThumbs .swiper-slide {
+  text-align: center;
+  padding: 10px;
+}
+
+.swiperThumbs .swiper-slide-active {background-color: #f0f8ff;}
 
  /* 城一覧のページ */
  .header_text{
@@ -469,7 +481,6 @@ th {
   }
   /* スライダーの角を丸くする */
   .swiper-slide img {
-    border-radius: 10%;
     width: 50%;
   }
 
@@ -619,6 +630,7 @@ th {
 
  .cas_title {
   margin-top: 100px;
+  margin-bottom: -50px;
  }
 
  .comment {
@@ -660,5 +672,17 @@ th {
   margin-left: auto;
   margin-right: auto;
  }
+
+.swiperOptions .swiper-slide img,
+.swiperThumbs .swiper-slide img{width: 100%;}
+.swiperThumbs {background-color: #f0f8ff;}
+.swiperOptions .swiper-slide {text-align: center;}
+
+.swiperThumbs .swiper-slide {
+  text-align: center;
+  padding: 10px;
+}
+
+.swiperThumbs .swiper-slide-active {background-color: #f0f8ff;}
 
 }

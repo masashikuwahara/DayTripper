@@ -34,8 +34,10 @@ $castles_img5=$cas['img5'];
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/swiper@5.3.6/css/swiper.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@5.3.6/js/swiper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@4.1.1/dist/vue-awesome-swiper.js"></script>
   <title><?php echo $castles_title;?></title>
 </head>
 <body>
@@ -54,7 +56,7 @@ $castles_img5=$cas['img5'];
         }
         else
         {
-            $disp_img1='<img src="img/'.$castles_img1.'">';
+            $disp_img1="img/$castles_img1";
         }
     }
     catch (Exception $e)
@@ -73,7 +75,7 @@ $castles_img5=$cas['img5'];
         }
         else
         {
-            $disp_img2='<img src="img/'.$castles_img2.'">';
+            $disp_img2="img/$castles_img2";
         }
     }
     catch (Exception $e)
@@ -92,7 +94,7 @@ $castles_img5=$cas['img5'];
         }
         else
         {
-            $disp_img3='<img src="img/'.$castles_img3.'">';
+            $disp_img3="img/$castles_img3";
         }
     }
     catch (Exception $e)
@@ -111,7 +113,7 @@ $castles_img5=$cas['img5'];
         }
         else
         {
-            $disp_img4='<img src="img/'.$castles_img4.'">';
+            $disp_img4="img/$castles_img4";
         }
     }
     catch (Exception $e)
@@ -130,7 +132,7 @@ $castles_img5=$cas['img5'];
         }
         else
         {
-            $disp_img5='<img src="img/'.$castles_img5.'">';
+            $disp_img5="img/$castles_img5";
         }
     }
     catch (Exception $e)
@@ -140,11 +142,45 @@ $castles_img5=$cas['img5'];
     }
 
     ?>
-    <!-- <?php echo $disp_img1;?>
-    <?php echo $disp_img2;?>
-    <?php echo $disp_img3;?>
-    <?php echo $disp_img4;?>
-    <?php echo $disp_img5;?> -->
+
+    <div id="app">
+    <swiper :options="swiperOptions" ref="swiperOptions" class="swiperOptions">
+        <swiper-slide>
+            <span><img src="<?php echo $disp_img1; ?>" alt=""></span>
+        </swiper-slide>
+        <swiper-slide>
+            <span><img src="<?php echo $disp_img2; ?>" alt=""></span>
+        </swiper-slide>
+        <swiper-slide>
+            <span><img src="<?php echo $disp_img3; ?>" alt=""></span>
+        </swiper-slide>
+        <swiper-slide>
+            <span><img src="<?php echo $disp_img4; ?>" alt=""></span>
+        </swiper-slide>
+        <swiper-slide>
+            <span><img src="<?php echo $disp_img5; ?>" alt=""></span>
+        </swiper-slide>
+    <div class="swiper-pagination" slot="pagination"></div>
+    </swiper>
+
+    <swiper :options="swiperThumbs" ref="swiperThumbs" class="swiperThumbs">
+        <swiper-slide>
+            <span><img src="<?php echo $disp_img1; ?>" alt="" /></span>
+        </swiper-slide>
+        <swiper-slide>
+            <span><img src="<?php echo $disp_img2; ?>" alt="" /></span>
+        </swiper-slide>
+        <swiper-slide>
+            <span><img src="<?php echo $disp_img3; ?>" alt="" /></span>
+        </swiper-slide>
+        <swiper-slide>
+            <span><img src="<?php echo $disp_img4; ?>" alt="" /></span>
+        </swiper-slide>
+        <swiper-slide>
+            <span><img src="<?php echo $disp_img5; ?>" alt="" /></span>
+        </swiper-slide>
+    </swiper>
+    </div>
 
     
 
@@ -197,4 +233,5 @@ $castles_img5=$cas['img5'];
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="menu.js"></script>
+  <script type="text/javascript" src="gallery.js"></script>
   <?php require('footer.php'); ?>
