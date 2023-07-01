@@ -548,7 +548,7 @@ th {
     color: crimson;
   }
 
-  /* 検索フォーム、ボタン */
+  /* 検索 */
 .sea {  
   background-color: #fff4e1 ;
   border-radius: 10px;
@@ -591,6 +591,12 @@ th {
 
 .f {
   font-size: 1.8rem;
+}
+
+.search{
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 20px;
 }
 
 .detail {

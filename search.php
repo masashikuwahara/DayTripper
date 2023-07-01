@@ -21,7 +21,7 @@
 <body>
   <?php require('header.php'); ?>
     <br />
-    <div class="header_text">
+    <div class="search">
     <?php
     echo "<div class='s'> 「{$s}」の検索結果</div>";
 
