@@ -191,6 +191,8 @@ li {
 
 .info {
   text-align: center;
+  position: relative;
+  right: 20px;
 }
 
 .info2{
@@ -238,7 +240,7 @@ li {
 }
 
 .btn {
-  background-color: #4f313a;
+  background-color: #ffa500;
   border-radius: 20px;
   border: none;
   color: #fff;
@@ -247,17 +249,51 @@ li {
 }
 
 .btn:hover {
-  background-color: #ea5548;
+  background-color: #d2691e;
 }
 
 .btn:active {
-  background-color: #ea5548;
+  background-color: #87ceeb;
   position: relative;
   top: 2px;
 }
 
+
 .cp_ipradio {
   margin-bottom: -50px;
+}
+
+.cp_ipradio .option-input {
+	position: relative;
+	margin: 0 1rem 0 0;
+}
+.cp_ipradio .option-input:before,
+.cp_ipradio .option-input:after {
+	position: absolute;
+	z-index: 1;
+	top: -0.125rem;
+	left: -0.125rem;
+	width: 1rem;
+	height: 1rem;
+	content: '';
+	-webkit-transition: all 0.3s ease-in-out;
+	        transition: all 0.3s ease-in-out;
+	border-radius: 50%;
+	background: #ffffff;
+}
+.cp_ipradio .option-input:after {
+	z-index: 0;
+	top: -0.25rem;
+	left: -0.25rem;
+	width: 1.25rem;
+	height: 1.25rem;
+	background: #ff7f50;
+}
+.cp_ipradio .option-input:checked:before {
+	-webkit-transform: scale(0, 0);
+	        transform: scale(0, 0);
+	border-width: 0.625rem;
+	border-color: #ff7f50;
 }
 
 .btn {
@@ -332,6 +368,10 @@ th {
   text-align: center;
   margin-top: 100px;
   margin-bottom: -50px;
+ }
+
+ .comment {
+  text-align: left;
  }
 
  .swiperOptions .swiper-slide img,
@@ -481,9 +521,9 @@ th {
     justify-content: center;
     align-items: center;
   }
-  /* スライダーの角を丸くする */
+
   .swiper-slide img {
-    width: 50%;
+    width: 100%;
   }
 
   #app {
@@ -569,7 +609,7 @@ th {
 }
 
 .btn {
-  background-color: #4f313a;
+  background-color: #ffa500;
   border-radius: 20px;
   border: none;
   color: #fff;
@@ -578,17 +618,50 @@ th {
 }
 
 .btn:hover {
-  background-color: #ea5548;
+  background-color: #d2691e;
 }
 
 .btn:active {
-  background-color: #ea5548;
+  background-color: #87ceeb;
   position: relative;
   top: 2px;
 }
 
 .cp_ipradio {
   margin-bottom: -50px;
+}
+
+.cp_ipradio .option-input {
+	position: relative;
+	margin: 0 1rem 0 0;
+}
+.cp_ipradio .option-input:before,
+.cp_ipradio .option-input:after {
+	position: absolute;
+	z-index: 1;
+	top: -0.125rem;
+	left: -0.125rem;
+	width: 1rem;
+	height: 1rem;
+	content: '';
+	-webkit-transition: all 0.3s ease-in-out;
+	        transition: all 0.3s ease-in-out;
+	border-radius: 50%;
+	background: #ffffff;
+}
+.cp_ipradio .option-input:after {
+	z-index: 0;
+	top: -0.25rem;
+	left: -0.25rem;
+	width: 1.25rem;
+	height: 1.25rem;
+	background: #ff7f50;
+}
+.cp_ipradio .option-input:checked:before {
+	-webkit-transform: scale(0, 0);
+	        transform: scale(0, 0);
+	border-width: 0.625rem;
+	border-color: #ff7f50;
 }
 
 .s {
@@ -696,7 +769,7 @@ th {
  }
 
 .swiperOptions .swiper-slide img,
-.swiperThumbs .swiper-slide img{width: 100%;}
+.swiperThumbs .swiper-slide img{width: 80%;}
 .swiperThumbs {background-color: #f0f8ff;}
 .swiperOptions .swiper-slide {text-align: center;}
 

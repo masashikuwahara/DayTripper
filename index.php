@@ -18,28 +18,28 @@
       <swiper :options="swiperOption">
   
         <swiper-slide>
-          <a href="#"><img src="img/osaka.jpg" alt="image"></a>
+          <a href="detail.php?id=23"><img src="img/osaka01.jpg" alt="image"></a>
           <p>大阪城</p>
         </swiper-slide>
 
         <swiper-slide>
-          <a href="#"><img src="img/himeji.jpg" alt="image"></a>
-          <p>姫路城</p>
+          <a href="detail.php?id=23"><img src="img/osaka02.jpg" alt="image"></a>
+          <p>大阪城</p>
         </swiper-slide>
         
         <swiper-slide>
-          <a href="#"><img src="img/okayama.jpg" alt="image"></a>
-          <p>岡山城</p>
+          <a href="detail.php?id=23"><img src="img/osaka03.jpg" alt="image"></a>
+          <p>大阪城</p>
         </swiper-slide>
 
         <swiper-slide>
-          <a href="#"><img src="img/nagashino.jpg" alt="image"></a>
-          <p>長篠城</p>
+          <a href="detail.php?id=23"><img src="img/osaka04.jpg" alt="image"></a>
+          <p>大阪城</p>
         </swiper-slide>
 
         <swiper-slide>
-          <a href="#"><img src="img/marugame.jpg" alt="image"></a>
-          <p>丸亀城</p>
+          <a href="detail.php?id=23"><img src="img/osaka05.jpg" alt="image"></a>
+          <p>大阪城</p>
         </swiper-slide>
 
         <div class="swiper-pagination"  slot="pagination"></div>
@@ -60,6 +60,8 @@
   
   <p style="text-align: center;">城や文化財を検索する</p>
   <form  style="text-align: center;" class="cp_ipradio" action="search.php" method="get">
+    <label><input type="radio" class="option-input" name="select" value="castle" checked>城を検索する</label>
+    <label><input type="radio" class="option-input" name="select" value="culture" >文化財を検索する</label><br />
     <input class="sea" type="text" name="s" placeholder="例:姫路城、出雲大社">
     <input class="btn" type="submit" value="検索する">
   </form>
