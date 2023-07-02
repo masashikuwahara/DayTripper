@@ -140,7 +140,7 @@ session();
       <input name="img_name_old3" type="hidden" value="<?php echo $castles_img3_old;?>">
       <input name="img_name_old4" type="hidden" value="<?php echo $castles_img4_old;?>">
       <input name="img_name_old5" type="hidden" value="<?php echo $castles_img5_old;?>">
-      城番号を入力してください。100名城ca001～、続100名城se001～<br />
+      城番号を入力してください。100名城1～、続100名城101～<br />
       <input class="tex" type="text" name="cas" value="<?php echo $castles_cas; ?>"><br />
       城名を入力してください。<br />
       <input class="tex" type="text" name="title" value="<?php echo $castles_title; ?>"><br />
