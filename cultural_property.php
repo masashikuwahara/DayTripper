@@ -46,7 +46,7 @@
         }
 
         echo '<span class="img_style">'.
-            '<a href="culturals.php?id='.$rec['id'].'">'.
+            '<a href="culturals_detail.php?id='.$rec['id'].'">'.
             $img_name.
             '<br />'.
             $rec['title'].
