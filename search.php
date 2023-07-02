@@ -44,10 +44,10 @@
           echo '</div>';
         } 
       }else{
-        echo '見つかりませんでした';
+        echo '<div class="result">見つかりませんでした</div>';
       }
     }else{
-      echo 'キーワードを入力してください';
+      echo '<div class="result">キーワードを入力してください</div>';
     }
     ?>
     <p style="text-align: center;">もう一度検索する</p>

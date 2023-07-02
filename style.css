@@ -224,7 +224,7 @@ li {
   color: crimson;
 }
 
-/* 検索フォーム、ボタン */
+/* 検索 */
 .sea {  
   background-color: #fff4e1 ;
   border-radius: 10px;
@@ -262,6 +262,13 @@ li {
 
 .btn {
   margin-bottom: 100px;
+}
+
+.result {
+  background-color: #ffc0cb;
+  border: 2px solid #db7093;
+  height: 30px;
+  padding-top: 5px;
 }
 
 .s {
@@ -597,6 +604,13 @@ th {
   margin-left: 200px;
   margin-right: 200px;
   margin-bottom: 20px;
+}
+
+.result {
+  background-color: #ffc0cb;
+  border: 2px solid #db7093;
+  height: 30px;
+  padding-top: 5px;
 }
 
 .detail {
