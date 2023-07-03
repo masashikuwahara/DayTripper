@@ -31,6 +31,7 @@
         $stmt->execute();
         $t = $stmt->rowCount();
         if($t > 0){
+          echo "<div class='success'>{$t}件見つかりました</div></br>";
           while ($r = $stmt->fetch()){
             echo '<div class="f">';
             $img_name='<img style="width:120px" src="img/'.$r['img1'].'">';
@@ -45,13 +46,14 @@
             echo '</div>';
           } 
         }else{
-          echo '<div class="result">見つかりませんでした</div>';
+          echo '<div class="result">そのキーワードでは見つかりませんでした</div>';
         }
       }else{
         $stmt=$dbh->prepare("SELECT * FROM cultures WHERE title like '%$my_sea%'");
         $stmt->execute();
         $t = $stmt->rowCount();
         if($t > 0){
+          echo "<div class='success'>{$t}件見つかりました</div></br>";
           while ($r = $stmt->fetch()){
             echo '<div class="f">';
             $img_name='<img style="width:120px" src="img/'.$r['img1'].'">';
