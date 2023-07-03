@@ -9,7 +9,7 @@
 
   body {
     margin: 0;
-    background-color: #f0f8ff;
+    background-color: #fbfaf5;
     color: #333333;
   }
 
@@ -17,7 +17,7 @@
     height: 60px;
     width: 100%;
     padding: 0px 15px;
-    background-color: #87ceeb;
+    background-color: #fff0f5;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -206,8 +206,27 @@ li {
   border-bottom:1px solid #000;
 }
 
-.intro {
+/* はじめにのページ */
+
+.main{
+  margin-left: 20px;
+}
+
+.main_img {
+  width: 350px;
+}
+
+h2.intro {
+  text-align: left;
+}
+
+p.intro {
+  text-align: left;
+}
+
+.article {
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .split {
@@ -376,7 +395,7 @@ th {
 
  .swiperOptions .swiper-slide img,
  .swiperThumbs .swiper-slide img{width: 100%;}
- .swiperThumbs {background-color: #f0f8ff;}
+ .swiperThumbs {background-color: #fbfaf5;}
  .swiperOptions .swiper-slide {text-align: center;}
 
 .swiperThumbs .swiper-slide {
@@ -384,7 +403,7 @@ th {
   padding: 10px;
 }
 
-.swiperThumbs .swiper-slide-active {background-color: #f0f8ff;}
+.swiperThumbs .swiper-slide-active {background-color: #fbfaf5;}
 
  /* 城一覧のページ */
  .header_text{
@@ -415,14 +434,15 @@ th {
 @media screen and (min-width: 400px) {
   body {
     margin: 0;
-    background-color: #f0f8ff;
+    background-color: #fbfaf5;
+    color: #333333;
   }
 
   header {
     height: 60px;
     width: 100%;
     padding: 0px 15px;
-    background-color: #87ceeb;
+    background-color: #fff5ee;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -567,12 +587,42 @@ th {
     border-bottom:1px solid #000;
   }
 
-  .label{
-    background-color:blue;
-    border-radius:3px;
-    color:#fff;
-    padding:2px 5px;
-    margin:0 20px;
+  /* はじめにのページ */
+
+  .wrapper{
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .main{
+    float: left;
+    width: 35%;
+    padding: 10px;
+    height:400px;
+  }
+
+  .main_img {
+    width: 550px;
+  }
+  
+  .side{
+    width: 65%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  h2.intro {
+    text-align: left;
+  }
+  
+  p.intro {
+    text-align: left;
+  }
+  
+  .article {
+    text-align: center;
+    margin-bottom: 100px;
   }
 
   .intro {
@@ -686,6 +736,13 @@ th {
   padding-top: 5px;
 }
 
+.success {
+  background-color: #87cefa;
+  border: 2px solid #0000ff;
+  height: 30px;
+  padding-top: 5px;
+}
+
 .detail {
   font-size: 1rem;
   overflow: hidden;
@@ -716,7 +773,7 @@ th {
   border-top: solid 1px #778ca3;
  }
  .table tr:nth-child(2n+1) {
-  background: #e9faf9;
+  background: #e7e7eb;
  }
  .table th,.table td {
   padding: 10px;
@@ -770,7 +827,7 @@ th {
 
 .swiperOptions .swiper-slide img,
 .swiperThumbs .swiper-slide img{width: 80%;}
-.swiperThumbs {background-color: #f0f8ff;}
+.swiperThumbs {background-color: #fbfaf5;}
 .swiperOptions .swiper-slide {text-align: center;}
 
 .swiperThumbs .swiper-slide {
@@ -778,6 +835,6 @@ th {
   padding: 10px;
 }
 
-.swiperThumbs .swiper-slide-active {background-color: #f0f8ff;}
+.swiperThumbs .swiper-slide-active {background-color: #fbfaf5;}
 
 }
