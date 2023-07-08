@@ -10,14 +10,14 @@
   body {
     margin: 0;
     background-color: #fbfaf5;
-    color: #333333;
+    color: #000b00;
   }
 
   header {
     height: 60px;
     width: 100%;
     padding: 0px 15px;
-    background-color: #fff0f5;
+    background-color: #fef4f4;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -34,7 +34,7 @@
   }
 
   a {
-    color: #000000;
+    color: #000b00;
     text-decoration: none;
   }
 
@@ -67,7 +67,7 @@ nav{
 
 .menu ul li a:hover
 {background-color:rgba(0,0,0,0.5);
-color:orange;}
+color:rgb(0, 217, 255);}
 
 li {
   list-style: none;
@@ -326,6 +326,13 @@ p.intro {
   padding-top: 5px;
 }
 
+.success {
+  background-color: #87cefa;
+  border: 2px solid #0000ff;
+  height: 30px;
+  padding-top: 5px;
+}
+
 .s {
   margin-top: 50px;
   font-size: 20pt;
@@ -362,7 +369,7 @@ th {
  }
 
  .table tr:nth-child(2n+1) {
-  background: #e9faf9;
+  background: #f3f3f2;
  }
 
  .table th,.table td {
@@ -435,14 +442,14 @@ th {
   body {
     margin: 0;
     background-color: #fbfaf5;
-    color: #333333;
+    color: #000b00;
   }
 
   header {
     height: 60px;
     width: 100%;
     padding: 0px 15px;
-    background-color: #fff5ee;
+    background-color: #fef4f4;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -489,22 +496,21 @@ th {
   }
 
   .menu ul{
-  height: 70px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  position: relative;
-  right: 30px;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+    right: 30px;
   }
   .menu ul li a{
-  padding: 0 1em;
-  border-bottom: none;
-
+    padding: 0 1em;
+    border-bottom: none;
   }
     
-  .menu ul li a:hover
-  {
-    background-color:transparent;
+  .menu ul li a:hover{
+    background-color:#fbd26b;
+    color:#005243;
   }
 
   li {
@@ -773,7 +779,7 @@ th {
   border-top: solid 1px #778ca3;
  }
  .table tr:nth-child(2n+1) {
-  background: #e7e7eb;
+  background: #f3f3f2;
  }
  .table th,.table td {
   padding: 10px;
