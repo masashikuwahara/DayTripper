@@ -68,7 +68,7 @@
             echo '</div>';
           } 
         }else{
-          echo '<div class="result">見つかりませんでした</div>';
+          echo '<div class="result">そのキーワード見つかりませんでした</div>';
         }
       }
     }else{
