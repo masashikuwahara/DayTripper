@@ -65,9 +65,10 @@ nav{
 }
 
 
-.menu ul li a:hover
-{background-color:rgba(0,0,0,0.5);
-color:rgb(0, 217, 255);}
+.menu ul li a:hover{
+  background-color:rgba(201, 173, 49, 0.5);
+  color:rgb(255, 0, 242);
+}
 
 li {
   list-style: none;
@@ -641,7 +642,7 @@ th {
     align-items: center;
   } */
 
-  .region {
+  /* .region {
     color: darkcyan;
     font-size: 25pt;
     padding: 0;
@@ -649,7 +650,7 @@ th {
 
   .region:hover {
     color: crimson;
-  }
+  } */
 
   /* 検索 */
 .sea {  
