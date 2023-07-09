@@ -129,7 +129,7 @@ $culturals_img3=$cul['img3'];
     <table class="table">
         <tbody>
             <tr>
-                <th>作成年</th>
+                <th>創建年</th>
                 <td><?php echo $culturals_year;?></td>
             </tr>
             <tr>
