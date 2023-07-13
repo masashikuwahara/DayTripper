@@ -77,7 +77,7 @@ li {
 
 .menu{
   text-align:center;
-  background-color:rgba(248, 248, 250, 0.89);
+  background-color:rgba(248, 248, 250, 0.925);
   transition: .5s ease;/*滑らかに表示*/
   -webkit-transform: translateX(-105%);
   transform: translateX(-105%);/*左に隠しておく*/
