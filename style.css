@@ -439,7 +439,7 @@ th {
 
 
 /* ここからデスクトップ */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 420px) {
   body {
     margin: 0;
     background-color: #fbfaf5;
