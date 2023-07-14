@@ -17,30 +17,30 @@
   
       <swiper :options="swiperOption">
   
-        <swiper-slide>
-          <a href="detail.php?id=23"><img src="img/osaka01.jpg" alt="image"></a>
-          <p>大阪城</p>
-        </swiper-slide>
+      <swiper-slide>
+        <a href="#"><img src="img/himejijou.jpg" alt="image"></a>
+        <p>姫路城</p>
+      </swiper-slide>
 
-        <swiper-slide>
-          <a href="detail.php?id=23"><img src="img/osaka02.jpg" alt="image"></a>
-          <p>大阪城</p>
-        </swiper-slide>
-        
-        <swiper-slide>
-          <a href="detail.php?id=23"><img src="img/osaka03.jpg" alt="image"></a>
-          <p>大阪城</p>
-        </swiper-slide>
+      <swiper-slide>
+        <a href="#"><img src="img/kinojou.jpg" alt="image"></a>
+        <p>鬼ノ城</p>
+      </swiper-slide>
+      
+      <swiper-slide>
+        <a href="#"><img src="img/maruokajou.jpg" alt="image"></a>
+        <p>丸岡城</p>
+      </swiper-slide>
 
-        <swiper-slide>
-          <a href="detail.php?id=23"><img src="img/osaka04.jpg" alt="image"></a>
-          <p>大阪城</p>
-        </swiper-slide>
+      <swiper-slide>
+        <a href="#"><img src="img/okayamajou.jpg" alt="image"></a>
+        <p>岡山城</p>
+      </swiper-slide>
 
-        <swiper-slide>
-          <a href="detail.php?id=23"><img src="img/osaka05.jpg" alt="image"></a>
-          <p>大阪城</p>
-        </swiper-slide>
+      <swiper-slide>
+        <a href="#"><img src="img/uedajou.jpg" alt="image"></a>
+        <p>上田城</p>
+      </swiper-slide>
 
         <div class="swiper-pagination"  slot="pagination"></div>
 
