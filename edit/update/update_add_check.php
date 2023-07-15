@@ -41,7 +41,7 @@ session();
 
     if($update_information=='')
     {
-        echo'<p style="color:#ff0000">城名が入力されていません。</p><br />';
+        echo'<p style="color:#ff0000">更新情報が入力されていません。</p><br />';
     }
     else
     {

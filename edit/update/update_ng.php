@@ -8,8 +8,8 @@ session();
     <title>選択されていません</title>
 </head>
 <body>
-    城が選択されていません。 <br />
+    更新情報が選択されていません。 <br />
     <br />
-    <a href="castles_list.php">戻る</a>
+    <a href="update_list.php">戻る</a>
 </body>
 </html>

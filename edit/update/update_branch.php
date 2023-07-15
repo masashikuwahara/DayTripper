@@ -42,7 +42,7 @@ if(isset($_POST['delete'])==true)
 		exit();
 	}
 	$id=$_POST['id'];
-	header('Location:pro_delete.php?id='.$id);
+	header('Location:update_delete.php?id='.$id);
 	exit();
 }
 

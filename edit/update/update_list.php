@@ -77,6 +77,7 @@ $info->execute();
 $info = $info->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($info as $post) {
+	echo '<input type="radio" name="id" value="'.$post['id'].'">';
 	echo $post['day']. '<br>';
 	echo $post['information']. '<br>';
 }
@@ -102,6 +103,7 @@ catch (Exception $e)
 
 <?php
 echo '<br/>';
+echo '<input class="btn" type="submit" name="delete" value="削除">';
 echo '</form>';
 ?>
 
