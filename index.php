@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <meta name="description" content="DayTripperの記録を集めたサイトです。城や文化財をを中心に訪れておりカテゴリー別に分けて紹介しています。">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <meta property="og:title" content="DayTripperの記録">
+  <meta property="og:description" content="DayTripperの記録を集めたサイトです。城や文化財をを中心に訪れておりカテゴリー別に分けて紹介しています。">
+  <meta property="og:image" content="サムネイル画像までのURL">
+  <meta property="og:url" content="https://daytripper.site"> 
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DayTripperの記録">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
