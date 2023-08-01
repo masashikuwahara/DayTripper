@@ -25,30 +25,30 @@
   
       <swiper :options="swiperOption">
   
-      <swiper-slide>
-        <a href="#"><img src="img/himejijou.jpg" alt="image"></a>
-        <p>姫路城</p>
-      </swiper-slide>
+        <swiper-slide>
+          <a href="detail.php?id=20"><img src="img/himeji01.jpg" alt="image"></a>
+          <p>姫路城</p>
+        </swiper-slide>
 
-      <swiper-slide>
-        <a href="#"><img src="img/kinojou.jpg" alt="image"></a>
-        <p>鬼ノ城</p>
-      </swiper-slide>
-      
-      <swiper-slide>
-        <a href="#"><img src="img/maruokajou.jpg" alt="image"></a>
-        <p>丸岡城</p>
-      </swiper-slide>
+        <swiper-slide>
+          <a href="detail.php?id=22"><img src="img/kinojou01.jpg" alt="image"></a>
+          <p>鬼ノ城</p>
+        </swiper-slide>
+        
+        <swiper-slide>
+          <a href="detail.php?id=34"><img src="img/maruoka01.jpg" alt="image"></a>
+          <p>丸岡城</p>
+        </swiper-slide>
 
-      <swiper-slide>
-        <a href="#"><img src="img/okayamajou.jpg" alt="image"></a>
-        <p>岡山城</p>
-      </swiper-slide>
+        <swiper-slide>
+          <a href="detail.php?id=12"><img src="img/okayama01.jpg" alt="image"></a>
+          <p>岡山城</p>
+        </swiper-slide>
 
-      <swiper-slide>
-        <a href="#"><img src="img/uedajou.jpg" alt="image"></a>
-        <p>上田城</p>
-      </swiper-slide>
+        <swiper-slide>
+          <a href="detail.php?id=51"><img src="img/uedajou.jpg" alt="image"></a>
+          <p>上田城</p>
+        </swiper-slide>
 
         <div class="swiper-pagination"  slot="pagination"></div>
 
@@ -115,6 +115,10 @@
         ?>
       </li>
     </ul>
+  </div>
+
+  <div class="insta">
+    <a href="https://www.instagram.com/day_____tripper_official/" target="_blank" rel="noopener noreferrer"><img src="img/insta.png" width="30px" alt="インスタ"></a>
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>

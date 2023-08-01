@@ -207,6 +207,11 @@ li {
   border-bottom:1px solid #000;
 }
 
+.insta {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 /* はじめにのページ */
 
 .main{
@@ -592,6 +597,11 @@ th {
     display: flex;
     padding:15px;
     border-bottom:1px solid #000;
+  }
+
+  .insta {
+    text-align: center;
+    margin-bottom: 30px;
   }
 
   /* はじめにのページ */
