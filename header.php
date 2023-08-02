@@ -1,7 +1,7 @@
 <header>
   <nav>
     <div class="drawer">
-      <div id="logo"><a href="index.php">DayTripper</a></div>
+      <div id="logo"><a href="../index.php">DayTripper</a></div>
       <div class="Toggle">
         <span></span>
         <span></span>
@@ -11,10 +11,11 @@
     
     <div class="menu">
       <ul>
-        <li><a href="intro.php">はじめに</a></li>
-        <li><a href="100_castles.php">100名城</a></li>
-        <li><a href="sequel_100_castles.php">続100名城</a></li>
-        <li><a href="cultural_property.php">その他文化財</a></li>
+        <li><a href="../intro.php">はじめに</a></li>
+        <li><a href="../knowledge.php">城についての基礎知識</a></li>
+        <li><a href="../100_castles.php">100名城</a></li>
+        <li><a href="../sequel_100_castles.php">続100名城</a></li>
+        <li><a href="../cultural_property.php">その他文化財</a></li>
       </ul>
     </div>
   </nav>
