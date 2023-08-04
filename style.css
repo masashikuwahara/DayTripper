@@ -179,7 +179,7 @@ li {
 .title {
   margin-top: 100px;
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .update {
@@ -441,6 +441,20 @@ th {
   margin-left: auto;
   margin-right: auto;
  }
+
+ /* 現存天守のページ */
+
+ .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  gap: 10px;
+}
+
+.grid_2 {
+  display: inline-block;
+  text-align: center;
+}
+
 
 
 /* ここからデスクトップ */
@@ -853,5 +867,18 @@ th {
 }
 
 .swiperThumbs .swiper-slide-active {background-color: #fbfaf5;}
+
+/* 現存天守のページ */
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  gap: 10px;
+}
+
+.grid_2 {
+  display: inline-block;
+  text-align: center;
+}
 
 }
