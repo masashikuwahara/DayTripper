@@ -447,10 +447,10 @@ th {
  .container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-  gap: 10px;
+  gap: 5px;
 }
 
-.grid_2 {
+.grid {
   display: inline-block;
   text-align: center;
 }
@@ -876,7 +876,7 @@ th {
   gap: 10px;
 }
 
-.grid_2 {
+.grid {
   display: inline-block;
   text-align: center;
 }

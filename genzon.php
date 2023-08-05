@@ -15,23 +15,54 @@
   <div class="about">
     現存天守とは江戸時代以前に建造され、現在でも残っている天守のことを言います。
     かつて日本全国には多数の城があり、天守閣も多くありました。しかし戦乱、江戸時代初期の
-    一国一城令、明治維新の廃城令、戦争での焼失、落雷や家事での焼失などの理由により
-    ほとんどが失われ、現在では12城が残るのみです。現存天守以外の天守閣は復元されたものです。
+    一国一城令、明治維新の廃城令、落雷や火事での焼失などの理由により
+    ほとんどが失われ、現在では12城が残るのみです。12城のうち、5城は国宝に指定されており、
+    他7つは重要文化財に指定されています。現存天守以外の天守閣は復元されたものです。
     自分はこれまで8か所訪れましたのでご紹介します。
   </div>
   <hr>
 
 <div class="container">
-  <div class="grid_2">
-    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="40%" alt="姫路城"></a>
+  <div class="grid">
+    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城"></a>
     <p>城名</p>
   </div>
-  <div class="grid_2">
-    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="40%" alt="姫路城" class="mr1"></a>
+  <div class="grid">
+    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城" class="mr1"></a>
     <p>城名</p>
   </div>
-  <div class="grid_2">
-    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="40%" alt="姫路城"></a>
+  <div class="grid">
+    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城"></a>
+    <p>城名</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城"></a>
+    <p>城名</p>
+  </div>
+  <div class="grid">
+    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城" class="mr1"></a>
+    <p>城名</p>
+  </div>
+  <div class="grid">
+    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城"></a>
+    <p>城名</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城"></a>
+    <p>城名</p>
+  </div>
+  <div class="grid">
+    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城" class="mr1"></a>
+    <p>城名</p>
+  </div>
+  <div class="grid">
+    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城"></a>
     <p>城名</p>
   </div>
 </div>

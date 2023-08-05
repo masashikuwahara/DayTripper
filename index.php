@@ -26,28 +26,18 @@
       <swiper :options="swiperOption">
   
         <swiper-slide>
-          <a href="detail.php?id=20"><img src="img/himeji01.jpg" alt="image"></a>
-          <p>姫路城</p>
+          <a href="genzon.php"><img src="img/genzon.jpg" alt="image"></a>
+          <p>現存天守</p>
         </swiper-slide>
 
         <swiper-slide>
-          <a href="detail.php?id=22"><img src="img/kinojou01.jpg" alt="image"></a>
-          <p>鬼ノ城</p>
+          <a href="100_castles.php"><img src="img/100meijou.jpg" alt="image"></a>
+          <p>日本100名城</p>
         </swiper-slide>
         
         <swiper-slide>
-          <a href="detail.php?id=34"><img src="img/maruoka01.jpg" alt="image"></a>
-          <p>丸岡城</p>
-        </swiper-slide>
-
-        <swiper-slide>
-          <a href="detail.php?id=12"><img src="img/okayama01.jpg" alt="image"></a>
-          <p>岡山城</p>
-        </swiper-slide>
-
-        <swiper-slide>
-          <a href="detail.php?id=51"><img src="img/uedajou.jpg" alt="image"></a>
-          <p>上田城</p>
+          <a href="sequel_100_castles.php"><img src="img/zokunihon.jpg" alt="image"></a>
+          <p>続日本100名城</p>
         </swiper-slide>
 
         <div class="swiper-pagination"  slot="pagination"></div>
@@ -62,7 +52,9 @@
 
   <div id="title">
     <p>
-      ここはDayTripperのこれまでの旅の記録をまとめたものです。初めての方ははじめにのページをご覧ください。
+      ここはわたくし、DayTripperのこれまでの旅の記録をまとめたものです。日本100名城、続日本100名城、文化財を中心に
+      日本各地いろいろな場所へ行ってきまして、簡単にではありますがカテゴリー別に分けて紹介しています。
+      初めての方ははじめにのページをご覧ください。
     </p> 
   </div>
   
