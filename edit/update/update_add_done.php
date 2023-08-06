@@ -15,14 +15,16 @@ session();
         $post=($_POST);
         $update_cas=$post['day'];
         $update_information=$post['information'];
+        $update_id=$post['id'];
 
         require('../../connect.php');
 
-        $sql = 'INSERT INTO info (day,information) 
-        VALUES (?,?)';
+        $sql = 'INSERT INTO info (day,information,number) 
+        VALUES (?,?,?)';
         $stmt = $dbh->prepare($sql);
         $data[] = $update_cas;
         $data[] = $update_information;
+        $data[] = $update_id;
         $stmt->execute($data);
 
         $dbh = null;

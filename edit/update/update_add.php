@@ -41,6 +41,8 @@ session();
     <input class="tex" type="text" name="day" ><br />
     更新内容を入力してください。<br />
     <input class="tex" type="text" name="information" ><br />
+    idを入力してください。<br />
+    <input class="tex" type="text" name="id" ><br />
     <input class="btn" type="button" onclick="history.back()"value="戻る">
     <input class="btn" type="submit" value="次のページへ">
   </form>

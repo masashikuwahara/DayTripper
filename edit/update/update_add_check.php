@@ -27,6 +27,7 @@ session();
     $post=sanitize($_POST);
     $update_day=$post['day'];
     $update_information=$post['information'];
+    $update_id=$post['id'];
 
     if($update_day=='')
     {
@@ -49,8 +50,19 @@ session();
         echo$update_information;
         echo'<br />';
     }
+
+    if($update_id=='')
+    {
+        echo'<p style="color:#ff0000">idが入力されていません。</p><br />';
+    }
+    else
+    {
+        echo'id:';
+        echo$update_id;
+        echo'<br />';
+    }
     
-    if($update_day==''||$update_information=='')
+    if($update_day==''||$update_information==''||$update_id=='')
     {
         echo'<form>';
         echo'<input class="btn" type="button" onclick="history.back()" value="戻る">';
@@ -62,6 +74,7 @@ session();
         echo'<form method="post" action="update_add_done.php">';
         echo'<input type="hidden" name="day" value="'.$update_day.'">';
         echo'<input type="hidden" name="information" value="'.$update_information.'">';
+        echo'<input type="hidden" name="id" value="'.$update_id.'">';
         echo'<br />';
         echo'<input class="btn" type="button" onclick="history.back()" value="戻る">&nbsp;';
         echo'<input class="btn" type="submit" value="決定する">';
