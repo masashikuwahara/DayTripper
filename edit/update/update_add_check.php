@@ -62,7 +62,7 @@ session();
         echo'<br />';
     }
     
-    if($update_day==''||$update_information==''||$update_id=='')
+    if($update_day==''||$update_information=='')
     {
         echo'<form>';
         echo'<input class="btn" type="button" onclick="history.back()" value="戻る">';

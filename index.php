@@ -89,11 +89,17 @@
                 {
                   break;
                 }
-        
-                echo '<li class="info3">'.
-                
-                '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].'.'.$rec['information'].'</a>'.
-                '</li>';
+                if($rec['number']==null)
+                {
+                  echo '<li class="info4">'.
+                  $rec['day'].
+                  $rec['information'].
+                  '</li>';
+                }else{
+                  echo '<li class="info3">'.
+                  '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].'.'.$rec['information'].'</a>'.
+                  '</li>';
+                }
               }
         
               }
