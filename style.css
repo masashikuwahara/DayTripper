@@ -201,11 +201,12 @@ li {
   width: auto;
 }
 
-.info3{
-  display: flex;
-  padding:15px;
-  border-bottom:1px solid #000;
-}
+  .info3{
+    display: flex;
+    padding:15px;
+    text-decoration:underline;
+    border-bottom:1px solid #000;
+  }
 
 .insta {
   text-align: center;
@@ -610,6 +611,7 @@ th {
   .info3{
     display: flex;
     padding:15px;
+    text-decoration:underline;
     border-bottom:1px solid #000;
   }
 

@@ -91,9 +91,8 @@
                 }
         
                 echo '<li class="info3">'.
-                $rec['day'].
-                '&nbsp;'.
-                '<a href="detail.php?id='.$rec['number'].'">'.$rec['information'].'</a>'.
+                
+                '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].'.'.$rec['information'].'</a>'.
                 '</li>';
               }
         
