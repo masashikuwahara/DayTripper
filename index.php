@@ -93,7 +93,7 @@
                 echo '<li class="info3">'.
                 $rec['day'].
                 '&nbsp;'.
-                $rec['information'].
+                '<a href="detail.php?id='.$rec['number'].'">'.$rec['information'].'</a>'.
                 '</li>';
               }
         
