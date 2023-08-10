@@ -15,6 +15,12 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <style>
+    .ad{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  </style>
   <title>DayTripperの記録</title>
 </head>
 <body>
@@ -48,6 +54,12 @@
     </div>
   </div>
 
+  <div style="text-align: center;">
+  <a href="https://px.a8.net/svt/ejp?a8mat=3TF2AW+CCQTO2+4D9Y+5ZU29" rel="nofollow">
+    <img border="0" width="234" height="60" alt="" src="https://www25.a8.net/svt/bgt?aid=230810216747&wid=001&eno=01&mid=s00000020383001007000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=3TF2AW+CCQTO2+4D9Y+5ZU29" alt="">
+  </div>
+
   <h1 id="title">DayTripperの記録</h1>
 
   <div id="title">
@@ -65,6 +77,12 @@
     <input class="sea" type="text" name="s" placeholder="例:姫路城、出雲大社">
     <input class="btn" type="submit" value="検索する">
   </form>
+
+  <div style="text-align: center;">
+  <a href="https://px.a8.net/svt/ejp?a8mat=3TF2AW+CSTJ02+14CS+6HMHT" rel="nofollow">
+    <img border="0" width="320" height="50" alt="" src="https://www24.a8.net/svt/bgt?aid=230810216774&wid=001&eno=01&mid=s00000005230001090000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=3TF2AW+CSTJ02+14CS+6HMHT" alt="">
+  </div>
 
   <?php
     try
@@ -95,9 +113,13 @@
                   $rec['day'].
                   $rec['information'].
                   '</li>';
+                }elseif($rec['kinds'] == 1){
+                  echo '<li class="info3">'.
+                  '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].''.$rec['information'].'</a>'.
+                  '</li>';
                 }else{
                   echo '<li class="info3">'.
-                  '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].'.'.$rec['information'].'</a>'.
+                  '<a href="culturals_detail.php?id='.$rec['number'].'">'.$rec['day'].''.$rec['information'].'</a>'.
                   '</li>';
                 }
               }
@@ -116,6 +138,12 @@
 
   <div class="insta">
     <a href="https://www.instagram.com/day_____tripper_official/" target="_blank" rel="noopener noreferrer"><img src="img/insta.png" width="30px" alt="インスタ"></a>
+  </div>
+
+  <div class="ad">
+  <a href="https://px.a8.net/svt/ejp?a8mat=3TF2AW+C210S2+455G+639IP" rel="nofollow">
+    <img border="0" width="234" height="60" alt="" src="https://www25.a8.net/svt/bgt?aid=230810216729&wid=001&eno=01&mid=s00000019330001023000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3TF2AW+C210S2+455G+639IP" alt="">
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>

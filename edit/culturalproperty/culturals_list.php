@@ -71,7 +71,7 @@ $castles = $dbh->prepare(" SELECT id, title FROM cultures LIMIT {$start}, 10 ");
 echo 'その他文化財一覧<br/><br/>';
 
 echo '<form method="post" action="culturals_branch.php">';
-echo '<input class="add" type="submit" name="add" value="文化財を追加する"><br />';
+echo '<input class="add" type="submit" name="add" value="文化財を追加"><br />';
 
 $castles->execute();
 $castles = $castles->fetchAll(PDO::FETCH_ASSOC);

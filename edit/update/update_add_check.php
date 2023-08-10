@@ -28,6 +28,7 @@ session();
     $update_day=$post['day'];
     $update_information=$post['information'];
     $update_id=$post['id'];
+    $update_kinds=$post['kinds'];
 
     if($update_day=='')
     {
@@ -61,6 +62,17 @@ session();
         echo$update_id;
         echo'<br />';
     }
+
+    if($update_kinds=='')
+    {
+        echo'<p style="color:#ff0000">idが入力されていません。</p><br />';
+    }
+    else
+    {
+        echo'真偽値:';
+        echo$update_kinds;
+        echo'<br />';
+    }
     
     if($update_day==''||$update_information=='')
     {
@@ -75,6 +87,7 @@ session();
         echo'<input type="hidden" name="day" value="'.$update_day.'">';
         echo'<input type="hidden" name="information" value="'.$update_information.'">';
         echo'<input type="hidden" name="id" value="'.$update_id.'">';
+        echo'<input type="hidden" name="kinds" value="'.$update_kinds.'">';
         echo'<br />';
         echo'<input class="btn" type="button" onclick="history.back()" value="戻る">&nbsp;';
         echo'<input class="btn" type="submit" value="決定する">';

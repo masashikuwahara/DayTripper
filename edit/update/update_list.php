@@ -71,7 +71,7 @@ $info = $dbh->prepare(" SELECT id, day, information FROM info ORDER BY id DESC L
 echo '更新情報一覧<br/><br/>';
 
 echo '<form method="post" action="update_branch.php">';
-echo '<input class="add" type="submit" name="add" value="更新情報を追加する"><br />';
+echo '<input class="add" type="submit" name="add" value="更新情報を追加"><br />';
 
 $info->execute();
 $info = $info->fetchAll(PDO::FETCH_ASSOC);

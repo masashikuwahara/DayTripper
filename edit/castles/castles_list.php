@@ -71,7 +71,7 @@ $castles = $dbh->prepare(" SELECT id, title FROM 100castles LIMIT {$start}, 10 "
 echo '城一覧<br/><br/>';
 
 echo '<form method="post" action="castles_branch.php">';
-echo '<input class="add" type="submit" name="add" value="城を追加する"><br />';
+echo '<input class="add" type="submit" name="add" value="城を追加"><br />';
 
 $castles->execute();
 $castles = $castles->fetchAll(PDO::FETCH_ASSOC);

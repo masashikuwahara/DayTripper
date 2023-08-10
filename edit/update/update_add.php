@@ -41,8 +41,10 @@ session();
     <input class="tex" type="text" name="day" ><br />
     更新内容を入力してください。<br />
     <input class="tex" type="text" name="information" ><br />
-    idを入力してください。<br />
+    idを入力してください。ページの更新の場合は空欄。<br />
     <input class="tex" type="text" name="id" ><br />
+    真偽値を入力してください。1:城 0:文化財<br />
+    <input class="tex" type="text" name="kinds" ><br />
     <input class="btn" type="button" onclick="history.back()"value="戻る">
     <input class="btn" type="submit" value="次のページへ">
   </form>
