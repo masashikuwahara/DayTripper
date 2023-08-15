@@ -45,6 +45,8 @@ session();
     <input class="tex" type="text" name="id" ><br />
     真偽値を入力してください。1:城 0:文化財<br />
     <input class="tex" type="text" name="kinds" ><br />
+    ページ更新の場合はURLを入力してください<br />
+    <input class="tex" type="text" name="url" ><br />
     <input class="btn" type="button" onclick="history.back()"value="戻る">
     <input class="btn" type="submit" value="次のページへ">
   </form>

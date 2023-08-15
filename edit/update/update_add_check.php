@@ -29,6 +29,7 @@ session();
     $update_information=$post['information'];
     $update_id=$post['id'];
     $update_kinds=$post['kinds'];
+    $update_url=$post['url'];
 
     if($update_day=='')
     {
@@ -73,6 +74,17 @@ session();
         echo$update_kinds;
         echo'<br />';
     }
+
+    if($update_url=='')
+    {
+        echo'<p style="color:#ff0000">URLが入力されていません。</p><br />';
+    }
+    else
+    {
+        echo'URL:';
+        echo$update_url;
+        echo'<br />';
+    }
     
     if($update_day==''||$update_information=='')
     {
@@ -88,6 +100,7 @@ session();
         echo'<input type="hidden" name="information" value="'.$update_information.'">';
         echo'<input type="hidden" name="id" value="'.$update_id.'">';
         echo'<input type="hidden" name="kinds" value="'.$update_kinds.'">';
+        echo'<input type="hidden" name="url" value="'.$update_url.'">';
         echo'<br />';
         echo'<input class="btn" type="button" onclick="history.back()" value="戻る">&nbsp;';
         echo'<input class="btn" type="submit" value="決定する">';

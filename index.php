@@ -109,9 +109,8 @@
                 }
                 if($rec['number']==null)
                 {
-                  echo '<li class="info4">'.
-                  $rec['day'].
-                  $rec['information'].
+                  echo '<li class="info3">'.
+                  '<a href="'.$rec['url'].'">'.$rec['day'].''.$rec['information'].'</a>'.
                   '</li>';
                 }elseif($rec['kinds'] == 1){
                   echo '<li class="info3">'.
