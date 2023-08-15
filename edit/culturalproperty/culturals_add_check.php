@@ -34,17 +34,6 @@ session();
     $culturals_img2=$_FILES['img2'];
     $culturals_img3=$_FILES['img3'];
 
-    if($culturals_cul=='')
-    {
-        echo'<p style="color:#ff0000">文化財番号が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'文化財番号:';
-        echo$culturals_cul;
-        echo'<br />';
-    }
-
     if($culturals_title=='')
     {
         echo'<p style="color:#ff0000">文化財名が入力されていません。</p><br />';
