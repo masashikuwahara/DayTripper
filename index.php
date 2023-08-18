@@ -141,7 +141,7 @@
   </div>
 
   <div class="ad">
-    <a href="milestones/index.html" target="_blank" rel="noopener noreferrer"><img src="milestones/1000posts.png" width="234px" alt="インスタ"></a>
+    <a href="milestones/" target="_blank" rel="noopener noreferrer"><img src="milestones/1000posts.png" width="234px" alt="インスタ"></a>
     <p>1000投稿記念ページのアーカイブです</p>
   </div>
 
