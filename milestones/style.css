@@ -1,0 +1,849 @@
+/* ↓400px以下で表示 */
+html {scroll-behavior: smooth;}
+
+.element {
+  width: 376px;
+  max-width: 376px;
+  margin: auto;
+}
+
+.count {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu, .menu span {
+display: inline-block;
+-webkit-transition: all .4s;
+transition: all .4s;
+box-sizing: border-box;
+}
+
+.menu {
+position: fixed;
+top: 20px;
+right: 25px;
+width: 35px;
+height: 22px;
+z-index: 10;
+}
+
+.menu span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  z-index: 10;
+}
+
+.menu.active span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  z-index: 10;
+}
+
+/* ボタンの動き */
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.menu{
+  position: fixed;/*ボタン内側の基点となるためrelativeを指定*/
+  top: 650px;
+  right: 25px;
+  width: 35px;
+  height: 22px;
+  background:#7cc7e8;
+    width: 70px;
+    height:70px;
+  border-radius: 50px;
+}
+
+/*ボタン内側*/
+.menu span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 20px;
+    height: 3px;
+    border-radius: 2px;
+  background: #fff;
+    width: 45%;
+  }
+
+.menu span:nth-of-type(1) {
+  top:23px; 
+}
+
+.menu span:nth-of-type(2) {
+  top:33px;
+}
+
+.menu span:nth-of-type(3) {
+  top:43px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.menu.active span:nth-of-type(1) {
+    top: 28px;
+    left: 20px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 45%;
+}
+
+.menu.active span:nth-of-type(2) {
+  opacity: 0;/*真ん中の線は透過*/
+}
+
+.menu.active span:nth-of-type(3){
+    top: 40px;
+    left: 20px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 45%;
+}
+
+/* メニュー */
+
+#nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  background-color:rgba(0, 0, 0, 0.74);
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+#nav ul {
+  position: absolute;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+#nav.active {
+  right: 0;
+  opacity: 1;
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  visibility: visible;
+}
+
+#nav li{
+  list-style: none;
+    text-align: center; 
+}
+
+#nav li a{
+  color: #fff;
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-transform: none;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+#nav ul li a:hover {
+  color: #f19db5;
+}
+
+.twi {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+img {
+  width: 100%;
+}
+
+/* 枠線の表示 */
+
+#menu01{
+  font-size: 50px;
+  margin-bottom: 100px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #7cc7e8;
+  border-radius: 8px;
+}
+
+#menu01 .about-title {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #7cc7e8;
+  font-weight: bold;
+}
+
+#menu02{
+  font-size: 50px;
+  margin-bottom: 100px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #7cc7e8;
+  border-radius: 8px;
+}
+
+#menu02 .intro-title {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #7cc7e8;
+  font-weight: bold;
+}
+
+
+#menu03{
+  font-size: 50px;
+  margin-bottom: 100px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #7cc7e8;
+  border-radius: 8px;
+}
+
+#menu03 .info-title {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #7cc7e8;
+  font-weight: bold;
+}
+
+#menu04{
+  font-size: 50px;
+  margin-bottom: 100px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #7cc7e8;
+  border-radius: 8px;
+}
+
+#menu04 .snsinsta {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #7cc7e8;
+  font-weight: bold;
+}
+
+.instagram-media {
+  position: relative;
+  top: 20px;
+  right: 25px;
+}
+
+#menu05{
+  font-size: 50px;
+  margin-bottom: 100px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #7cc7e8;
+  border-radius: 8px;
+}
+
+#menu05 .arc {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #7cc7e8;
+  font-weight: bold;
+}
+
+#menu06{
+  font-size: 50px;
+  margin-bottom: 100px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #7cc7e8;
+  border-radius: 8px;
+}
+
+#menu06 .sns {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #7cc7e8;
+  font-weight: bold;
+}
+
+/* 要素の表示 */
+
+.intro {
+  font-size: 20px;
+  margin: 0; 
+  padding: 0;
+}
+
+.info {
+  font-size: 20px;
+  display: flex;
+}
+
+.insta {
+  font-size: 25px;
+}
+
+.library {
+  font-size: 25px;
+  color: #7cc7e8;
+}
+
+a {
+  text-decoration: none;
+  color: #f19db5;
+}
+
+.share {
+  display: flex;
+  justify-content: center;
+}
+.fa-twitter {
+  color: #7cc7e8;
+  font-size: 50px;
+  position: relative;
+  right: 25px;
+}
+
+.fa-instagram {
+  color: #7cc7e8;
+  font-size: 50px;
+  position: relative;
+  left: 25px;
+}
+
+.aaa {
+  pointer-events: none;
+  font-size: 50px;
+  font: bold;
+}
+
+.line-green {
+  color: #7cc7e8;
+  padding-left: 75px;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #7cc7e8;
+}
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background:#fff;
+    text-align:center;
+    color:#fff;
+  }
+  
+  /* Loading画像中央配置　*/
+  #splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Loading アイコンの大きさ設定　*/
+  #splash_logo img {
+    width:260px;
+  }
+  
+  /* fadeUpをするアイコンの動き */
+  .fadeUp{
+  animation-name: fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+/* ↓400px以上で表示 */
+@media screen and (min-width: 419px) {  
+
+.element {
+    width: 700px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.count {
+  font-size: 50px;
+}
+
+.menu, .menu span {
+  display: inline-block;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  width: 35px;
+  height: 22px;
+  z-index: 10;
+}
+
+.menu span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  z-index: 10;
+}
+
+.menu.active span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  z-index: 10;
+}
+
+/* ボタンの動き */
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.menu{
+  position: fixed;/*ボタン内側の基点となるためrelativeを指定*/
+  top: 20px;
+  right: 25px;
+  width: 35px;
+  height: 22px;
+  background:#7cc7e8;
+    width: 70px;
+    height:70px;
+  border-radius: 50px;
+}
+
+/*ボタン内側*/
+.menu span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 20px;
+    height: 3px;
+    border-radius: 2px;
+  background: #fff;
+    width: 45%;
+  }
+
+.menu span:nth-of-type(1) {
+  top:23px; 
+}
+
+.menu span:nth-of-type(2) {
+  top:33px;
+}
+
+.menu span:nth-of-type(3) {
+  top:43px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.menu.active span:nth-of-type(1) {
+    top: 28px;
+    left: 20px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 45%;
+}
+
+.menu.active span:nth-of-type(2) {
+  opacity: 0;/*真ん中の線は透過*/
+}
+
+.menu.active span:nth-of-type(3){
+    top: 40px;
+    left: 20px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 45%;
+}
+
+/* メニュー表示 */
+
+/* メニュー表示 */
+
+#nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  background-color:rgba(0, 0, 0, 0.74);
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+#nav.active {
+  right: 0;
+  opacity: 1;
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  visibility: visible;
+}
+
+#nav ul {
+  margin: 20px 0;
+  padding: 20px 0;
+}
+
+#nav ul li {
+  list-style-type: none;
+}
+
+#nav ul li a {
+  display: block;
+  padding: 20px 0;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+#nav ul li a:hover {
+  color: #f19db5;
+}
+
+#page-link {
+  position: absolute;
+  top: 50px;
+}
+
+.twi {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+img {
+  width: 100%;
+}
+
+/* 枠線の表示 */
+
+#menu01{
+  font-size: 50px;
+  margin-bottom: 100px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #7cc7e8;
+  border-radius: 8px;
+}
+
+#menu01 .about-title {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #7cc7e8;
+  font-weight: bold;
+}
+
+#menu02{
+  font-size: 50px;
+  margin-bottom: 100px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #7cc7e8;
+  border-radius: 8px;
+}
+
+#menu02 .intro-title {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #7cc7e8;
+  font-weight: bold;
+}
+
+
+#menu03{
+  font-size: 50px;
+  margin-bottom: 100px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #7cc7e8;
+  border-radius: 8px;
+}
+
+#menu03 .info-title {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #7cc7e8;
+  font-weight: bold;
+}
+
+#menu04{
+  font-size: 50px;
+  margin-bottom: 100px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #7cc7e8;
+  border-radius: 8px;
+}
+
+#menu04 .snsinsta {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #7cc7e8;
+  font-weight: bold;
+}
+
+.instagram-media {
+  position: relative;
+  top: 20px;
+  left: 25px;
+}
+
+#menu05{
+  font-size: 50px;
+  margin-bottom: 100px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #7cc7e8;
+  border-radius: 8px;
+}
+
+#menu05 .arc {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #7cc7e8;
+  font-weight: bold;
+}
+
+#menu06{
+  font-size: 50px;
+  margin-bottom: 100px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #7cc7e8;
+  border-radius: 8px;
+}
+
+#menu06 .sns {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #7cc7e8;
+  font-weight: bold;
+}
+
+/* 要素の表示 */
+
+.intro {
+  font-size: 25px;
+  margin: 0; 
+  padding: 0;
+}
+
+.info {
+  font-size: 25px;
+  display: flex;
+}
+
+.insta {
+  font-size: 25px;
+}
+
+.library {
+  font-size: 25px;
+  color: #7cc7e8;
+}
+
+a {
+  text-decoration: none;
+  color: #f19db5;
+}
+
+.share {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-twitter {
+  color: #7cc7e8;
+  font-size: 50px;
+  position: relative;
+  right: 25px;
+}
+
+.fa-instagram {
+  color: #7cc7e8;
+  font-size: 50px;
+  position: relative;
+  left: 25px;
+}
+
+.aaa {
+  pointer-events: none;
+  font-size: 50px;
+  font: bold;
+}
+
+.line-green {
+  color: #7cc7e8;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #313333;
+}
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background:#fff;
+    text-align:center;
+    color:#fff;
+  }
+  
+  /* Loading画像中央配置　*/
+  #splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Loading アイコンの大きさ設定　*/
+  #splash_logo img {
+    width:260px;
+  }
+  
+  /* fadeUpをするアイコンの動き */
+  .fadeIn{
+  animation-name: fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+}
