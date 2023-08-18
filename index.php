@@ -111,15 +111,15 @@
                 if($rec['number']==null)
                 {
                   echo '<li class="info3">'.
-                  '<a href="'.$rec['url'].'">'.$rec['day'].''.$rec['information'].'</a>'.
+                  '<a href="'.$rec['url'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
                   '</li>';
                 }elseif($rec['kinds'] == 1){
                   echo '<li class="info3">'.
-                  '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].''.$rec['information'].'</a>'.
+                  '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
                   '</li>';
                 }else{
                   echo '<li class="info3">'.
-                  '<a href="culturals_detail.php?id='.$rec['number'].'">'.$rec['day'].''.$rec['information'].'</a>'.
+                  '<a href="culturals_detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
                   '</li>';
                 }
               }
