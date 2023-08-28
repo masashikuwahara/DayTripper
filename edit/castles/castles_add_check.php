@@ -28,11 +28,12 @@ session();
     $castles_cas=$post['cas'];
     $castles_title=$post['title'];
     $castles_structure=$post['structure'];
+    $castles_tenshu=$post['tenshu'];
     $castles_builder=$post['builder'];
     $castles_year=$post['year'];
     $castles_lord=$post['lord'];
+    $castles_remains=$post['remains'];
     $castles_specify1=$post['specify1'];
-    $castles_specify2=$post['specify2'];
     $castles_recommend=$post['recommend'];
     $castles_explan=$post['explan'];
     $castles_access=$post['access'];
@@ -75,6 +76,17 @@ session();
         echo'<br />';
     }
 
+    if($castles_tenshu=='')
+    {
+        echo'<p style="color:#ff0000">天守構造が入力されていません。</p><br />';
+    }
+    else
+    {
+        echo'天守構造:';
+        echo$castles_tenshu;
+        echo'<br />';
+    }
+
     if($castles_builder=='')
     {
         echo'<p style="color:#ff0000">築城主が入力されていません。</p><br />';
@@ -108,6 +120,17 @@ session();
         echo'<br />';
     }
 
+    if($castles_remains=='')
+    {
+        echo'<p style="color:#ff0000">遺構が入力されていません。</p><br />';
+    }
+    else
+    {
+        echo'遺構:';
+        echo$castles_remains;
+        echo'<br />';
+    }
+
     if($castles_specify1=='')
     {
         echo'<p style="color:#ff0000">指定文化財が入力されていません。</p><br />';
@@ -118,8 +141,6 @@ session();
         echo$castles_specify1;
         echo'<br />';
     }
-        echo$castles_specify2;
-        echo'<br />';
 
     if($castles_recommend=='')
     {
@@ -242,11 +263,12 @@ session();
         echo'<input type="hidden" name="cas" value="'.$castles_cas.'">';
         echo'<input type="hidden" name="title" value="'.$castles_title.'">';
         echo'<input type="hidden" name="structure" value="'.$castles_structure.'">';
+        echo'<input type="hidden" name="tenshu" value="'.$castles_tenshu.'">';
         echo'<input type="hidden" name="builder" value="'.$castles_builder.'">';
         echo'<input type="hidden" name="year" value="'.$castles_year.'">';
         echo'<input type="hidden" name="lord" value="'.$castles_lord.'">';
+        echo'<input type="hidden" name="remains" value="'.$castles_remains.'">';
         echo'<input type="hidden" name="specify1" value="'.$castles_specify1.'">';
-        echo'<input type="hidden" name="specify2" value="'.$castles_specify2.'">';
         echo'<input type="hidden" name="recommend" value="'.$castles_recommend.'">';
         echo'<input type="hidden" name="explan" value="'.$castles_explan.'">';
         echo'<input type="hidden" name="access" value="'.$castles_access.'">';

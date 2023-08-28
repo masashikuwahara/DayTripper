@@ -6,8 +6,8 @@ $castles_id=$_GET['id'];
 
 require('../../connect.php');
 $dbh->query('SET NAMES utf8');
-$sql = 'SELECT cas,title,structure,builder,year,lord,
-specify1,specify2,recommend,explan,access,img1,img2,img3,img4,img5
+$sql = 'SELECT cas,title,structure,tenshu,builder,year,lord,
+remains,specify1,recommend,explan,access,img1,img2,img3,img4,img5
  FROM 100castles WHERE id=?';
 $stmt = $dbh->prepare($sql);
 $data[]=$castles_id;
@@ -16,11 +16,12 @@ $stmt->execute($data);
 $cas =$stmt->fetch(PDO::FETCH_ASSOC);
 $castles_title=$cas['title'];
 $castles_structure=$cas['structure'];
+$castles_tenshu=$cas['tenshu'];
 $castles_builder=$cas['builder'];
 $castles_year=$cas['year'];
 $castles_lord=$cas['lord'];
+$castles_remains=$cas['remains'];
 $castles_specify1=$cas['specify1'];
-$castles_specify2=$cas['specify2'];
 $castles_recommend=$cas['recommend'];
 $castles_explan=$cas['explan'];
 $castles_access=$cas['access'];
@@ -157,6 +158,9 @@ $castles_img5=$cas['img5'];
     <h2>城郭構造</h2>
     <?php echo $castles_structure;?>
     <br />
+    <h2>天守構造</h2>
+    <?php echo $castles_tenshu;?>
+    <br />
     <h2>築城主</h2>
     <?php echo $castles_builder;?>
     <br />
@@ -166,10 +170,11 @@ $castles_img5=$cas['img5'];
     <h2>主な城主</h2>
     <?php echo $castles_lord;?>
     <br />
+    <h2>遺構</h2>
+    <?php echo $castles_remains;?>
+    <br />
     <h2>指定文化財</h2>
     <?php echo $castles_specify1;?>
-    <br />
-    <?php echo $castles_specify2;?>
     <br />
     <h2>おすすめ度</h2>
     <?php echo $castles_recommend;?>
