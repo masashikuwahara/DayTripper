@@ -40,7 +40,7 @@
             $a = mb_convert_encoding($a, "UTF-8", "auto");
             echo $a;
             echo '<div class="detail">';
-            echo "{$r['specify1']}"."<br />"."{$r['specify2']}".
+            echo "{$r['specify1']}"."<br />".
             "<br />"."{$r['explan']}"."<hr>";
             echo '</div>';
             echo '</div>';
