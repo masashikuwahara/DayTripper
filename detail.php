@@ -213,7 +213,7 @@ $castles_img5=$cas['img5'];
             </tr>
             <tr>
                 <th>遺構</th>
-                <td><?php echo $castles_遺構;?></td>
+                <td><?php echo $castles_remains;?></td>
             </tr>
             <tr>
                 <th>おすすめ度</th>
