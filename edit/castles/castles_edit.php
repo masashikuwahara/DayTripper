@@ -43,8 +43,8 @@ session();
 
         require('../../connect.php');
         $dbh->query('SET NAMES utf8');
-        $sql = 'SELECT cas,title,structure,builder,year,lord,
-        specify1,specify2,recommend,explan,access,img1,img2,img3,img4,img5
+        $sql = 'SELECT cas,title,structure,tenshu,builder,year,lord,
+        remains,specify1,recommend,explan,access,img1,img2,img3,img4,img5
         FROM 100castles WHERE id=?';
         $stmt = $dbh->prepare($sql);
         $data[]=$castles_id;
@@ -58,7 +58,6 @@ session();
         $castles_year=$cas['year'];
         $castles_lord=$cas['lord'];
         $castles_specify1=$cas['specify1'];
-        $castles_specify2=$cas['specify2'];
         $castles_recommend=$cas['recommend'];
         $castles_explan=$cas['explan'];
         $castles_access=$cas['access'];
