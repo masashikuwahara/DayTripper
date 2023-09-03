@@ -40,8 +40,8 @@
             $a = mb_convert_encoding($a, "UTF-8", "auto");
             echo $a;
             echo '<div class="detail">';
-            echo "{$r['specify1']}"."<br />".
-            "<br />"."{$r['explan']}"."<hr>";
+            echo "指定文化財："."{$r['specify1']}"."<br />".
+            "おすすめ度："."{$r['recommend']}"."<br />"."{$r['explan']}"."<hr>";
             echo '</div>';
             echo '</div>';
           } 
