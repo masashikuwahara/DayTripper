@@ -37,13 +37,13 @@ session();
 <div class="form">
   <h1>更新情報追加</h1>
   <form method="post" action="update_add_check.php" enctype="multipart/form-data">
-    更新日時を入力してください。yyyy-mm-dd<br />
+    更新日時を入力してください。yyyy.mm.dd<br />
     <input class="tex" type="text" name="day" ><br />
     更新内容を入力してください。<br />
     <input class="tex" type="text" name="information" ><br />
     idを入力してください。ページの更新の場合は空欄。<br />
     <input class="tex" type="text" name="id" ><br />
-    真偽値を入力してください。1:城 0:文化財<br />
+    真偽値を入力してください。1:城 0:文化財 空欄：ページ更新<br />
     <input class="tex" type="text" name="kinds" ><br />
     ページ更新の場合はURLを入力してください<br />
     <input class="tex" type="text" name="url" ><br />
