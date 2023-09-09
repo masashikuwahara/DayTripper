@@ -66,7 +66,7 @@ session();
 
     if($update_kinds=='')
     {
-        echo'<p style="color:#ff0000">idが入力されていません。</p><br />';
+        echo'<p style="color:#ff0000">真偽値が入力されていません。</p><br />';
     }
     else
     {

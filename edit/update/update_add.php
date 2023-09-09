@@ -44,7 +44,11 @@ session();
     idを入力してください。ページの更新の場合は空欄。<br />
     <input class="tex" type="text" name="id" ><br />
     真偽値を入力してください。1:城 0:文化財 空欄：ページ更新<br />
-    <input class="tex" type="text" name="kinds" ><br />
+    <select name="kinds" id="" class="tex">
+      <option></option>
+      <option>1</option>
+      <option>0</option>
+    </select><br />
     ページ更新の場合はURLを入力してください<br />
     <input class="tex" type="text" name="url" ><br />
     <input class="btn" type="button" onclick="history.back()"value="戻る">
