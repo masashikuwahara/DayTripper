@@ -34,6 +34,7 @@ $castles_img5=$cas['img5'];
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $castles_title; ?></title>
     <style>
         .btn{
