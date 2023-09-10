@@ -47,6 +47,11 @@
           <p>続日本100名城</p>
         </swiper-slide>
 
+        <swiper-slide>
+          <a href="other_castles.php"><img src="img/other.jpg" alt="image"></a>
+          <p>その他の城</p>
+        </swiper-slide>
+
         <div class="swiper-pagination"  slot="pagination"></div>
 
         <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
