@@ -75,6 +75,30 @@
       初めての方ははじめにのページをご覧ください。
     </p> 
   </div>
+
+  <p style="text-align: center;">今のあなたにおすすめな城↓</p><br />
+
+<?php
+try{
+  require('connect.php');
+  $dbh->query('SET NAMES utf8');
+  $sql='SELECT * FROM 100castles ORDER BY RAND() ';
+  $stmt=$dbh->prepare($sql);
+  $stmt->execute();
+
+  $rec=$stmt->fetch(PDO::FETCH_ASSOC);
+  $img_name='<img style="width:360px" src="img/'.$rec['img1'].'">';
+
+  echo '<div style="text-align: center;">'.'<a href="detail.php?id='.$rec['id'].'">'.
+$img_name.'<br />'.$rec['title'].'</a>'.'</div>';
+
+}
+catch (Exception $e)
+{
+  echo 'ただいま障害により大変ご迷惑をお掛けしております。';
+  exit();
+}
+?>
   
   <p style="text-align: center;">城や文化財を検索する</p>
   <form  style="text-align: center;" class="cp_ipradio" action="search.php" method="get">
