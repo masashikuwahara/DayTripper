@@ -90,7 +90,7 @@ try{
   $img_name='<img style="width:360px" src="img/'.$rec['img1'].'">';
 
   echo '<div style="text-align: center;">'.'<a href="detail.php?id='.$rec['id'].'">'.
-$img_name.'<br />'.$rec['title'].'</a>'.'</div>';
+  $img_name.'<br />'.$rec['title'].'</a>'.'</div>';
 
 }
 catch (Exception $e)

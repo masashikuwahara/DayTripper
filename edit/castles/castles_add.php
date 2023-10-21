@@ -55,8 +55,14 @@ session();
     <input class="tex" type="text" name="remains" ><br />
     指定文化財を入力してください。<br />
     <input class="tex" type="text" name="specify1" ><br />
-    おすすめ度を★5つで入力してください。★☆<br />
-    <input class="tex" type="text" name="recommend" ><br />
+    おすすめ度を入力してください。<br />
+    <select class="tex" name="recommend" id="" >
+      <option>★☆☆☆☆</option>
+      <option>★★☆☆☆</option>
+      <option>★★★☆☆</option>
+      <option>★★★★☆</option>
+      <option>★★★★★</option>
+    </select><br />
     説明を入力してください。<br />
     <textarea class="textb" type="text" name="explan" ></textarea><br />
     アクセスを入力してください。widthを600から100%に変更。<br />

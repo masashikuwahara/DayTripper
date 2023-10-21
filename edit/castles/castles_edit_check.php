@@ -33,7 +33,6 @@ session();
     $castles_year=$post['year'];
     $castles_lord=$post['lord'];
     $castles_specify1=$post['specify1'];
-    $castles_specify2=$post['specify2'];
     $castles_recommend=$post['recommend'];
     $castles_explan=$post['explan'];
     $castles_access=$post['access'];
@@ -124,8 +123,6 @@ session();
         echo$castles_specify1;
         echo'<br />';
     }
-        echo$castles_specify2;
-        echo'<br />';
 
     if($castles_recommend=='')
     {
@@ -253,7 +250,6 @@ session();
         echo'<input type="hidden" name="year" value="'.$castles_year.'">';
         echo'<input type="hidden" name="lord" value="'.$castles_lord.'">';
         echo'<input type="hidden" name="specify1" value="'.$castles_specify1.'">';
-        echo'<input type="hidden" name="specify2" value="'.$castles_specify2.'">';
         echo'<input type="hidden" name="recommend" value="'.$castles_recommend.'">';
         echo'<input type="hidden" name="explan" value="'.$castles_explan.'">';
         echo'<input type="hidden" name="access" value="'.$castles_access.'">';

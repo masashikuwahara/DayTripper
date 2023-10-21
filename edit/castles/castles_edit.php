@@ -153,13 +153,18 @@ session();
       <input class="tex" type="text" name="lord" value="<?php echo $castles_lord; ?>"><br />
       指定文化財を入力してください。(2つまで)<br />
       <input class="tex" type="text" name="specify1" value="<?php echo $castles_specify1; ?>"><br /><br />
-      <input class="tex" type="text" name="specify2" value="<?php echo $castles_specify2; ?>"><br />
       おすすめ度を★5つで入力してください。★☆<br />
-      <input class="tex" type="text" name="recommend" value="<?php echo $castles_recommend; ?>"><br />
+      <select class="tex" name="recommend" id="" value="<?php echo $castles_recommend; ?>" >
+        <option>★☆☆☆☆</option>
+        <option>★★☆☆☆</option>
+        <option>★★★☆☆</option>
+        <option>★★★★☆</option>
+        <option>★★★★★</option>
+      </select><br />
       説明を入力してください。<br />
       <textarea class="textb" type="text" name="explan" ><?php echo $castles_explan; ?></textarea><br />
       アクセスを入力してください。<br />
-      <input class="texta" type="text" name="access" ><br />
+      <textarea class="texta" type="text" name="access" ></textarea><br />
       画像を選んでください。<br />
       <input type="file" name="img1" ><br /><br />
       <input type="file" name="img2" ><br /><br />

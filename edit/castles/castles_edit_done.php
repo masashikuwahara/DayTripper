@@ -21,7 +21,6 @@ session();
         $castles_year=$post['year'];
         $castles_lord=$post['lord'];
         $castles_specify1=$post['specify1'];
-        $castles_specify2=$post['specify2'];
         $castles_recommend=$post['recommend'];
         $castles_explan=$post['explan'];
         $castles_access=$post['access'];
@@ -39,7 +38,7 @@ session();
         require('../../connect.php');
 
         $sql = 'UPDATE 100castles SET cas=?,title=?,structure=?,builder=?,year=?,
-        lord=?,specify1=?,specify2=?,recommend=?,explan=?,access=?,
+        lord=?,specify1=?,recommend=?,explan=?,access=?,
         img1=?,img2=?,img3=?,img4=?,img5=? WHERE id=?';
         $stmt = $dbh->prepare($sql);
         $data[] = $castles_cas;
@@ -49,7 +48,6 @@ session();
         $data[] = $castles_year;
         $data[] = $castles_lord;
         $data[] = $castles_specify1;
-        $data[] = $castles_specify2;
         $data[] = $castles_recommend;
         $data[] = $castles_explan;
         $data[] = $castles_access;
