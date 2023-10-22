@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="description" content="DayTripperの記録を集めたサイトです。城や文化財をを中心に訪れておりカテゴリー別に分けて紹介しています。">
+  <meta name="description" content="DayTripperの旅の記録を集めたサイトです。城や文化財を中心に訪れておりカテゴリー別に分けて紹介しています。">
   <meta name="format-detection" content="email=no,telephone=no,address=no">
   <meta property="og:title" content="DayTripperの記録">
-  <meta property="og:description" content="DayTripperの記録を集めたサイトです。城や文化財をを中心に訪れておりカテゴリー別に分けて紹介しています。">
+  <meta property="og:description" content="DayTripperの旅の記録を集めたサイトです。城や文化財を中心に訪れておりカテゴリー別に分けて紹介しています。">
   <meta property="og:image" content="サムネイル画像までのURL">
   <meta property="og:url" content="https://daytripper.site"> 
   <meta property="og:type" content="website">
@@ -15,9 +15,16 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jmap.js"></script>
+  <script type="text/javascript" src="jquery.japan-map.min.js"></script>
   <link rel="canonical" href="https://daytripper.site/">
   <style>
     .ad{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    #myMapJapan{
       text-align: center;
       margin-bottom: 30px;
     }
@@ -70,11 +77,16 @@
 
   <div id="title">
     <p>
-      ここはわたくし、DayTripperのこれまでの旅の記録をまとめたものです。日本100名城、続日本100名城、文化財を中心に
-      日本各地いろいろな場所へ行ってきまして、簡単にではありますがカテゴリー別に分けて紹介しています。
-      初めての方ははじめにのページをご覧ください。
+      ここはわたくし、DayTripperのこれまでの旅の記録をまとめたものです。これまで日本100名城、続日本100名城、文化財を中心に
+      日本各地いろいろな場所へ行ってきました。そこで簡単にではありますがカテゴリー別に分けて紹介しようと思いこのサイトを立ち上げました。
+      お時間の許す限りご覧ください。
+      初めての方は、まずははじめにのページをご覧ください。
     </p> 
   </div>
+
+  <p style="text-align: center;">都道府県別お城マップ</p><br />
+
+  <div id="myMapJapan"></div>
 
   <p style="text-align: center;">今のあなたにおすすめな城↓</p><br />
 
@@ -183,7 +195,6 @@ catch (Exception $e)
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.3/dist/vue-awesome-swiper.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="swiper.js"></script>
   <script type="text/javascript" src="menu.js"></script>
   <?php require('footer.php'); ?>
