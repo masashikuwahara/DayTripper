@@ -20,6 +20,10 @@ a{
 	display: none;
 }
 
+#info4{
+	display: none;
+}
+
 /*モーダルの横幅を変更したい場合*/
 .modaal-container{
     max-width: 600px;
@@ -73,7 +77,7 @@ a{
 
 .akita{
   height: 40px;
-  width: 60px;
+  width: 59px;
   border-radius: 3px;
   background: #6495ed;
   margin-top: 3px;
@@ -89,3 +93,20 @@ a{
   opacity: 0.7;
 }
 
+.iwate{
+  height: 40px;
+  width: 59px;
+  border-radius: 3px;
+  background: #6495ed;
+  margin-top: 3px;
+  position: relative;
+  top: 144px;
+  right: 270px;
+}
+
+.iwate:hover{
+  height: 40px;
+  width: 60px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
