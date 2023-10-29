@@ -1,7 +1,11 @@
 a{
-  display: block;
+  display: inline-block;
   text-decoration: none ;
   color: black;
+}
+
+.container{
+  text-align: center;
 }
 /*infoエリアをはじめは非表示*/
 #info{
@@ -9,6 +13,10 @@ a{
 }
 
 #info2{
+	display: none;
+}
+
+#info3{
 	display: none;
 }
 
@@ -30,31 +38,53 @@ a{
 	background:#666;
 }
 
+/* ここから各都道府県別 */
 .hokkaido{
-  height: 130px;
-  width: 170px;
+  height: 100px;
+  width: 140px;
   border-radius: 3px;
-  background: #7f7fff;
+  background: #7b68ee;
 }
 
 .hokkaido:hover{
-  height: 130px;
-  width: 170px;
+  height: 100px;
+  width: 140px;
   border-radius: 3px;
   opacity: 0.7;
 }
 
 .aomori{
-  height: 65px;
-  width: 145px;
+  height: 40px;
+  width: 120px;
   border-radius: 3px;
-  background: #7f7fff;
-  margin-top: 5px;
+  background: #6495ed;
+  margin-top: 3px;
+  position: relative;
+  top: 102px;
+  right: 144px;
 }
 
 .aomori:hover{
-  height: 65px;
-  width: 145px;
+  height: 40px;
+  width: 120px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.akita{
+  height: 40px;
+  width: 60px;
+  border-radius: 3px;
+  background: #6495ed;
+  margin-top: 3px;
+  position: relative;
+  top: 144px;
+  right: 268px;
+}
+
+.akita:hover{
+  height: 40px;
+  width: 60px;
   border-radius: 3px;
   opacity: 0.7;
 }
