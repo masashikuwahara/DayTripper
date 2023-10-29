@@ -24,6 +24,70 @@ a{
 	display: none;
 }
 
+#info5{
+	display: none;
+}
+
+#info6{
+	display: none;
+}
+
+#info7{
+	display: none;
+}
+
+#info8{
+	display: none;
+}
+
+#info9{
+	display: none;
+}
+
+#info10{
+	display: none;
+}
+
+#info11{
+	display: none;
+}
+
+#info12{
+	display: none;
+}
+
+#info13{
+	display: none;
+}
+
+#info14{
+	display: none;
+}
+
+#info15{
+	display: none;
+}
+
+#info16{
+	display: none;
+}
+
+#info17{
+	display: none;
+}
+
+#info18{
+	display: none;
+}
+
+#info19{
+	display: none;
+}
+
+#info20{
+	display: none;
+}
+
 /*モーダルの横幅を変更したい場合*/
 .modaal-container{
     max-width: 600px;
@@ -88,7 +152,7 @@ a{
 
 .akita:hover{
   height: 40px;
-  width: 60px;
+  width: 59px;
   border-radius: 3px;
   opacity: 0.7;
 }
@@ -106,7 +170,61 @@ a{
 
 .iwate:hover{
   height: 40px;
-  width: 60px;
+  width: 59px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.yamagata{
+  height: 40px;
+  width: 59px;
+  border-radius: 3px;
+  background: #6495ed;
+  margin-top: 3px;
+  position: relative;
+  top: 186px;
+  right: 394px;
+}
+
+.yamagata:hover{
+  height: 40px;
+  width: 59px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.miyagi{
+  height: 40px;
+  width: 59px;
+  border-radius: 3px;
+  background: #6495ed;
+  margin-top: 3px;
+  position: relative;
+  top: 186px;
+  right: 396px;
+}
+
+.miyagi:hover{
+  height: 40px;
+  width: 59px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.fukushima{
+  height: 40px;
+  width: 78px;
+  border-radius: 3px;
+  background: #6495ed;
+  margin-top: 3px;
+  position: relative;
+  top: 228px;
+  right: 478px;
+}
+
+.fukushima:hover{
+  height: 40px;
+  width: 78px;
   border-radius: 3px;
   opacity: 0.7;
 }
