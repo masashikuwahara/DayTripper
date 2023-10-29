@@ -16,15 +16,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="jmap.js"></script>
-  <script type="text/javascript" src="jquery.japan-map.min.js"></script>
   <link rel="canonical" href="https://daytripper.site/">
   <style>
     .ad{
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    #myMapJapan{
       text-align: center;
       margin-bottom: 30px;
     }
@@ -85,8 +79,6 @@
   </div>
 
   <p style="text-align: center;">都道府県別お城マップ</p><br />
-
-  <div id="myMapJapan"></div>
 
   <p style="text-align: center;">今のあなたにおすすめな城↓</p><br />
 
