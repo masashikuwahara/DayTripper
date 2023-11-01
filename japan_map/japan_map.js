@@ -9,7 +9,7 @@
 	
 	
 	$(".modal-open").modaal({
-	start_open:flag, 
+	// start_open:flag, 
 	overlay_close:true,
 	before_open:function(){
 		$('html').css('overflow-y','hidden');

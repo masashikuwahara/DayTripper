@@ -1,3 +1,4 @@
+
 a{
   display: inline-block;
   text-decoration: none ;
@@ -104,6 +105,62 @@ a{
 .modaal-close:hover:after,
 .modaal-close:hover:before{
 	background:#666;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+header{
+  background: #333;
+}
+
+h1{
+  font-size:1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  margin-top: 20px;
+  color: #000;
+}
+
+h2{
+  font-size:1.2rem;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+p,ul{
+  margin-top:20px;  
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  color:#333;
+    outline: none;
+}
+
+small{
+  background:#333;
+  color:#fff;
+  display: block;
+  text-align: center;
+  padding:20px;
+}
+
+
+section{
+  padding:30px;
+}
+
+section:nth-child(2n){
+  background:#f3f3f3; 
+}
+
+img{
+  max-width: 100%;
+  height: auto;
 }
 
 /* ここから各都道府県別 */
@@ -225,6 +282,132 @@ a{
 .fukushima:hover{
   height: 40px;
   width: 78px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.ibaraki{
+  height: 59px;
+  width: 38px;
+  border-radius: 3px;
+  background: #87ceeb;
+  margin-top: 3px;
+  position: relative;
+  top: 294px;
+  right: 520px;
+}
+
+.ibaraki:hover{
+  height: 59px;
+  width: 38px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.tochigi{
+  height: 59px;
+  width: 41px;
+  border-radius: 3px;
+  background: #87ceeb;
+  margin-top: 3px;
+  position: relative;
+  top: 294px;
+  right: 605px;
+}
+
+.tochigi:hover{
+  height: 59px;
+  width: 41px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.gunma{
+  height: 59px;
+  width: 38px;
+  border-radius: 3px;
+  background: #87ceeb;
+  margin-top: 3px;
+  position: relative;
+  top: 294px;
+  right: 690px;
+}
+
+.gunma:hover{
+  height: 59px;
+  width: 38px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.chiba{
+  height: 100px;
+  width: 38px;
+  border-radius: 3px;
+  background: #87ceeb;
+  margin-top: 3px;
+  position: relative;
+  top: 355px;
+  right: 649px;
+}
+
+.chiba:hover{
+  height: 89px;
+  width: 38px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.saitama{
+  height: 40px;
+  width: 81px;
+  border-radius: 3px;
+  background: #87ceeb;
+  margin-top: 3px;
+  position: relative;
+  top: 331px;
+  right: 774px;
+}
+
+.saitama:hover{
+  height: 40px;
+  width: 81px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.tokyo{
+  height: 40px;
+  width: 81px;
+  border-radius: 3px;
+  background: #87ceeb;
+  margin-top: 3px;
+  position: relative;
+  top: 373px;
+  right: 859px;
+}
+
+.tokyo:hover{
+  height: 40px;
+  width: 81px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.kanagawa{
+  height: 40px;
+  width: 81px;
+  border-radius: 3px;
+  background: #87ceeb;
+  margin-top: 3px;
+  position: relative;
+  top: 415px;
+  right: 944px;
+}
+
+.kanagawa:hover{
+  height: 40px;
+  width: 81px;
   border-radius: 3px;
   opacity: 0.7;
 }
