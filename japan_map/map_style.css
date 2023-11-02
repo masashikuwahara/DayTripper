@@ -1,4 +1,3 @@
-
 a{
   display: inline-block;
   text-decoration: none ;
@@ -114,6 +113,260 @@ header{
 }
 
 h1{
+  font-size:1.0rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  margin-top: 20px;
+  color: #000;
+}
+
+h2{
+  font-size:1.0rem;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+p,ul{
+  margin-top:20px;  
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  color:#333;
+    outline: none;
+}
+
+small{
+  background:#333;
+  color:#fff;
+  display: block;
+  text-align: center;
+  padding:20px;
+}
+
+
+section{
+  padding:30px;
+}
+
+section:nth-child(2n){
+  background:#f3f3f3; 
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* ここから各都道府県別 */
+.hokkaido{
+  height: 100px;
+  width: 140px;
+  border-radius: 3px;
+  background: #7b68ee;
+  position: absolute;
+  right: 10px;
+}
+
+.hokkaido:hover{
+  height: 100px;
+  width: 140px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.aomori{
+  height: 40px;
+  width: 120px;
+  border-radius: 3px;
+  background: #6495ed;
+  margin-top: 3px;
+  position: absolute;
+  top: 194px;
+  right: 30px;
+}
+
+.aomori:hover{
+  height: 40px;
+  width: 120px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.akita{
+  height: 40px;
+  width: 59px;
+  border-radius: 3px;
+  background: #6495ed;
+  margin-top: 3px;
+  position: absolute;
+  top: 236px;
+  right: 90px;
+}
+
+
+@media screen and (min-width: 420px) {
+a{
+  display: inline-block;
+  text-decoration: none ;
+  color: black;
+  font-size: 12px;
+}
+
+.container{
+  position: relative;
+  left: 1000px;
+}
+/*infoエリアをはじめは非表示*/
+#info{
+	display: none;
+}
+
+#info2{
+	display: none;
+}
+
+#info3{
+	display: none;
+}
+
+#info4{
+	display: none;
+}
+
+#info5{
+	display: none;
+}
+
+#info6{
+	display: none;
+}
+
+#info7{
+	display: none;
+}
+
+#info8{
+	display: none;
+}
+
+#info9{
+	display: none;
+}
+
+#info10{
+	display: none;
+}
+
+#info11{
+	display: none;
+}
+
+#info12{
+	display: none;
+}
+
+#info13{
+	display: none;
+}
+
+#info14{
+	display: none;
+}
+
+#info15{
+	display: none;
+}
+
+#info16{
+	display: none;
+}
+
+#info17{
+	display: none;
+}
+
+#info18{
+	display: none;
+}
+
+#info19{
+	display: none;
+}
+
+#info20{
+	display: none;
+}
+
+#info21{
+	display: none;
+}
+
+#info22{
+	display: none;
+}
+
+#info23{
+	display: none;
+}
+
+#info24{
+	display: none;
+}
+
+#info25{
+	display: none;
+}
+
+#info26{
+	display: none;
+}
+
+#info27{
+	display: none;
+}
+
+#info28{
+	display: none;
+}
+
+#info29{
+	display: none;
+}
+
+#info30{
+	display: none;
+}
+
+/*モーダルの横幅を変更したい場合*/
+.modaal-container{
+    max-width: 600px;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after, 
+.modaal-close:before{
+	background:#ccc;	
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+	background:#666;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+header{
+  background: #333;
+}
+
+h1{
   font-size:1.5rem;
   text-align: center;
   text-transform: uppercase;
@@ -169,6 +422,8 @@ img{
   width: 140px;
   border-radius: 3px;
   background: #7b68ee;
+  position: relative;
+  left: 0px;
 }
 
 .hokkaido:hover{
@@ -293,7 +548,7 @@ img{
   background: #87ceeb;
   margin-top: 3px;
   position: relative;
-  top: 294px;
+  top: 270px;
   right: 520px;
 }
 
@@ -311,7 +566,7 @@ img{
   background: #87ceeb;
   margin-top: 3px;
   position: relative;
-  top: 294px;
+  top: 270px;
   right: 605px;
 }
 
@@ -329,7 +584,7 @@ img{
   background: #87ceeb;
   margin-top: 3px;
   position: relative;
-  top: 294px;
+  top: 270px;
   right: 690px;
 }
 
@@ -347,7 +602,7 @@ img{
   background: #87ceeb;
   margin-top: 3px;
   position: relative;
-  top: 355px;
+  top: 331px;
   right: 649px;
 }
 
@@ -410,4 +665,168 @@ img{
   width: 81px;
   border-radius: 3px;
   opacity: 0.7;
+}
+
+.niigata{
+  height: 40px;
+  width: 78px;
+  border-radius: 3px;
+  background: #00ff7f;
+  margin-top: 3px;
+  position: relative;
+  top: 228px;
+  right: 1066px;
+}
+
+.niigata:hover{
+  height: 40px;
+  width: 78px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.nagano{
+  height: 83px;
+  width: 35px;
+  border-radius: 3px;
+  background: #00ff7f;
+  margin-top: 3px;
+  position: relative;
+  top: 288px;
+  right: 1148px;
+}
+
+.nagano:hover{
+  height: 83px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.yamanashi{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  background: #00ff7f;
+  margin-top: 3px;
+  position: relative;
+  top: 373px;
+  right: 1187px;
+}
+
+.yamanashi:hover{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.shizuoka{
+  height: 58px;
+  width: 35px;
+  border-radius: 3px;
+  background: #00ff7f;
+  margin-top: 3px;
+  position: relative;
+  top: 415px;
+  right: 1226px;
+}
+
+.shizuoka:hover{
+  height: 58px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.toyama{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  background: #00ff7f;
+  margin-top: 3px;
+  position: relative;
+  top: 246px;
+  right: 1302px;
+}
+
+.toyama:hover{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.gifu{
+  height: 83px;
+  width: 35px;
+  border-radius: 3px;
+  background: #00ff7f;
+  margin-top: 3px;
+  position: relative;
+  top: 288px;
+  right: 1341px;
+}
+
+.gifu:hover{
+  height: 83px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.aichi{
+  height: 60px;
+  width: 35px;
+  border-radius: 3px;
+  background: #00ff7f;
+  margin-top: 3px;
+  position: relative;
+  top: 373px;
+  right: 1380px;
+}
+
+.aichi:hover{
+  height: 60px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.ishikawa{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  background: #00ff7f;
+  margin-top: 3px;
+  position: relative;
+  top: 226px;
+  right: 1456px;
+}
+
+.ishikawa:hover{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.fukui{
+  height: 40px;
+  width: 59px;
+  border-radius: 3px;
+  background: #00ff7f;
+  margin-top: 3px;
+  position: relative;
+  top: 250px;
+  right: 1519px;
+}
+
+.fukui:hover{
+  height: 40px;
+  width: 59px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
 }
