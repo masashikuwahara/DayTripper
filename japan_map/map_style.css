@@ -776,7 +776,7 @@ img{
 }
 
 .aichi{
-  height: 60px;
+  height: 62px;
   width: 35px;
   border-radius: 3px;
   background: #00ff7f;
@@ -787,7 +787,7 @@ img{
 }
 
 .aichi:hover{
-  height: 60px;
+  height: 62px;
   width: 35px;
   border-radius: 3px;
   opacity: 0.7;
@@ -825,6 +825,132 @@ img{
 .fukui:hover{
   height: 40px;
   width: 59px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.shiga{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  background: #fff352;
+  margin-top: 3px;
+  position: relative;
+  top: 310px;
+  right: 1558px;
+}
+
+.shiga:hover{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.nara{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  background: #fff352;
+  margin-top: 3px;
+  position: relative;
+  top: 352px;
+  right: 1597px;
+}
+
+.nara:hover{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.mie{
+  height: 41px;
+  width: 35px;
+  border-radius: 3px;
+  background: #fff352;
+  margin-top: 3px;
+  position: relative;
+  top: 394px;
+  right: 1636px;
+}
+
+.mie:hover{
+  height: 41px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.kyoto{
+  height: 61px;
+  width: 35px;
+  border-radius: 3px;
+  background: #fff352;
+  margin-top: 3px;
+  position: relative;
+  top: 310px;
+  right: 1712px;
+}
+
+.kyoto:hover{
+  height: 61px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.osaka{
+  height: 61px;
+  width: 35px;
+  border-radius: 3px;
+  background: #fff352;
+  margin-top: 3px;
+  position: relative;
+  top: 374px;
+  right: 1751px;
+}
+
+.osaka:hover{
+  height: 61px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.wakayama{
+  height: 40px;
+  width: 59px;
+  border-radius: 3px;
+  background: #fff352;
+  margin-top: 3px;
+  position: relative;
+  top: 420px;
+  right: 1790px;
+}
+
+.wakayama:hover{
+  height: 40px;
+  width: 59px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.hyogo{
+  height: 83px;
+  width: 35px;
+  border-radius: 3px;
+  background: #fff352;
+  margin-top: 3px;
+  position: relative;
+  top: 331px;
+  right: 1891px;
+}
+
+.hyogo:hover{
+  height: 83px;
+  width: 35px;
   border-radius: 3px;
   opacity: 0.7;
 }
