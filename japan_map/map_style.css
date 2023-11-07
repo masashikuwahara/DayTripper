@@ -219,7 +219,7 @@ a{
 
 .container{
   position: relative;
-  left: 1000px;
+  left: 1200px;
 }
 /*infoエリアをはじめは非表示*/
 #info{
@@ -339,6 +339,26 @@ a{
 }
 
 #info30{
+	display: none;
+}
+
+#info31{
+	display: none;
+}
+
+#info32{
+	display: none;
+}
+
+#info33{
+	display: none;
+}
+
+#info34{
+	display: none;
+}
+
+#info35{
 	display: none;
 }
 
@@ -945,10 +965,100 @@ img{
   margin-top: 3px;
   position: relative;
   top: 331px;
-  right: 1891px;
+  right: 1890px;
 }
 
 .hyogo:hover{
+  height: 83px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.tottori{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  background: #ffbf7f;
+  margin-top: 3px;
+  position: relative;
+  top: 331px;
+  right: 1966px;
+}
+
+.tottori:hover{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.okayama{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  background: #ffbf7f;
+  margin-top: 3px;
+  position: relative;
+  top: 374px;
+  right: 2005px;
+}
+
+.okayama:hover{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.shimane{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  background: #ffbf7f;
+  margin-top: 3px;
+  position: relative;
+  top: 331px;
+  right: 2081px;
+}
+
+.shimane:hover{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.hiroshima{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  background: #ffbf7f;
+  margin-top: 3px;
+  position: relative;
+  top: 374px;
+  right: 2120px;
+}
+
+.hiroshima:hover{
+  height: 40px;
+  width: 35px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.yamaguchi{
+  height: 83px;
+  width: 35px;
+  border-radius: 3px;
+  background: #ffbf7f;
+  margin-top: 3px;
+  position: relative;
+  top: 210px;
+  right: 1228px;
+}
+
+.yamaguchi:hover{
   height: 83px;
   width: 35px;
   border-radius: 3px;
