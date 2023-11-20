@@ -33,12 +33,12 @@ img {
 }
 
 a {
-  font-size: 25px;
+  font-size: 30px;
   text-decoration: none;
 }
 
 p {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #jp_map li a { height:12%; width:7%; }
@@ -105,5 +105,5 @@ p {
   #jp_map li.hokkaido a span, #jp_map li.aomori a span, #jp_map li.akita a span, #jp_map li.iwate a span, #jp_map li.yamagata a span, #jp_map li.miyagi a span, #jp_map li.nigata a span, #jp_map li.ehime a span, #jp_map li.kagawa a span, #jp_map li.kochi a span, #jp_map li.tokushima a span { width:auto; }
 }
 @media screen and (max-width:480px) {
-  #jp_map li a { font-size:11px; }
+  #jp_map a { font-size:35px; }
 }
