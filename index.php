@@ -78,7 +78,7 @@
     </p> 
   </div>
 
-  <p style="text-align: center;">都道府県別お城マップ</p><br />
+  <p class="map"><a href="map/" id="child">日本地図版から見る</a></p>
 
   <p style="text-align: center;">今のあなたにおすすめな城↓</p><br />
 

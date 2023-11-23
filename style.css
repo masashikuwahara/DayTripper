@@ -7,6 +7,12 @@
   bottom: 5px;
 }
 
+#logo a{
+  color: #000;
+  text-decoration: none;
+  font-size: 30px;
+}
+
   body {
     margin: 0;
     background-color: #fbfaf5;
@@ -33,7 +39,7 @@
     text-align: center;
   }
 
-  a {
+  li a {
     color: #000b00;
     text-decoration: none;
   }
@@ -399,8 +405,17 @@ th {
   text-decoration:underline double #4CB9F6;;
  }
 
- .map {
-  margin-bottom: 100px;
+ #child {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  font-size: 25px;
+  color: #0000ff;
+  transition: 0.3s;
+ }
+
+ #child:hover {
+  color: #4CB9F6;
  }
 
  .cas_title {
@@ -465,7 +480,7 @@ th {
 
 
 /* ここからデスクトップ */
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 450px) {
   body {
     margin: 0;
     background-color: #fbfaf5;
