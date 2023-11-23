@@ -1,7 +1,7 @@
 <header>
   <nav>
     <div class="drawer">
-      <div id="logo"><a href="../index.php">DayTripper</a></div>
+      <div id="logo"><a href="index.php">DayTripper</a></div>
       <div class="Toggle">
         <span></span>
         <span></span>
