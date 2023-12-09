@@ -88,4 +88,4 @@ https://daytripper.site/
 | password    | varcher    | null: false |
 
 # ER図
-ここに画像url
+<img width="700" src=ここに画像URL>
