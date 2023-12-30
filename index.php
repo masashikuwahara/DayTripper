@@ -78,7 +78,8 @@
     </p> 
   </div>
 
-  <p class="map"><a href="map/" id="child">日本地図版から見る</a></p>
+  <p style="text-align: center;">地域ごとに城を検索できるようにしました。こちらもご覧ください↓</p>
+  <p class="map"><a href="map/" id="child">日本地図から城を検索</a></p>
 
   <p style="text-align: center;">今のあなたにおすすめな城↓</p><br />
 
