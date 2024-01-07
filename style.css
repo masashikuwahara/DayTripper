@@ -467,6 +467,30 @@ th {
   text-decoration: none;
 }
 
+.mo a{
+  display: block;
+  text-align: center;
+  background-color: #f8ac3a;
+  border-radius: 99px;
+  width: 250px;
+  margin: auto;
+  font-size: 30px;
+  color: #000;
+  padding: 0 10px;
+  border-radius: 9999px;
+  text-decoration: none;
+}
+
+.mo{
+  margin-bottom: 10px;
+}
+
+.mo a:hover{
+  background-color: #2ea2e6;
+  color: #fff;
+}
+
+
  .castle_page{
   width: 390px;
   margin-left: auto;

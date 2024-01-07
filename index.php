@@ -166,9 +166,10 @@ catch (Exception $e)
     </ul>
   </div>
 
-  <div class="info">
-    <a href="info.php">more</a>
+  <div class="mo">
+    <a href="info.php">更新履歴を見る</a>
   </div>
+
 
   <div class="insta">
     <a href="https://www.instagram.com/day_____tripper_official/" target="_blank" rel="noopener noreferrer"><img src="img/insta.png" width="30px" alt="インスタ"></a>
