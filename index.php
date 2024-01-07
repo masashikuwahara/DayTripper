@@ -94,7 +94,7 @@ try{
   $rec=$stmt->fetch(PDO::FETCH_ASSOC);
   $img_name='<img style="width:360px" src="img/'.$rec['img1'].'">';
 
-  echo '<div style="text-align: center;">'.'<a href="detail.php?id='.$rec['id'].'">'.
+  echo '<div class="rand" style="text-align: center;">'.'<a href="detail.php?id='.$rec['id'].'">'.
   $img_name.'<br />'.$rec['title'].'</a>'.'</div>';
 
 }
@@ -120,54 +120,54 @@ catch (Exception $e)
   </div>
 
   <?php
-    try
-    {
-      require('connect.php');
-      $dbh->query('SET NAMES utf8');
-      $sql='SELECT * FROM info ORDER BY id DESC ';
-      $stmt=$dbh->prepare($sql);
-      $stmt->execute();
-
-      $dbh=null;
-      ?>
+  try
+  {
+    require('connect.php');
+    $dbh->query('SET NAMES utf8');
+    $sql='SELECT * FROM info ORDER BY id DESC limit 3 ';
+    $stmt=$dbh->prepare($sql);
+    $stmt->execute();
+    $dbh=null;
+  ?>
 
   <p class="update">更新情報</p>
   <div class="info">
     <ul class="info2">
-        <?php 
-              while(true)
-              {
-                $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-                if($rec==false)
-                {
-                  break;
-                }
-                if($rec['number']==null)
-                {
-                  echo '<li class="info3">'.
-                  '<a href="'.$rec['url'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
-                  '</li>';
-                }elseif($rec['kinds'] == 1){
-                  echo '<li class="info3">'.
-                  '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
-                  '</li>';
-                }else{
-                  echo '<li class="info3">'.
-                  '<a href="culturals_detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
-                  '</li>';
-                }
-              }
-        
-              }
-              catch (Exception $e)
-              {
-                echo 'ただいま障害により大変ご迷惑をお掛けしております。';
-                exit();
-              }
-        
-        ?>
-      </li>
+      <?php 
+      while(true)
+      {
+        $rec=$stmt->fetch(PDO::FETCH_ASSOC);
+        if($rec==false)
+        {
+          break;
+        }
+        if($rec['number']==null)
+        {
+          echo '<li class="info3">'.
+          '<a href="'.$rec['url'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
+          '</li>';
+        }elseif($rec['kinds'] == 1){
+          echo '<li class="info3">'.
+          '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
+          '</li>';
+        }else{
+          echo '<li class="info3">'.
+          '<a href="culturals_detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
+          '</li>';
+        }
+      }
+    }
+    catch (Exception $e)
+    {
+      echo 'ただいま障害により大変ご迷惑をお掛けしております。';
+      exit();
+    }
+    ?>
     </ul>
+  </div>
+
+  <div class="info">
+    <a href="info.php">more</a>
   </div>
 
   <div class="insta">

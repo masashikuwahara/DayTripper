@@ -418,6 +418,10 @@ th {
   color: #4CB9F6;
  }
 
+ #child a {
+  text-decoration: none;
+ }
+
  .cas_title {
   text-align: center;
   margin-top: 100px;
@@ -449,6 +453,18 @@ th {
  .img_style{
   display: inline-block;
   margin: 15px;
+}
+
+.img_style a{
+  text-decoration: none;
+}
+
+.rand a{
+  text-decoration: none;
+}
+
+.map a{
+  text-decoration: none;
 }
 
  .castle_page{
