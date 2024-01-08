@@ -463,6 +463,10 @@ th {
   text-decoration: none;
 }
 
+.map {
+  margin-bottom: 50px;
+}
+
 .map a{
   text-decoration: none;
 }
@@ -474,7 +478,7 @@ th {
   border-radius: 99px;
   width: 250px;
   margin: auto;
-  font-size: 30px;
+  font-size: 25px;
   color: #000;
   padding: 0 10px;
   border-radius: 9999px;
@@ -898,7 +902,7 @@ th {
  }
 
  .map {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
  }
 
  /* 城一覧のページ */

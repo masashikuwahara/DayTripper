@@ -185,6 +185,10 @@ catch (Exception $e)
     <img border="0" width="234" height="60" alt="" src="https://www25.a8.net/svt/bgt?aid=230810216729&wid=001&eno=01&mid=s00000019330001023000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3TF2AW+C210S2+455G+639IP" alt="">
   </div>
+
+  <div class="ad" style="font-size:12px">
+    <a href="contact/">お問い合わせ</a>
+  </div>
   
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
