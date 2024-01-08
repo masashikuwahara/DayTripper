@@ -15,7 +15,7 @@
 
   body {
     margin: 0;
-    background-color: #fbfaf5;
+    background-image: url("img/back.jpg");
     color: #000b00;
   }
 
@@ -527,7 +527,7 @@ th {
 @media screen and (min-width: 450px) {
   body {
     margin: 0;
-    background-color: #fbfaf5;
+    background-image: url("img/back.jpg");
     color: #000b00;
   }
 
