@@ -7,7 +7,7 @@ session();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>編集管理トップ</title>
+    <title>管理トップ</title>
 </head>
 <body>
     編集管理トップメニュー<br />
@@ -17,6 +17,8 @@ session();
     <a href="culturalproperty/culturals_list.php">その他文化財</a><br />
     <br />
     <a href="update/update_list.php">更新情報</a><br />
+    <br />
+    <a href="contact.php">お問い合わせ</a><br />
     <br />
     <a href="logout.php">ログアウト</a><br />
 </body>
