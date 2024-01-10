@@ -7,4 +7,10 @@ if(isset($_POST['disp'])==true)
 	exit();
 }
 
+if(isset($_POST['con'])==true)
+{
+	header('Location: con_check.php');
+	exit();
+}
+
 ?>

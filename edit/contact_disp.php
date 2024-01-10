@@ -42,8 +42,15 @@ $dbh = null;
 
         .wrapper {
           text-align: center;
-          margin-left: 500px;
-          margin-right: 500px;
+          width: auto;
+        }
+        @media screen and (min-width: 450px) {
+        .wrapper {
+          text-align: center;
+          width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+        }  
         }
     </style>
 </head>
@@ -62,6 +69,12 @@ $dbh = null;
       <?php echo $contact_cre;?>
       <br />
       <br />
+      <form method="post" action="contact_branch.php" ">
+        <input type="hidden" name="id" value="<?php echo $contact_id; ?>">
+        <input type="radio" name="id" value=" ">
+        <input class="btn" type="submit" name="con" value="次のページへ">
+      </form>
+      
       <form>
         <input class="btn" type="button" onclick="history.back()" value="戻る">
       </form>
