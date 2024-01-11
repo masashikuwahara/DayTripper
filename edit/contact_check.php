@@ -27,8 +27,8 @@ session();
     $post=($_POST);
     $con_id=$post['id'];
     $con_ck=$post['ck'];
-
-    if($con_ck=== NULL)
+    
+    if($con_ck === '')
     {
         echo'<p style="color:#ff0000">チェックが入力されていません。</p><br />';
         echo'<form>';
@@ -37,6 +37,11 @@ session();
     }
     else
     {
+      if($con_ck === "0"){
+        echo '回答前';
+      }else{
+        echo '回答済み';
+      };
         echo'更新します';
         echo'<br />';
         echo'<form method="post" action="castles_edit_done.php">';
