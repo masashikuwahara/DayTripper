@@ -36,8 +36,21 @@ $dbh = null;
             color: #ffffff;
         }
 
+        .btn_check{
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            border-radius: 20px;
+            border: none;
+            color: #ffffff;
+        }
+
         .btn:hover {
             background-color: #ed6fb5;
+        }
+
+        .btn_check:hover {
+            background-color: blue;
         }
 
         .wrapper {
@@ -69,10 +82,11 @@ $dbh = null;
       <?php echo $contact_cre;?>
       <br />
       <br />
-      <form method="post" action="contact_branch.php" ">
+      <form method="post" action="contact_check.php" ">
         <input type="hidden" name="id" value="<?php echo $contact_id; ?>">
-        <input type="radio" name="id" value=" ">
-        <input class="btn" type="submit" name="con" value="次のページへ">
+        <input type="radio" name="ck" value="0" checked>回答前
+        <input type="radio" name="ck" value="1">回答済み
+        <input class="btn_check" type="submit" value="次のページへ">
       </form>
       
       <form>

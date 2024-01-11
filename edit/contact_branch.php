@@ -9,7 +9,7 @@ if(isset($_POST['disp'])==true)
 
 if(isset($_POST['con'])==true)
 {
-	header('Location: con_check.php');
+	header('Location: contact_check.php');
 	exit();
 }
 
