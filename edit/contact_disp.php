@@ -16,6 +16,7 @@ $contact_id=$con['id'];
 $contact_name=$con['name'];
 $contact_email=$con['email'];
 $contact_message=$con['message'];
+$contact_confirmed=$con['confirmed'];
 $contact_cre=$con['created_at'];
 
 $dbh = null;
@@ -69,6 +70,15 @@ $dbh = null;
 </head>
 <body>
   <div class="wrapper">
+    <?php
+    if($contact_confirmed == 0){
+      echo '対応前';
+    }else{
+      echo '対応済み';
+    }
+    ?>
+    
+
     <h2>お名前</h2>
       <?php echo $contact_name;?>
       <br />

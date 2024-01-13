@@ -67,10 +67,9 @@ if ($page > 1) {
 	$start = 0;
 }
 
-$contacts = $dbh->prepare(" SELECT id, name FROM contact LIMIT {$start}, 10 ");
+$contacts = $dbh->prepare(" SELECT * FROM contact LIMIT {$start}, 10 ");
 
 echo 'お問い合わせ一覧<br/><br/>';
-
 echo '<form method="post" action="contact_branch.php">';
 
 
@@ -79,7 +78,12 @@ $contacts = $contacts->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($contacts as $post) {
 	echo '<input type="radio" name="id" value="'.$post['id'].'">';
-	echo $post['name']. '<br>';
+	echo $post['name']. '&nbsp;';
+	if($post['confirmed'] == 0){
+		echo '対応前'. '<br>';
+	}else{
+		echo '対応済み'. '<br>';
+	}
 }
 
 $page_num = $dbh->prepare(" SELECT COUNT(*) id FROM contact ");
