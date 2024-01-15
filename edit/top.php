@@ -18,7 +18,7 @@ session();
     <br />
     <a href="update/update_list.php">更新情報</a><br />
     <br />
-    <a href="contact.php">お問い合わせ</a><br />
+    <a href="contact/">お問い合わせ</a><br />
     <br />
     <a href="logout.php">ログアウト</a><br />
 </body>
