@@ -80,9 +80,9 @@ foreach ($contacts as $post) {
 	echo '<input type="radio" name="id" value="'.$post['id'].'">';
 	echo $post['name']. '&nbsp;';
 	if($post['confirmed'] == 0){
-		echo '回答前'. '<br>';
+		echo '対応前'. '<br>';
 	}else{
-		echo '回答済み'. '<br>';
+		echo '対応済み'. '<br>';
 	}
 }
 
@@ -112,7 +112,7 @@ echo '</form>';
 ?>
 
 <br />
-<a href="top.php">トップメニューへ</a><br />
+<a href="../top.php">トップメニューへ</a><br />
 
 </body>
 </html>
