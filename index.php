@@ -186,7 +186,7 @@ catch (Exception $e)
     <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3TF2AW+C210S2+455G+639IP" alt="">
   </div>
 
-  <div class="ad" style="font-size:12px">
+  <div class="ad" style="font-size:18px">
     <a href="contact/">お問い合わせ</a>
   </div>
   
