@@ -78,7 +78,7 @@ $contacts = $contacts->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($contacts as $post) {
 	echo '<input type="radio" name="id" value="'.$post['id'].'">';
-	echo $post['name']. '&nbsp;';
+	echo $post['title'].'&nbsp;'.$post['created_at'].'&nbsp;';
 	if($post['confirmed'] == 0){
 		echo '対応前'. '<br>';
 	}else{
