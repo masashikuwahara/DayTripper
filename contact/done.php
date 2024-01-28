@@ -55,17 +55,26 @@ require('../connect.php');
   <?php
   $name = htmlspecialchars($_POST["n"],ENT_QUOTES);
   $email = htmlspecialchars($_POST["e"],ENT_QUOTES);
+  $title = htmlspecialchars($_POST["t"],ENT_QUOTES);
   $message = htmlspecialchars($_POST["m"],ENT_QUOTES);
   
-  if( !empty($name) && ($email) && ($message)){
-    $dbh->query("INSERT INTO contact (id, name, email, message, created_at)
-    VALUES (NULL,'$name','$email','$message',NOW())");
+  if( !empty($name) && ($email) && ($title) && ($message)){
+    $dbh->query("INSERT INTO contact (id, name, email, title, message, created_at)
+    VALUES (NULL,'$name','$email','$title','$message',NOW())");
     echo '<div class="done">送信しました</div><br>';
     echo '<div class="btn3">';
     echo '<a href="../index.php"><input class="btn2" type="button" value="トップへ戻る"></a>';
     echo '<div/>';
+
+    mb_language("Japanese");
+    mb_internal_encoding("UTF-8");
+    
+    $subject = "新しいメッセージを受信しました";
+    $text = "内容を確認してください";
+    $headers = "From: 新着";
+    mb_send_mail('xxxxx@email.com', $subject, $text, $headers);
   }else{
-    echo '<div class="done">お名前とメールアドレスとお問い合わせ内容を入力してください</div><br>';
+    echo '<div class="done">すべて入力してください</div><br>';
     echo '<div class="btn3">';
     echo '<input class="btn2" type="button" onclick="history.back()" value="戻る">';
     echo '<div/>';

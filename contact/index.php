@@ -61,6 +61,8 @@
         <div><input class="name" type="text" placeholder="例) 山田 太朗" name="n"></div>
         メールアドレス
         <div><input class="name" type="text" placeholder="例) abc@xyz.com" name="e"></div>
+        表題
+        <div><input class="name" type="text" placeholder="例) 犬山城の写真について" name="t"></div>
         お問い合わせ内容
         <div><textarea class="comm" placeholder="お問い合わせ内容をこちらにご記入ください" name="m"></textarea></div>
         <input class="btn" type="submit" value="送信">
