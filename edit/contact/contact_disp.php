@@ -15,6 +15,7 @@ $con =$stmt->fetch(PDO::FETCH_ASSOC);
 $contact_id=$con['id'];
 $contact_name=$con['name'];
 $contact_email=$con['email'];
+$contact_title=$con['title'];
 $contact_message=$con['message'];
 $contact_confirmed=$con['confirmed'];
 $contact_cre=$con['created_at'];
@@ -84,6 +85,9 @@ $dbh = null;
       <br />
       <h2>メールアドレス</h2>
       <?php echo $contact_email;?>
+      <br />
+      <h2>表題</h2>
+      <?php echo $contact_title;?>
       <br />
       <h2>お問い合わせ内容</h2>
       <?php echo $contact_message;?>
