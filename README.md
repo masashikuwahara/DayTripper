@@ -1,10 +1,10 @@
 # Datrripperの記録
-これまで訪れた城や文化財の紹介、まとめのサイト
-PC版
+これまで訪れた城や文化財の紹介、まとめのサイト 
+PC版 
 <img width="700" src="https://daytripper.site/img/index.jpg">
 
-モバイル版
-<img width="700" src="https://daytripper.site/img/mobile.jpg">
+モバイル版 
+<img width="350" src="https://daytripper.site/img/mobile.jpg">
 
 # ページの概要
 ページ上部にある各メニューから城、文化財のページへ遷移します。  
