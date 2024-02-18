@@ -1,7 +1,7 @@
 # Datrripperの記録
 これまで訪れた城や文化財の紹介、まとめのサイト
 
-<img width="700" src=ここに画像URL>
+<img width="700" src="https://daytripper.site/img/index.jpg">
 
 # ページの概要
 ページ上部にある各メニューから城、文化財のページへ遷移します。  
