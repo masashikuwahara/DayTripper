@@ -6,7 +6,7 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
-    <information$update_information>登録しました</information$update_information>
+    <title>登録しました</title>
 </head>
 <body>
     <?php

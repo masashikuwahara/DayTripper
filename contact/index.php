@@ -50,13 +50,19 @@
     </style>
   </head>
   <body>
+    <script>
+    function submitChk () {
+      var flag = confirm ( "送信してもよろしいですか？\n\n送信したくない場合は[キャンセル]ボタンを押して下さい");
+      return flag;
+    }
+    </script>
     <?php include('header.php'); ?>
     <div class="wrapper">
       <h1>お問い合わせフォーム</h1>
       <p>下記のフォームにお名前、メールアドレス、<br>
       お問い合わせ内容を記入し<br>
       送信ボタンを押してください。</p>
-      <form action="done.php" method="post">
+      <form action="done.php" method="post" onsubmit="return submitChk()">
         お名前
         <div><input class="name" type="text" placeholder="例) 山田 太朗" name="n"></div>
         メールアドレス
