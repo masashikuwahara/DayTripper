@@ -15,3 +15,21 @@ const submitChk = () => {
     const flag = confirm("OK！\n\nすべてそろっています");
     return flag;
 };
+
+// const change = () => {
+//     if ((document.getElementById("check1").checked)
+//         && (document.getElementById("check2").checked)
+//         && (document.getElementById("check3").checked)
+//         && (document.getElementById("check4").checked)
+//         && (document.getElementById("check5").checked)) {
+//         document.getElementById("check-btn").disabled = false;
+//     }
+//     else {
+//         document.getElementById("check-btn").disabled = true;
+//     }
+// };
+
+// const submitChk = () => {
+//     const flag = confirm ( "OK！\n\nすべてそろっています");
+//     return flag;
+//   };
