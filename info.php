@@ -46,16 +46,17 @@
             while(true)
             {
               $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-              if($rec==false)
+              if(!$rec)
               {
                 break;
               }
-              if($rec['number']==null)
+
+              if(!$rec['number'])
               {
                 echo '<li class="info3">'.
                 '<a href="'.$rec['url'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
                 '</li>';
-              }elseif($rec['kinds'] == 1){
+              }elseif($rec['kinds'] === 1){
                 echo '<li class="info3">'.
                 '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
                 '</li>';

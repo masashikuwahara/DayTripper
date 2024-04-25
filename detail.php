@@ -49,11 +49,9 @@ $castles_img5=$cas['img5'];
     <?php
     try{
 
-        $dbh = null;
-
-        if($castles_img1=='')
+        if($castles_img1 === '')
         {
-            $disp_img1='';
+            $disp_img1 = '';
         }
         else
         {
@@ -68,11 +66,9 @@ $castles_img5=$cas['img5'];
 
     try{
 
-        $dbh = null;
-
-        if($castles_img2=='')
+        if($castles_img2 === '')
         {
-            $disp_img2='';
+            $disp_img2 = '';
         }
         else
         {
@@ -87,11 +83,9 @@ $castles_img5=$cas['img5'];
 
     try{
 
-        $dbh = null;
-
-        if($castles_img3=='')
+        if($castles_img3 === '')
         {
-            $disp_img3='';
+            $disp_img3 = '';
         }
         else
         {
@@ -106,11 +100,9 @@ $castles_img5=$cas['img5'];
 
     try{
 
-        $dbh = null;
-
-        if($castles_img4=='')
+        if($castles_img4 === '')
         {
-            $disp_img4='';
+            $disp_img4 = '';
         }
         else
         {
@@ -125,11 +117,9 @@ $castles_img5=$cas['img5'];
 
     try{
 
-        $dbh = null;
-
-        if($castles_img5=='')
+        if($castles_img5 === '')
         {
-            $disp_img5='';
+            $disp_img5 = '';
         }
         else
         {

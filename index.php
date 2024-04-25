@@ -189,7 +189,7 @@ catch (Exception $e)
   <div class="ad" style="font-size:18px">
     <a href="contact/">お問い合わせ</a>
   </div>
-  <p>ver.2.5.7</p>
+  <p style="margin-bottom: 30px;">ver.2.6.7</p>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.3/dist/vue-awesome-swiper.min.js"></script>

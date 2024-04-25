@@ -39,23 +39,23 @@
       $stmt=$dbh->prepare($sql);
       $stmt->execute();
 
-      $dbh=null;
+      $dbh = null;
 
       while(true)
       {
         $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-        if($rec==false)
+        if(!$rec)
         {
           break;
         }
 
-        if($rec['img1']=='')
+        if($rec['img1'] === '')
         {
-          $img_name='';
+          $img_name = '';
         }
         else
         {
-          $img_name='<img style="width:360px" src="img/'.$rec['img1'].'">';
+          $img_name = '<img style="width:360px" src="img/'.$rec['img1'].'">';
         }
 
         echo '<span class="img_style">'.
