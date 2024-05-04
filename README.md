@@ -32,7 +32,7 @@ https://daytripper.site/
 
 # データベース設計
 
-## 100castles テーブル
+## castles テーブル
 
 | Column     | Type   | Options     |
 | ---------- | ------ | ----------- |
