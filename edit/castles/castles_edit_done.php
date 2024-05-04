@@ -37,7 +37,7 @@ session();
 
         require('../../connect.php');
 
-        $sql = 'UPDATE 100castles SET cas=?,title=?,structure=?,builder=?,year=?,
+        $sql = 'UPDATE castles SET cas=?,title=?,structure=?,builder=?,year=?,
         lord=?,specify1=?,recommend=?,explan=?,access=?,
         img1=?,img2=?,img3=?,img4=?,img5=? WHERE id=?';
         $stmt = $dbh->prepare($sql);

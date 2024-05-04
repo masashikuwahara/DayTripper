@@ -33,7 +33,7 @@ session();
 
         require('../../connect.php');
 
-        $sql = 'INSERT INTO 100castles (cas,title,structure,tenshu,builder,year,lord,
+        $sql = 'INSERT INTO castles (cas,title,structure,tenshu,builder,year,lord,
         remains,specify1,recommend,explan,access,img1,img2,img3,img4,img5) 
         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
         $stmt = $dbh->prepare($sql);

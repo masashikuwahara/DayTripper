@@ -51,7 +51,7 @@ try
 
 require('../../connect.php');
 $dbh->query('SET NAMES utf8');
-$sql='SELECT id,title FROM 100castles WHERE 1';
+$sql='SELECT id,title FROM castles WHERE 1';
 $stmt=$dbh->prepare($sql);
 $stmt->execute();
 
@@ -67,7 +67,7 @@ if ($page > 1) {
 	$start = 0;
 }
 
-$castles = $dbh->prepare(" SELECT id, title FROM 100castles LIMIT {$start}, 10 ");
+$castles = $dbh->prepare(" SELECT id, title FROM castles LIMIT {$start}, 10 ");
 
 echo '城一覧<br/><br/>';
 
@@ -82,7 +82,7 @@ foreach ($castles as $post) {
 	echo $post['title']. '<br>';
 }
 
-$page_num = $dbh->prepare(" SELECT COUNT(*) id FROM 100castles ");
+$page_num = $dbh->prepare(" SELECT COUNT(*) id FROM castles ");
 $page_num->execute();
 $page_num = $page_num->fetchColumn();
 
