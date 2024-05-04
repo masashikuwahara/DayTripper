@@ -29,7 +29,7 @@
     {
       require('connect.php');
       $dbh->query('SET NAMES utf8');
-      $sql='SELECT id,cas,title,img1 FROM 100castles WHERE cas >= 101 AND cas <= 200 ORDER BY cas ASC';
+      $sql='SELECT id,cas,title,img1 FROM castles WHERE cas >= 101 AND cas <= 200 ORDER BY cas ASC';
       $stmt=$dbh->prepare($sql);
       $stmt->execute();
 

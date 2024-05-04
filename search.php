@@ -27,7 +27,7 @@
 
     if($_GET["s"] != ''){
       if($_GET['select'] === 'castle'){
-        $stmt=$dbh->prepare("SELECT * FROM 100castles WHERE title like '%$my_sea%'");
+        $stmt=$dbh->prepare("SELECT * FROM castles WHERE title like '%$my_sea%'");
         $stmt->execute();
         $t = $stmt->rowCount();
         if($t > 0){

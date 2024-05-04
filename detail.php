@@ -5,7 +5,7 @@ require('connect.php');
 $dbh->query('SET NAMES utf8');
 $sql = 'SELECT cas,title,structure,tenshu,builder,year,lord,
 remains,specify1,recommend,explan,access,img1,img2,img3,img4,img5
- FROM 100castles WHERE id=?';
+ FROM castles WHERE id=?';
 $stmt = $dbh->prepare($sql);
 $data[]=$castles_id;
 $stmt->execute($data);
