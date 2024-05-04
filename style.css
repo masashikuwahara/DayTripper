@@ -16,6 +16,7 @@
   body {
     margin: 0;
     background-image: url("img/back.jpg");
+    background-attachment: fixed;
     color: #000b00;
   }
 
