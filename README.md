@@ -1,4 +1,4 @@
-# Datrripperの記録
+# Daytripperの記録
 これまで訪れた城や文化財の紹介、まとめのサイト<br>
 PC版<br>
 <img width="700" src="https://daytripper.site/img/index.jpg">
