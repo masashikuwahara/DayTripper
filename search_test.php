@@ -1,4 +1,12 @@
-<?php
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resultt</title>
+</head>
+<body>
+    <?php
 // データベースに接続
 $servername = "localhost";
 $username = "root";
@@ -40,9 +48,30 @@ if ($result->num_rows > 0) {
     }
     // ページネーションリンクの表示
     echo "<br>";
-    for ($i = 1; $i <= $totalPages; $i++) {
-        echo "<a href='?keyword=$keyword&page=$i'>$i</a> ";
-    }
+    // 最初のページへのリンク
+if ($page > 1) {
+    echo "<a href='?keyword=$keyword&page=1'>First</a> ";
+}
+
+// 省略記号の表示
+if ($page > 2) {
+    echo "... ";
+}
+
+// ページ番号の表示
+for ($i = max(1, $page - 2); $i <= min($page + 2, $totalPages); $i++) {
+    echo "<a href='?keyword=$keyword&page=$i'>$i</a> ";
+}
+
+// 省略記号の表示
+if ($page < $totalPages - 1) {
+    echo "... ";
+}
+
+// 最後のページへのリンク
+if ($page < $totalPages) {
+    echo "<a href='?keyword=$keyword&page=$totalPages'>Last</a> ";
+}
 } else {
     echo "検索結果がありません";
 }
@@ -50,3 +79,6 @@ if ($result->num_rows > 0) {
 // データベース接続を閉じる
 $conn->close();
 ?>
+
+</body>
+</html>
