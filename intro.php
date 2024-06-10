@@ -13,7 +13,7 @@
   <h1 class="title">はじめに</h1>
   <div class="wrapper">
     <main class="main">
-      <img src="img/001.jpg" class="main_img" alt="image">
+      <img src="img/kiyosu01.jpg" class="main_img" alt="image">
     </main>
     <aside class="side">
       <h2 class="intro">このページを制作した理由について</h2>

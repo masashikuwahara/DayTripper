@@ -522,7 +522,26 @@ th {
   text-align: center;
 }
 
+/* 2カラムレイアウト */
 
+.grid {
+  display: inline-block;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-content {
+  flex: 1;
+}
+
+aside {
+  text-align: center;
+  margin: auto;
+}
 
 /* ここからデスクトップ */
 @media screen and (min-width: 450px) {
@@ -950,9 +969,26 @@ th {
   gap: 10px;
 }
 
+/* 2カラムレイアウト */
+
 .grid {
   display: inline-block;
   text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-content {
+  flex: 1;
+}
+
+aside {
+  width: 300px;
+  margin-top: 0;
+  margin-right: 300px;
 }
 
 }
