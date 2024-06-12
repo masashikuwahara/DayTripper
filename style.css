@@ -1,35 +1,9 @@
-#logo {
-  max-width:50%;
-  display:block;
-  margin:0 auto;
-  font-size: 25px;
-  position: relative;
-  bottom: 5px;
-}
-
-#logo a{
-  color: #000;
-  text-decoration: none;
-  font-size: 30px;
-}
-
   body {
     margin: 0;
     background-image: url("img/back.jpg");
     background-attachment: fixed;
     color: #000b00;
   }
-
-  header {
-    height: 60px;
-    width: 100%;
-    padding: 0px 15px;
-    background-color: #fef4f4;
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    display: flex;
-  } 
 
   footer {
     position: fixed;
@@ -40,112 +14,154 @@
     text-align: center;
   }
 
-  li a {
-    color: #000b00;
+  a {
     text-decoration: none;
-  }
-
-nav{
- width: 100%;
- height: 70px;
- position: relative;
-}
-.drawer{
- display: flex;
- flex-direction: row;
- align-items: center;
- justify-content: space-between;
- position: relative;
- height: 70px;
- padding: 0 1em;
-}
-
-/*ナビゲーション部分*/
-
-.menu ul li a {
-  display:block;
-  font-weight:bold;
-  padding: 2em;
-  color:#333;
-  text-decoration:none;
-  z-index: 999;
-}
-
-
-.menu ul li a:hover{
-  background-color:rgba(201, 173, 49, 0.5);
-  color:rgb(255, 0, 242);
 }
 
 li {
-  list-style: none;
+    list-style: none;
 }
 
-
-.menu{
-  text-align:center;
-  background-color:rgba(248, 248, 250, 0.925);
-  transition: .5s ease;/*滑らかに表示*/
-  -webkit-transform: translateX(-105%);
-  transform: translateX(-105%);/*左に隠しておく*/
+ul {
+    margin: 0;
+    padding: 0;
 }
 
-
-/*OPEN時の動き*/
-.menu.open {
- -webkit-transform: translateX(0%);
- transform: translateX(-4%);/*中身を表示（右へスライド）*/
+.header {
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+    z-index: 1000;
 }
 
-/*トグルボタンのスタイルを指定*/
-.Toggle {
-    display: block;
-    position: fixed;    /* bodyに対しての絶対位置指定 */
-    width: 42px;
-    height: 42px;
+.header-inner {
+    padding: 0 5%;
+}
+
+/* ---------------------------------------------- */
+/* ハンバーガーメニュー */
+/* ------------------------- */
+#header-hamburger {
+    /* 見た目のCSS */
+    background: #6faa3c;
     cursor: pointer;
-    z-index: 3;
-  right:15px;
-}
- 
-.Toggle span {
-    display: block;
-    position: absolute;
     width: 50px;
-    border-bottom: solid 4px #333;
-    -webkit-transition: .35s ease-in-out; /*変化の速度を指定*/
-    -moz-transition: .35s ease-in-out;    /*変化の速度を指定*/
-    transition: .35s ease-in-out;     /*変化の速度を指定*/
- 
+    aspect-ratio: 1/1;
+    margin-left: auto;
+    /* ボタンがハンバーガーウィンドウの下に隠れないようにする指定 */
+    position: relative;
+    z-index: 10;
 }
- 
-.Toggle span:nth-child(1) {
-    top:5px;
+
+/* ----------------- */
+/* 三本線 */
+/* ----------------- */
+#header-hamburger span {
+    /* 見た目のCSS */
+    display: inline-block;
+    background: #fff;
+    width: 50%;
+    height: 2px;
+    /* バーガー線の太さ */
+    /*アニメーションの設定*/
+    transition: all .4s;
+    position: absolute;
+    left: 50%;
+    /* バーガー線の位置 */
+    transform: translateX(-50%);
 }
- 
-.Toggle span:nth-child(2) {
-    top: 18px;
+
+/* １本目 */
+#header-hamburger span:nth-of-type(1) {
+    top: 30%;
 }
- 
-.Toggle span:nth-child(3) {
-    top: 32px;
+
+/* ２本目 */
+#header-hamburger span:nth-of-type(2) {
+    top: 50%;
 }
- 
-.Toggle.active span:nth-child(1) {
-    top: 18px;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
+
+/* ３本目 */
+#header-hamburger span:nth-of-type(3) {
+    top: 70%;
+}
+
+/* ------------------ */
+/* ×印 */
+/* ------------------ */
+/*activeクラスが付与されると線が回転して×になる*/
+#header-hamburger.active span:nth-of-type(1) {
+    top: 50%;
+    left: 25%;
     transform: rotate(-45deg);
+    width: 50%;
 }
- 
-/* 2番目と3番目のspanを45度に */
-.Toggle.active span:nth-child(2),
-.Toggle.active span:nth-child(3) {
-    top: 18px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
+
+#header-hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+#header-hamburger.active span:nth-of-type(3) {
+    top: 50%;
+    left: 25%;
     transform: rotate(45deg);
+    width: 50%;
 }
+
+/* ----------------------------------------------- */
+/* メニューウィンドウ */
+/* -------------------------- */
+#hamburger-window {
+    transition: 0.3s;
+    text-align: center;
+    /* 初期状態は非表示 */
+    visibility: hidden;
+    position: fixed;
+    top: 50px;
+    right: -100vw;
+    z-index: 1;
+    /* 画面いっぱいに表示されるサイズに設定 */
+    width: 100%;
+    height: calc(100vh - 50px);
+    /* 画面からはみ出したらスクロール可能にする */
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/*スクロールバー非表示（Chrome・Safari）*/
+.content::-webkit-scrollbar{
+    display:none;
+}
+
+#hamburger-window.open {
+    visibility: visible;
+    right: 0;
+    background-color: #F9CDE2;
+}
+
+.hamburger-window__link {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.hamburger-window__link:hover {
+    background-color: #ccc;
+}
+
+.acordion-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px 0 23px 5%;
+    color: #333;
+}    
+
+.hamburger-window__title {
+    color: #333;
+}  
 
   /* スライダー */
   @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400|Roboto:400,700&display=swap");
@@ -551,17 +567,6 @@ aside {
     color: #000b00;
   }
 
-  header {
-    height: 60px;
-    width: 100%;
-    padding: 0px 15px;
-    background-color: #fef4f4;
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    display: flex;
-  } 
-
   footer {
     position: fixed;
     left: 0;
@@ -578,45 +583,6 @@ aside {
 
   h2 {
     text-align: center;
-  }
-
-  #logo {
-    max-width:50%;
-    display:block;
-    margin:0 auto;
-    position: absolute;
-    top: 10px;
-    z-index: 1;
-  }
-  
-  .Toggle{
-  display: none;
-  }
-
-  .menu{
-  width: 100%;
-    background-color: transparent;
-    margin-top:0;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  }
-
-  .menu ul{
-    height: 70px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    position: relative;
-    right: 30px;
-  }
-  .menu ul li a{
-    padding: 0 1em;
-    border-bottom: none;
-  }
-    
-  .menu ul li a:hover{
-    background-color:#fbd26b;
-    color:#005243;
   }
 
   li {
@@ -752,22 +718,6 @@ aside {
   .intro {
     text-align: center;
   }
-
-  /* .split {
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-  } */
-
-  /* .region {
-    color: darkcyan;
-    font-size: 25pt;
-    padding: 0;
-  }
-
-  .region:hover {
-    color: crimson;
-  } */
 
   /* 検索 */
 .sea {  
