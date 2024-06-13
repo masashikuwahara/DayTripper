@@ -6,6 +6,15 @@
       <span></span>
       <span></span>
     </div>
+    <div class="logo"><a href="index.php">DayTripper</a></div>
+    <div class="menu">
+      <a class="menu-btn" href="intro.php">はじめに</a>
+      <a class="menu-btn" href="genzon.php">現存天守</a>
+      <a class="menu-btn" href="100_castles.php">100名城</a>
+      <a class="menu-btn" href="sequel_100_castles.php">続100名城</a>
+      <a class="menu-btn" href="other_castles.php">その他の城</a>
+      <a class="menu-btn" href="cultural_property.php">その他文化財</a>
+    </div>
   </div>
 
   <!-- ハンバーガーウィンドウ -->
