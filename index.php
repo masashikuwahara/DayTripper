@@ -21,6 +21,12 @@
       text-align: center;
       margin-bottom: 30px;
     }
+
+    .query {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 15px;
+    }
   </style>
   <title>DayTripperの記録</title>
 </head>
@@ -183,23 +189,19 @@
         </div>
         <aside>
           <div class="sub-content">
-            <h2>最近の投稿</h2>
+            <h2>おすすめ度5の城</h2>
             <ul>
-              <li>投稿1</li>
-              <li>投稿2</li>
-              <li>投稿3</li>
+              <li>姫路城</li>
+              <li>松本城</li>
+              <li>名古屋城</li>
             </ul>
-
-            <h2>おすすめのコンテンツ</h2>
-            <ul>
-              <li>コンテンツ1</li>
-              <li>コンテンツ2</li>
-              <li>コンテンツ3</li>
-            </ul>
+            <div class="mo">
+              <a href="#">さらに見る</a>
+            </div>
           </div>
         </aside>
       </div>
-      <div class="ad" style="font-size:18px">
+      <div class="query">
         <a href="contact/">お問い合わせ</a>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
