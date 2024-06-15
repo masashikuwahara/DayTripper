@@ -131,12 +131,12 @@
     /* 初期状態は非表示 */
     visibility: hidden;
     position: fixed;
-    top: 50px;
+    top: 0px;
     right: -100vw;
     z-index: 1;
     /* 画面いっぱいに表示されるサイズに設定 */
     width: 100%;
-    height: calc(100vh - 50px);
+    height: calc(100vh);
     /* 画面からはみ出したらスクロール可能にする */
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -151,7 +151,8 @@
 #hamburger-window.open {
     visibility: visible;
     right: 0;
-    background-color: #F9CDE2;
+    background-image: radial-gradient(circle at 100% 0%, 
+		rgb(243, 94, 156) 15%, rgb(243, 185, 61));
 }
 
 .hamburger-window__link {
@@ -505,7 +506,8 @@ th {
 .mo a{
   display: block;
   text-align: center;
-  background-color: #f8ac3a;
+  background-image: radial-gradient(circle at 100% 0%, 
+		rgb(147, 165, 241) 15%, rgb(127, 213, 235));
   border-radius: 99px;
   width: 250px;
   margin: auto;
@@ -625,18 +627,18 @@ aside {
     display: flex;
     justify-content: center;
     font-weight: bold;
+    padding: 15px 0 0 0;
   }
   
   .menu-btn {
     display: flex;
     justify-content: center;
-    padding: 8px 20px;
+    padding: 0 20px;
     color: #333;
   }
   
   a.menu-btn:hover {
-    background: #ffe0e0;
-    color: #bcbcff;
+    background: linear-gradient(transparent 65%, #96f5c8fd 70%);
   }
   
   

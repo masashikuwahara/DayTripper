@@ -189,7 +189,7 @@
         </div>
         <aside>
           <div class="sub-content">
-            <h2>おすすめ度5の城</h2>
+            <h2>城ビギナーにおすすめの城</h2>
             <ul>
               <li>姫路城</li>
               <li>松本城</li>
@@ -209,6 +209,5 @@
       <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.3/dist/vue-awesome-swiper.min.js"></script>
       <script type="text/javascript" src="swiper.js"></script>
       <script type="text/javascript" src="menu.js"></script>
+      ver.2.7.7
   <?php require('footer.php'); ?>
-</body>
-</html>
