@@ -57,7 +57,7 @@
     /* 見た目のCSS */
     background: #6faa3c;
     cursor: pointer;
-    width: 50px;
+    width: 60px;
     aspect-ratio: 1/1;
     margin-left: auto;
     /* ボタンがハンバーガーウィンドウの下に隠れないようにする指定 */
@@ -153,6 +153,7 @@
     right: 0;
     background-image: radial-gradient(circle at 100% 0%, 
 		rgb(243, 94, 156) 15%, rgb(243, 185, 61));
+    z-index: 5;
 }
 
 .hamburger-window__link {
@@ -613,6 +614,20 @@ aside {
   p {
     white-space: pre-wrap
   }
+
+  #header-hamburger {
+    /* 見た目のCSS */
+    background: #6faa3c;
+    cursor: pointer;
+    width: 80px;
+    aspect-ratio: 1/1;
+    margin-left: auto;
+    /* ボタンがハンバーガーウィンドウの下に隠れないようにする指定 */
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
 
   .logo {
     position: absolute;
