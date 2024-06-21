@@ -155,6 +155,8 @@
     background-image: radial-gradient(circle at 100% 0%, 
 		rgb(243, 94, 156) 15%, rgb(243, 185, 61));
     z-index: 5;
+    height: 100vh;
+    width: 100vw;
 }
 
 .hamburger-window__link {
@@ -205,6 +207,7 @@
 /* スライダーの角を丸くする */
 .swiper-slide img {
   width: 50%;
+  border-radius: 10px;
 }
 
 #app {
@@ -468,7 +471,7 @@ th {
 
  .swiperOptions .swiper-slide img,
  .swiperThumbs .swiper-slide img{width: 100%;}
- .swiperThumbs {background-color: #fbfaf5;}
+ /* .swiperThumbs {background-color: #fbfaf5;} */
  .swiperOptions .swiper-slide {text-align: center;}
 
 .swiperThumbs .swiper-slide {
@@ -476,7 +479,7 @@ th {
   padding: 10px;
 }
 
-.swiperThumbs .swiper-slide-active {background-color: #fbfaf5;}
+/* .swiperThumbs .swiper-slide-active {background-color: #fbfaf5;} */
 
  /* 城一覧のページ */
  .header_text{
@@ -578,11 +581,10 @@ aside {
 }
 
 /* ここからデスクトップ */
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 841px) {
   body {
     margin: 0;
-    background-image: radial-gradient(circle at 85% 15%, 
-		rgb(252, 236, 215) 65%, rgb(255, 220, 240));
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
     color: #000b00;
   }
 
@@ -645,6 +647,8 @@ aside {
     justify-content: center;
     font-weight: bold;
     padding: 15px 0 0 0;
+    margin-left: 100px;
+    margin-right: 100px;
   }
   
   .menu-btn {
@@ -654,7 +658,7 @@ aside {
     color: #333;
   }
   
-  a.menu-btn:hover {
+  .menu-btn:hover {
     background: linear-gradient(transparent 90%, #4169ecfd 70%);
   }
   
@@ -683,10 +687,11 @@ aside {
 
   .swiper-slide img {
     width: 100%;
+    border-radius: 20px;
   }
 
   #app {
-    margin-top: 100px;
+    margin-top: 45px;
   }
 
   #title {
@@ -962,7 +967,7 @@ th {
 
 .swiperOptions .swiper-slide img,
 .swiperThumbs .swiper-slide img{width: 80%;}
-.swiperThumbs {background-color: #fbfaf5;}
+/* .swiperThumbs {background-color: #fbfaf5;} */
 .swiperOptions .swiper-slide {text-align: center;}
 
 .swiperThumbs .swiper-slide {
@@ -970,7 +975,7 @@ th {
   padding: 10px;
 }
 
-.swiperThumbs .swiper-slide-active {background-color: #fbfaf5;}
+/* .swiperThumbs .swiper-slide-active {background-color: #fbfaf5;} */
 
 /* 現存天守のページ */
 
@@ -990,6 +995,7 @@ th {
 .container {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 300px;
 }
 
 .main-content {
@@ -999,7 +1005,13 @@ th {
 aside {
   width: 300px;
   margin-top: 0;
-  margin-right: 300px;
+  margin-right: 200px;
+  margin-left: 100px;
+  
+}
+
+.sub-content h2 {
+  text-align: center;
 }
 
 }
