@@ -21,55 +21,51 @@
     自分はこれまで8か所訪れましたのでご紹介します。
   </div>
   <hr>
+  <?php
+    try
+    {
+      require('connect.php');
+      $dbh->query('SET NAMES utf8');
+      $sql='SELECT id,cas,title,img1 FROM castles WHERE genzon = 1 ORDER BY cas ASC';
+      $stmt=$dbh->prepare($sql);
+      $stmt->execute();
 
-<div class="container">
-  <div class="grid">
-    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城"></a>
-    <p>城名</p>
-  </div>
-  <div class="grid">
-    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城" class="mr1"></a>
-    <p>城名</p>
-  </div>
-  <div class="grid">
-    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城"></a>
-    <p>城名</p>
-  </div>
-</div>
+      $dbh = null;
 
-<div class="container">
-  <div class="grid">
-    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城"></a>
-    <p>城名</p>
-  </div>
-  <div class="grid">
-    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城" class="mr1"></a>
-    <p>城名</p>
-  </div>
-  <div class="grid">
-    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城"></a>
-    <p>城名</p>
-  </div>
-</div>
+      while(true)
+      {
+        $rec=$stmt->fetch(PDO::FETCH_ASSOC);
+        if(!$rec)
+        {
+          break;
+        }
 
-<div class="container">
-  <div class="grid">
-    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城"></a>
-    <p>城名</p>
-  </div>
-  <div class="grid">
-    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城" class="mr1"></a>
-    <p>城名</p>
-  </div>
-  <div class="grid">
-    <a href="detail.php?id=20"><img src="img/himejijou.jpg" width="100%" alt="姫路城"></a>
-    <p>城名</p>
-  </div>
-</div>
+        if($rec['img1'] === '')
+        {
+          $img_name = '';
+        }
+        else
+        {
+          $img_name = '<img style="width:360px" src="img/'.$rec['img1'].'">';
+        }
 
-</div>
+        echo '<span class="img_style">'.
+            '<a href="detail.php?id='.$rec['id'].'">'.
+            $img_name.
+            '<br />'.
+            $rec['title'].
+              '</a>'.
+            '<br />'.
+            '</span>';
+      }
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      }
+      catch (Exception $e)
+      {
+        echo 'ただいま障害により大変ご迷惑をお掛けしております。';
+        exit();
+      }
+  ?>
   <script type="text/javascript" src="menu.js"></script>
 
   <?php include('footer.php'); ?>
