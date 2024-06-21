@@ -14,7 +14,7 @@ function createApp() {
         slidesPerView:2,
         centeredSlides : true,
         breakpoints: {
-          500: {
+          769: {
             slidesPerView: 1,
             spaceBetween: 0
           },
