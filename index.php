@@ -121,15 +121,68 @@
             <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=3TF2AW+CSTJ02+14CS+6HMHT" alt="">
           </div>
         
+          <div class="insta">
+            <a href="https://www.instagram.com/day_____tripper_official/" target="_blank" rel="noopener noreferrer"><img src="img/insta.png" width="30px" alt="インスタ"></a>
+          </div>
+        
+          <div class="ad">
+            <a href="milestones/" target="_blank" rel="noopener noreferrer"><img src="milestones/1000posts.png" width="234px" alt="インスタ"></a>
+            <p>1000投稿記念ページのアーカイブです</p>
+          </div>
+        
+          <div class="ad">
+          <a href="https://px.a8.net/svt/ejp?a8mat=3TF2AW+C210S2+455G+639IP" rel="nofollow">
+            <img border="0" width="234" height="60" alt="" src="https://www25.a8.net/svt/bgt?aid=230810216729&wid=001&eno=01&mid=s00000019330001023000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3TF2AW+C210S2+455G+639IP" alt="">
+          </div>
+        </div>
+        <aside>
+          <div class="sub-content">
+            <h2>城ビギナーにおすすめの城</h2>
+            <ul>
+              <?php
+              $sql='SELECT * FROM castles WHERE recnumber= 5 ORDER BY cas ASC limit 3';
+              $stmt=$dbh->prepare($sql);
+              $stmt->execute();
+        
+              while(true)
+              {
+                $rec=$stmt->fetch(PDO::FETCH_ASSOC);
+                if(!$rec)
+                {
+                  break;
+                }
+        
+                if($rec['img1'] === '')
+                {
+                  $img_name = '';
+                }
+                else
+                {
+                  $img_name = '<img style="width:360px" src="img/'.$rec['img1'].'">';
+                }
+        
+                echo '<span class="img_style">'.
+                    '<a href="detail.php?id='.$rec['id'].'">'.
+                    $img_name.
+                    '<br />'.
+                    $rec['title'].
+                      '</a>'.
+                    '<br />'.
+                    '</span>';
+              }
+              ?>
+            </ul>
+            <div class="mo">
+              <a href="recommend.php">さらに見る</a>
+            </div>
+          </div>
           <?php
           try
           {
-            require('connect.php');
-            $dbh->query('SET NAMES utf8');
             $sql='SELECT * FROM info ORDER BY id DESC limit 3 ';
             $stmt=$dbh->prepare($sql);
             $stmt->execute();
-            $dbh=null;
           ?>
         
           <p class="update">更新情報</p>
@@ -170,34 +223,6 @@
         
           <div class="mo">
             <a href="info.php">更新履歴を見る</a>
-          </div>
-        
-          <div class="insta">
-            <a href="https://www.instagram.com/day_____tripper_official/" target="_blank" rel="noopener noreferrer"><img src="img/insta.png" width="30px" alt="インスタ"></a>
-          </div>
-        
-          <div class="ad">
-            <a href="milestones/" target="_blank" rel="noopener noreferrer"><img src="milestones/1000posts.png" width="234px" alt="インスタ"></a>
-            <p>1000投稿記念ページのアーカイブです</p>
-          </div>
-        
-          <div class="ad">
-          <a href="https://px.a8.net/svt/ejp?a8mat=3TF2AW+C210S2+455G+639IP" rel="nofollow">
-            <img border="0" width="234" height="60" alt="" src="https://www25.a8.net/svt/bgt?aid=230810216729&wid=001&eno=01&mid=s00000019330001023000&mc=1"></a>
-            <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3TF2AW+C210S2+455G+639IP" alt="">
-          </div>
-        </div>
-        <aside>
-          <div class="sub-content">
-            <h2>城ビギナーにおすすめの城</h2>
-            <ul>
-              <li>姫路城</li>
-              <li>松本城</li>
-              <li>名古屋城</li>
-            </ul>
-            <div class="mo">
-              <a href="#">さらに見る</a>
-            </div>
           </div>
         </aside>
       </div>
