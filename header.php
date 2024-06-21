@@ -13,7 +13,7 @@
       <a class="menu-btn" href="100_castles.php">100名城</a>
       <a class="menu-btn" href="sequel_100_castles.php">続100名城</a>
       <a class="menu-btn" href="other_castles.php">その他の城</a>
-      <a class="menu-btn" href="recommend.php">初心者向けの城</a>
+      <a class="menu-btn" href="recommend.php">城ビギナーへおすすめの城</a>
       <a class="menu-btn" href="cultural_property.php">その他文化財</a>
     </div>
   </div>
@@ -37,7 +37,7 @@
         <a class="acordion-btn" href="other_castles.php">その他の城</a>
       </li>
       <li class="hamburger-window__link">
-        <a class="acordion-btn" href="recommend.php">初心者向けの城</a>
+        <a class="acordion-btn" href="recommend.php">城ビギナーへおすすめの城</a>
       </li>
       <li class="hamburger-window__link">
         <a class="acordion-btn" href="cultural_property.php">その他文化財</a>
