@@ -138,7 +138,7 @@
         </div>
         <aside>
           <div class="sub-content">
-            <h2>城ビギナーにおすすめの城</h2>
+            <h2>城ビギナーへおすすめの城</h2>
             <ul>
               <?php
               $sql='SELECT * FROM castles WHERE recnumber= 5 ORDER BY cas ASC limit 3';
