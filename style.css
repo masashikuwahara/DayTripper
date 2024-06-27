@@ -49,6 +49,7 @@
   left: 20px;
   font-size: 35px;
   font-weight: bold;
+  z-index: 5;
 }
 
 /* ---------------------------------------------- */
@@ -155,8 +156,8 @@
     background-image: radial-gradient(circle at 100% 0%, 
 		rgb(243, 94, 156) 15%, rgb(243, 185, 61));
     z-index: 5;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .hamburger-window__link {
@@ -559,25 +560,27 @@ th {
   text-align: center;
 }
 
-/* 2カラムレイアウト */
-
-.grid {
-  display: inline-block;
+ .front{
   text-align: center;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
 }
 
-.main-content {
-  flex: 1;
+.background.hidden {
+  opacity: 0;
 }
 
-aside {
-  text-align: center;
-  margin: auto;
+.cover {
+  margin-top: 900px;
 }
 
 /* ここからデスクトップ */
@@ -586,6 +589,10 @@ aside {
     margin: 0;
     background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
     color: #000b00;
+  }
+
+  header {
+    z-index: 1000;
   }
 
   footer {
@@ -639,7 +646,8 @@ aside {
     left: 20px;
     font-size: 35px;
     font-weight: bold;
-    color: #000
+    color: #000;
+    z-index: 5;
   }
 
   .menu {
@@ -656,6 +664,7 @@ aside {
     justify-content: center;
     padding: 0 20px;
     color: #333;
+    z-index: 5;
   }
   
   .menu-btn:hover {
@@ -977,7 +986,6 @@ th {
 
 /* .swiperThumbs .swiper-slide-active {background-color: #fbfaf5;} */
 
-/* 現存天守のページ */
 
 .container{
   display: grid;
@@ -985,33 +993,29 @@ th {
   gap: 10px;
 }
 
-/* 2カラムレイアウト */
-
-.grid {
-  display: inline-block;
-  text-align: center;
-}
-
-.container {
+.front{
   display: flex;
-  flex-wrap: wrap;
-  margin-left: 300px;
+  justify-content: center;
+  align-items: center;
 }
 
-.main-content {
-  flex: 1;
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
 }
 
-aside {
-  width: 300px;
-  margin-top: 0;
-  margin-right: 200px;
-  margin-left: 100px;
-  
+.background.hidden {
+  opacity: 0;
 }
 
-.sub-content h2 {
-  text-align: center;
+.cover {
+  margin-top: 900px;
 }
 
 }
