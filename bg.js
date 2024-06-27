@@ -1,9 +1,15 @@
               // 背景画像のURLリスト
 const images = [
-    'url("image1.jpg")',
-    'url("image2.jpg")',
-    'url("image3.jpg")',
-    'url("image4.jpg")'
+    'url("img/image01.jpg")',
+    'url("img/image02.jpg")',
+    'url("img/image03.jpg")',
+    'url("img/image04.jpg")',
+    'url("img/image05.jpg")',
+    'url("img/image06.jpg")',
+    'url("img/image07.jpg")',
+    'url("img/image08.jpg")',
+    'url("img/image09.jpg")',
+    'url("img/image10.jpg")',
 ];
 
 // 現在の画像のインデックス
