@@ -1,5 +1,5 @@
   body {
-    margin: 0;
+    margin: 0 auto;
     background-image: radial-gradient(circle at 85% 15%, 
 		rgb(252, 236, 215) 65%, rgb(255, 220, 240));
     background-attachment: fixed;
@@ -564,27 +564,36 @@ th {
   text-align: center;
 }
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 1s ease-in-out;
+/* 背景画像 */
+.fade-bg {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
-
-.background.hidden {
+.fade-bg__inner {
+  position: relative;
+  z-index: -100;
+}
+.fade-bg__inner div {
   opacity: 0;
+  transition: 4s;
 }
-
-.cover {
-  margin-top: 900px;
+.fade-bg__inner div.show-img {
+  opacity: 1;
+}
+.fade-bg__inner .bg-img {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: initial;
+  max-width: initial;
+  min-height: 100vh;
+  min-width: 100%;
 }
 
 /* ここからデスクトップ */
-@media screen and (min-width: 841px) {
+@media screen and (min-width: 1270px) {
   body {
     margin: 0;
     background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
@@ -999,23 +1008,33 @@ th {
   align-items: center;
 }
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* 背景画像 */
+.fade-bg {
+  position: relative;
+  top: -40px;
+  height: 100vh;
   width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 1s ease-in-out;
+  overflow: hidden;
 }
-
-.background.hidden {
+.fade-bg__inner {
+  position: relative;
+  z-index: -100;
+}
+.fade-bg__inner div {
   opacity: 0;
+  transition: 4s;
 }
-
-.cover {
-  margin-top: 900px;
+.fade-bg__inner div.show-img {
+  opacity: 1;
 }
-
+.fade-bg__inner .bg-img {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: initial;
+  max-width: initial;
+  min-height: 100vh;
+  min-width: 100%;
+}
 }
