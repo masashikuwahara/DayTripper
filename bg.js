@@ -1,43 +1,29 @@
-              // 背景画像のURLリスト
-const images = [
-    'url("img/image01.jpg")',
-    'url("img/image02.jpg")',
-    'url("img/image03.jpg")',
-    'url("img/image04.jpg")',
-    'url("img/image05.jpg")',
-    'url("img/image06.jpg")',
-    'url("img/image07.jpg")',
-    'url("img/image08.jpg")',
-    'url("img/image09.jpg")',
-    'url("img/image10.jpg")',
-];
-
-// 現在の画像のインデックス
-let currentIndex = 0;
-
-// 画像要素
-const background1 = document.getElementById('background1');
-const background2 = document.getElementById('background2');
-
-// 初期の背景画像を設定
-background1.style.backgroundImage = images[currentIndex];
-
-// 背景画像を変更する関数
-function changeBackground() {
-    // 次の画像のインデックスを計算
-    currentIndex = (currentIndex + 1) % images.length;
-
-    // 現在表示されている要素を取得
-    const currentBackground = currentIndex % 2 === 0 ? background1 : background2;
-    const nextBackground = currentIndex % 2 === 0 ? background2 : background1;
-
-    // 次の背景画像を設定
-    nextBackground.style.backgroundImage = images[currentIndex];
-
-    // フェードイン・フェードアウトのクラスを切り替え
-    currentBackground.classList.add('hidden');
-    nextBackground.classList.remove('hidden');
-}
-
-// 一定時間ごとに背景画像を変更（5000ミリ秒 = 5秒）
-setInterval(changeBackground, 5000);
+    /* 背景画像パス */
+    var imgList = [
+        'https://masuda8row.com/ref-img/img01.jpg',
+        'https://masuda8row.com/ref-img/img02.jpg',
+        'https://masuda8row.com/ref-img/img03.jpg',
+        'https://masuda8row.com/ref-img/img04.jpg'
+    ];
+    var fadeInSpeed = 4000; //フェードインスピード
+    var imgListLength = imgList.length;
+    var imgCnt = 0;
+    for (var i = 0; i < imgListLength; i++) {
+        var fadeBg = document.createElement('div');
+        fadeBg.innerHTML = '<img src="' + imgList[i] + '" ' + 'class="bg-img">';
+        document.getElementById('js-fade-bg__inner').appendChild(fadeBg);
+    }
+    var fadeImg = document.getElementById('js-fade-bg__inner').getElementsByTagName('div');
+    fadeImg[imgCnt].classList.add('show-img');
+    setInterval(function () {
+        ++imgCnt;
+        if (imgListLength === imgCnt) {
+            imgCnt = 0;
+            fadeImg[imgListLength - 1].classList.remove('show-img');
+        } else if (imgListLength === imgCnt + 1) {
+            for (var i = 0; i < (imgListLength - 1); i++) {
+                fadeImg[i].classList.remove('show-img');
+            }
+        }
+        fadeImg[imgCnt].classList.add('show-img');
+    }, fadeInSpeed);
