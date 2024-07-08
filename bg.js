@@ -1,19 +1,25 @@
     /* 背景画像パス */
-    var imgList = [
-        'https://masuda8row.com/ref-img/img01.jpg',
-        'https://masuda8row.com/ref-img/img02.jpg',
-        'https://masuda8row.com/ref-img/img03.jpg',
-        'https://masuda8row.com/ref-img/img04.jpg'
+    let imgList = [
+        'img/image01.jpg',
+        'img/image02.jpg',
+        'img/image03.jpg',
+        'img/image04.jpg',
+        'img/image05.jpg',
+        'img/image06.jpg',
+        'img/image07.jpg',
+        'img/image08.jpg',
+        'img/image09.jpg',
+        'img/image10.jpg'
     ];
-    var fadeInSpeed = 4000; //フェードインスピード
-    var imgListLength = imgList.length;
-    var imgCnt = 0;
-    for (var i = 0; i < imgListLength; i++) {
-        var fadeBg = document.createElement('div');
+    let fadeInSpeed = 4000; //フェードインスピード
+    let imgListLength = imgList.length;
+    let imgCnt = 0;
+    for (let i = 0; i < imgListLength; i++) {
+        let fadeBg = document.createElement('div');
         fadeBg.innerHTML = '<img src="' + imgList[i] + '" ' + 'class="bg-img">';
         document.getElementById('js-fade-bg__inner').appendChild(fadeBg);
     }
-    var fadeImg = document.getElementById('js-fade-bg__inner').getElementsByTagName('div');
+    let fadeImg = document.getElementById('js-fade-bg__inner').getElementsByTagName('div');
     fadeImg[imgCnt].classList.add('show-img');
     setInterval(function () {
         ++imgCnt;
@@ -21,7 +27,7 @@
             imgCnt = 0;
             fadeImg[imgListLength - 1].classList.remove('show-img');
         } else if (imgListLength === imgCnt + 1) {
-            for (var i = 0; i < (imgListLength - 1); i++) {
+            for (let i = 0; i < (imgListLength - 1); i++) {
                 fadeImg[i].classList.remove('show-img');
             }
         }
