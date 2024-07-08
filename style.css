@@ -13,6 +13,7 @@
     width: 100%;
     background: #a9a9a9;
     text-align: center;
+    z-index: 10;
   }
 
   a {
@@ -567,7 +568,7 @@ th {
 /* 背景画像 */
 .fade-bg {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 .fade-bg__inner {
