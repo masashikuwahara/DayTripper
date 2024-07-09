@@ -1,8 +1,8 @@
 <?php
 
-if(isset($_POST['disp'])==true)
+if(isset($_POST['disp']) === true)
 {
-	if(isset($_POST['id'])==false)
+	if(isset($_POST['id']) === false)
 	{
 		header('Location:contact_ng.php');
 		exit();
@@ -12,7 +12,7 @@ if(isset($_POST['disp'])==true)
 	exit();
 }
 
-if(isset($_POST['con'])==true)
+if(isset($_POST['con']) === true)
 {
 	header('Location: contact_check.php');
 	exit();

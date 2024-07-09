@@ -1,9 +1,9 @@
 <?php
 
 //城詳細 
-if(isset($_POST['disp'])==true)
+if(isset($_POST['disp']) === true)
 {
-	if(isset($_POST['id'])==false)
+	if(isset($_POST['id']) === false)
 	{
 		header('Location:culturals_ng.php');
 		exit();
@@ -14,16 +14,16 @@ if(isset($_POST['disp'])==true)
 }
 
 // 城追加
-if(isset($_POST['add'])==true)
+if(isset($_POST['add']) === true)
 {
 	header('Location: culturals_add.php');
 	exit();
 }
 
 // 城修正
-if(isset($_POST['edit'])==true)
+if(isset($_POST['edit']) === true)
 {
-	if(isset($_POST['id'])==false)
+	if(isset($_POST['id']) === false)
 	{
 		header('Location:culturals_ng.php');
 		exit();
@@ -34,9 +34,9 @@ if(isset($_POST['edit'])==true)
 }
 
 //城削除
-if(isset($_POST['delete'])==true)
+if(isset($_POST['delete']) === true)
 {
-	if(isset($_POST['id'])==false)
+	if(isset($_POST['id']) === false)
 	{
 		header('Location:culturals_ng.php');
 		exit();

@@ -21,7 +21,7 @@ try
 
     $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if($rec==false)
+    if(!$rec)
     {
         header("Content-Type: text/html; charset=UTF-8");
         echo'スタッフコードかパスワードが間違っています。<br />';

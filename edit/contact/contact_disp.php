@@ -72,7 +72,7 @@ $dbh = null;
 <body>
   <div class="wrapper">
     <?php
-    if($contact_confirmed == 0){
+    if($contact_confirmed === 0){
       echo '対応前';
     }else{
       echo '対応済み';

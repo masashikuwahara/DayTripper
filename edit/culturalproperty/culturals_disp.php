@@ -49,7 +49,7 @@ $culturals_img3=$cul['img3'];
 
         $dbh = null;
 
-        if($culturals_img1=='')
+        if($culturals_img1 === '')
         {
             $disp_img1='';
         }
@@ -68,7 +68,7 @@ $culturals_img3=$cul['img3'];
 
         $dbh = null;
 
-        if($culturals_img2=='')
+        if($culturals_img2 === '')
         {
             $disp_img2='';
         }
@@ -87,7 +87,7 @@ $culturals_img3=$cul['img3'];
 
         $dbh = null;
 
-        if($culturals_img3=='')
+        if($culturals_img3 === '')
         {
             $disp_img3='';
         }

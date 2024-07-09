@@ -61,7 +61,7 @@ session();
 
         $dbh = null;
 
-        if($culturals_img1_old=='')
+        if($culturals_img1_old === '')
         {
             $disp_img='';
         }
@@ -70,7 +70,7 @@ session();
             $disp_img='<img src="../../img/'.$culturals_img1_old.'">';
         }
 
-        if($culturals_img2_old=='')
+        if($culturals_img2_old === '')
         {
             $disp_img='';
         }
@@ -79,7 +79,7 @@ session();
             $disp_img='<img src="../../img/'.$culturals_img2_old.'">';
         }
 
-        if($culturals_img3_old=='')
+        if($culturals_img3_old === '')
         {
             $disp_img='';
         }

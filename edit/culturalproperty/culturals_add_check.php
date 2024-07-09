@@ -34,7 +34,7 @@ session();
     $culturals_img2=$_FILES['img2'];
     $culturals_img3=$_FILES['img3'];
 
-    if($culturals_title=='')
+    if($culturals_title === '')
     {
         echo'<p style="color:#ff0000">文化財名が入力されていません。</p><br />';
     }
@@ -45,7 +45,7 @@ session();
         echo'<br />';
     }
 
-    if($culturals_year=='')
+    if($culturals_year === '')
     {
         echo'<p style="color:#ff0000">制作年が入力されていません。</p><br />';
     }
@@ -56,7 +56,7 @@ session();
         echo'<br />';
     }
 
-    if($culturals_specify=='')
+    if($culturals_specify === '')
     {
         echo'<p style="color:#ff0000">指定文化財が入力されていません。</p><br />';
     }
@@ -67,7 +67,7 @@ session();
         echo'<br />';
     }
 
-    if($culturals_explan=='')
+    if($culturals_explan === '')
     {
         echo'<p style="color:#ff0000">説明が入力されていません。</p><br />';
     }
@@ -79,7 +79,7 @@ session();
     }    
 
     
-    if($culturals_access=='')
+    if($culturals_access === '')
     {
         echo'<p style="color:#ff0000">アクセスが入力されていません。</p><br />';
     }
@@ -132,8 +132,8 @@ session();
         }
     }
     
-    if($culturals_title==''||$culturals_year==''||$culturals_specify==''||
-    $culturals_explan==''||$culturals_access==''||
+    if($culturals_title === ''||$culturals_year === ''||$culturals_specify === ''||
+    $culturals_explan === ''||$culturals_access === ''||
     $culturals_img1['size']>1000000)
     {
         echo'<form>';

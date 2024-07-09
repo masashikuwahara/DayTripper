@@ -43,7 +43,7 @@ session();
     $castles_img4=$_FILES['img4'];
     $castles_img5=$_FILES['img5'];
 
-    if($castles_cas=='')
+    if($castles_cas === '')
     {
         echo'<p style="color:#ff0000">城番号が入力されていません。</p><br />';
     }
@@ -54,7 +54,7 @@ session();
         echo'<br />';
     }
 
-    if($castles_title=='')
+    if($castles_title === '')
     {
         echo'<p style="color:#ff0000">城名が入力されていません。</p><br />';
     }
@@ -65,7 +65,7 @@ session();
         echo'<br />';
     }
 
-    if($castles_structure=='')
+    if($castles_structure  === '')
     {
         echo'<p style="color:#ff0000">城郭構造が入力されていません。</p><br />';
     }
@@ -76,7 +76,7 @@ session();
         echo'<br />';
     }
 
-    if($castles_tenshu=='')
+    if($castles_tenshu === '')
     {
         echo'<p style="color:#ff0000">天守構造が入力されていません。</p><br />';
     }
@@ -87,7 +87,7 @@ session();
         echo'<br />';
     }
 
-    if($castles_builder=='')
+    if($castles_builder === '')
     {
         echo'<p style="color:#ff0000">築城主が入力されていません。</p><br />';
     }
@@ -98,7 +98,7 @@ session();
         echo'<br />';
     }
 
-    if($castles_year=='')
+    if($castles_year === '')
     {
         echo'<p style="color:#ff0000">築城年が入力されていません。</p><br />';
     }
@@ -109,7 +109,7 @@ session();
         echo'<br />';
     }
 
-    if($castles_lord=='')
+    if($castles_lord === '')
     {
         echo'<p style="color:#ff0000">主な城主が入力されていません。</p><br />';
     }
@@ -120,7 +120,7 @@ session();
         echo'<br />';
     }
 
-    if($castles_remains=='')
+    if($castles_remains === '')
     {
         echo'<p style="color:#ff0000">遺構が入力されていません。</p><br />';
     }
@@ -131,7 +131,7 @@ session();
         echo'<br />';
     }
 
-    if($castles_specify1=='')
+    if($castles_specify1 === '')
     {
         echo'<p style="color:#ff0000">指定文化財が入力されていません。</p><br />';
     }
@@ -142,7 +142,7 @@ session();
         echo'<br />';
     }
 
-    if($castles_recommend=='')
+    if($castles_recommend === '')
     {
         echo'<p style="color:#ff0000">おすすめ度が入力されていません。</p><br />';
     }
@@ -154,7 +154,7 @@ session();
     }    
 
     
-    if($castles_explan=='')
+    if($castles_explan === '')
     {
         echo'<p style="color:#ff0000">説明が入力されていません。</p><br />';
     }
@@ -166,7 +166,7 @@ session();
     }    
 
     
-    if($castles_access=='')
+    if($castles_access === '')
     {
         echo'<p style="color:#ff0000">アクセスが入力されていません。</p><br />';
     }
@@ -247,9 +247,9 @@ session();
         }
     }
     
-    if($castles_title==''||$castles_structure==''||$castles_builder==''||
-    $castles_year==''||$castles_lord==''||$castles_specify1==''||$castles_recommend==''||
-    $castles_explan==''||$castles_access==''||
+    if($castles_title === ''||$castles_structure === ''||$castles_builder === ''||
+    $castles_year === ''||$castles_lord === ''||$castles_specify1 === ''||$castles_recommend === ''||
+    $castles_explan === ''||$castles_access === ''||
     $castles_img1['size']>1000000)
     {
         echo'<form>';
