@@ -43,6 +43,11 @@ session();
     $castles_img4=$_FILES['img4'];
     $castles_img5=$_FILES['img5'];
 
+    require('../../connect.php');
+    $stmt = $dbh->prepare('SELECT COUNT(*) FROM castles WHERE cas = ?');
+    $stmt->execute([$castles_cas]);
+    $count = $stmt->fetchColumn();
+
     if($castles_cas === '')
     {
         echo'<p style="color:#ff0000">城番号が入力されていません。</p><br />';
@@ -52,6 +57,10 @@ session();
         echo'城番号:';
         echo$castles_cas;
         echo'<br />';
+    }
+
+    if ($count !== 0) {
+        echo '<p style="color:#ff0000">この城番号は既に登録されています。</p><br />';
     }
 
     if($castles_title === '')
@@ -247,7 +256,7 @@ session();
         }
     }
     
-    if($castles_title === ''||$castles_structure === ''||$castles_builder === ''||
+    if($castles_title === ''||$count !== 0||$castles_structure === ''||$castles_builder === ''||
     $castles_year === ''||$castles_lord === ''||$castles_specify1 === ''||$castles_recommend === ''||
     $castles_explan === ''||$castles_access === ''||
     $castles_img1['size']>1000000)
