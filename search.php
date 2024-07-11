@@ -14,7 +14,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
     <link rel="stylesheet" href="style.css">
     <title><?php echo $s ?>の検索結果</title>
 </head>
@@ -83,13 +82,12 @@
       <input class="btn" type="submit" value="検索する">
     </form>
   </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="menu.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script>
-        ScrollReveal().reveal('.f',{
-            duration: 800,
-            viewFactor: 0.2,
-        });
-    </script>
-    <?php require('footer.php'); ?>
+  <script type="text/javascript" src="menu.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+  ScrollReveal().reveal('.f',{
+    duration: 800,
+    viewFactor: 0.2,
+  });
+  </script>
+  <?php require('footer.php'); ?>

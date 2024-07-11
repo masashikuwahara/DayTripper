@@ -11,7 +11,7 @@
 <?php include('header.php'); ?>
 <div class="castle_page">
   <h1 class="title">現存天守</h1>
-  
+
   <div class="about">
     現存天守とは江戸時代以前に建造され、現在でも残っている天守のことを言います。
     かつて日本全国には多数の城があり、天守閣も多くありました。しかし戦乱、江戸時代初期の
@@ -68,5 +68,4 @@
   ?>
   </div>
   <script type="text/javascript" src="menu.js"></script>
-
   <?php include('footer.php'); ?>

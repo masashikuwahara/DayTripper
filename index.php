@@ -13,8 +13,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="canonical" href="https://daytripper.site/">
   <style>
     .ad{
@@ -177,10 +175,6 @@
 <div class="query">
   <a href="contact/">お問い合わせ</a>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.3/dist/vue-awesome-swiper.min.js"></script>
-<script type="text/javascript" src="swiper.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript" src="bg.js"></script>
   <?php require('footer.php'); ?>

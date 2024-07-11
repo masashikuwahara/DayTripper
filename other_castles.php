@@ -11,7 +11,6 @@
 <?php include('header.php'); ?>
 <div class="castle_page">
   <h1 class="title">その他の城</h1>
-  
   <div class="about">
     100名城、続100名城以外のお城です。これらの多くの城も史跡に指定されており、
     歴史的にも重要な城です。だいたいは本城を守る支城であり、守りに特化していることから
@@ -65,7 +64,5 @@
       ?>
 </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="menu.js"></script>
-
   <?php include('footer.php'); ?>

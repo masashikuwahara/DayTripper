@@ -9,7 +9,6 @@
 </head>
 <body>
 <?php include('header.php'); ?>
-
   <h1 class="title">はじめに</h1>
   <div class="wrapper">
     <main class="main">
@@ -43,6 +42,5 @@
     ここに文章
   </P> -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="menu.js"></script>
   <?php include('footer.php'); ?>
