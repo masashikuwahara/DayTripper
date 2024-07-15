@@ -40,9 +40,8 @@
     <input class="sea" type="text" name="s" placeholder="例:姫路城、出雲大社">
     <input class="btn" type="submit" value="検索する">
   </form>
-  <p style="text-align: center;">地域ごとに城を検索できるようにしました。こちらもご覧ください</p>
-  <p class="map"><a href="map/" id="child">日本地図から城を検索</a></p>
-
+  <p style="text-align: center;">地域ごとに城を検索できるようにしました。<br>↓をクリック！</p>
+  <div class="rand" style="text-align: center;"><a href="map/"><img style="width:360px" src="img/map.png"></a></div>
   <h2 style="text-align: center;">今のあなたにおすすめな城</h2><br />
         
   <?php

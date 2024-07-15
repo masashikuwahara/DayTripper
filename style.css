@@ -4,6 +4,7 @@
 		rgb(252, 236, 215) 65%, rgb(255, 220, 240));
     background-attachment: fixed;
     color: #000b00;
+    font-family: cursive ;
   }
 
   footer {
@@ -589,8 +590,10 @@ th {
 @media screen and (min-width: 1270px) {
   body {
     margin: 0;
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    background-image: radial-gradient(circle at 85% 15%, 
+		rgb(252, 236, 215) 65%, rgb(255, 220, 240));
     color: #000b00;
+    font-family: cursive ;
   }
 
   header {
@@ -665,12 +668,12 @@ th {
     display: flex;
     justify-content: center;
     padding: 0 20px;
-    color: #333;
+    color: #000000;
     z-index: 5;
   }
   
   .menu-btn:hover {
-    background: linear-gradient(transparent 90%, #4169ecfd 70%);
+    background: linear-gradient(transparent 90%, #1fb42bfd 70%);
   }
   
   
