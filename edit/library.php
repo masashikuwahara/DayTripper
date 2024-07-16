@@ -7,7 +7,7 @@ function session(){
     {
         header("Content-Type: text/html; charset=UTF-8");
         echo'ログインされていません。<br />';
-        echo'<a href="login.html">ログイン画面へ</a>';
+        echo'<a href="login.php">ログイン画面へ</a>';
         exit();
     }
     else
