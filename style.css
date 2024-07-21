@@ -67,7 +67,7 @@
     top: 0;
     right: 0;
     z-index: 10;
-    box-shadow: 0px 0px 10px rgba(63, 63, 63, 0.767);;
+    box-shadow: 0px 0px 10px rgba(63, 63, 63, 0.767);
 }
 
 /* 三本線 */
@@ -556,6 +556,17 @@ th {
 }
 
  .front{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 0.5em;
+	padding:0.5em;/*内側余白*/
+	border-radius:30px;/*丸みを調整*/
+	background-color:#aeebb3;
+  box-shadow: 0px 0px 10px rgba(63, 63, 63, 0.562);
+}
+
+.front_r{
   text-align: center;
 }
 
@@ -814,22 +825,23 @@ th {
 }
 
 .btn {
-  background-color: #ffa500;
-  border-radius: 20px;
+  background-color: #fff4e1 ;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow:  20px 20px 60px #bebebe,
+              -20px -20px 60px #ffffff;
   border: none;
-  color: #fff;
   width: 70px;
-  height: 35px;
-}
-
-.btn:hover {
-  background-color: #d2691e;
+  height: 30px;
+  color: #000;
 }
 
 .btn:active {
-  background-color: #87ceeb;
-  position: relative;
-  top: 2px;
+  border-radius: 50px;
+  background: #e0e0e08a;
+  box-shadow: inset 20px 20px 60px #bebebe,
+              inset -20px -20px 60px #ffffff;
+  color: #000;
 }
 
 .cp_ipradio {
@@ -1000,6 +1012,17 @@ th {
 }
 
 .front{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 22em;
+	padding:0.5em;/*内側余白*/
+	border-radius:30px;/*丸みを調整*/
+	background-color:#aeebb3;
+  box-shadow: 0px 0px 10px rgba(63, 63, 63, 0.562);
+}
+
+.front_r{
   display: flex;
   justify-content: center;
   align-items: center;
