@@ -34,15 +34,16 @@
     <div class="fade-bg__inner" id="js-fade-bg__inner"></div>
   </div>
 
+  <h2 class="front">城や文化財を検索</h2>
   <form  style="text-align: center;" class="cp_ipradio" action="search.php" method="get">
     <label><input type="radio" class="option-input" name="select" value="castle" checked>城を検索する</label>
     <label><input type="radio" class="option-input" name="select" value="culture" >文化財を検索する</label><br />
     <input class="sea" type="text" name="s" placeholder="例:姫路城、出雲大社">
     <input class="btn" type="submit" value="検索する">
   </form>
-  <p style="text-align: center;">地域ごとに城を検索できるようにしました。<br>↓をクリック！</p>
+  <h2 class="front">地図で城を検索</h2><p style="text-align: center;">↓をクリック！<br></p>
   <div class="rand" style="text-align: center;"><a href="map/"><img style="width:360px" src="img/map.png"></a></div>
-  <h2 style="text-align: center;">今のあなたにおすすめな城</h2><br />
+  <h2 class="front" >今のあなたにおすすめな城</h2><br />
         
   <?php
   try{
@@ -67,7 +68,7 @@
   ?>
   
     <h2 class="front">城ビギナーへおすすめの城</h2>
-      <ul class="front">
+      <ul class="front_r">
         <?php
         $sql='SELECT * FROM castles WHERE recnumber= 5 ORDER BY cas ASC limit 3';
         $stmt=$dbh->prepare($sql);
