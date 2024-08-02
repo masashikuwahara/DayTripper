@@ -14,6 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="canonical" href="https://daytripper.site/">
+  <title>DayTripperの記録</title>
   <style>
     .ad{
       text-align: center;
@@ -26,7 +27,6 @@
       font-size: 15px;
     }
   </style>
-  <title>DayTripperの記録</title>
 </head>
 <body>
   <?php require('header.php'); ?>
@@ -177,4 +177,4 @@
 </div>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-v.3.0.1
+v.3.1.1

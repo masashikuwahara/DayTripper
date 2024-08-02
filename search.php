@@ -22,7 +22,11 @@
   <br />
   <div class="search">
     <?php
-    echo "<div class='s'> 「{$s}」の検索結果</div>";
+    if($s != ''){
+      echo "<div class='s'> 「{$s}」の検索結果</div>";
+    }else{
+      echo "<div class='s'>キーワードを入力してください</div>";
+    }
 
     if($_GET["s"] != ''){
       if($_GET['select'] === 'castle'){
