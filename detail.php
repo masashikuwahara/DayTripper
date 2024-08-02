@@ -225,6 +225,5 @@ $castles_img5=$cas['img5'];
         <?php echo $castles_access;?>
     </div>
   </div>
-  <script type="text/javascript" src="menu.js"></script>
   <script type="text/javascript" src="gallery.js"></script>
   <?php require('footer.php'); ?>

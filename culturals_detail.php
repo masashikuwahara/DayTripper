@@ -147,6 +147,4 @@ $culturals_img3=$cul['img3'];
         <?php echo $culturals_access;?>
     </div>
   </div>
-  <script type="text/javascript" src="menu.js"></script>
-  <script type="text/javascript" src="gallery.js"></script>
   <?php require('footer.php'); ?>

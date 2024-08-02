@@ -82,7 +82,6 @@
       <input class="btn" type="submit" value="検索する">
     </form>
   </div>
-  <script type="text/javascript" src="menu.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script>
   ScrollReveal().reveal('.f',{

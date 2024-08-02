@@ -67,5 +67,4 @@
       }
   ?>
   </div>
-  <script type="text/javascript" src="menu.js"></script>
   <?php include('footer.php'); ?>

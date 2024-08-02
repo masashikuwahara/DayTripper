@@ -72,5 +72,4 @@
       ?>
 </div>
 
-  <script type="text/javascript" src="menu.js"></script>
-  <?php require('footer.php'); ?>
+<?php require('footer.php'); ?>
