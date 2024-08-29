@@ -1,10 +1,10 @@
 # Daytripperの記録
 これまで訪れた城や文化財の紹介、まとめのサイト<br>
 PC版<br>
-<img width="700" src="https://daytripper.site/img/index.jpg">
+<img width="700" src="https://daytripper.site/img/index-2.jpg">
 
 モバイル版<br>
-<img width="350" src="https://daytripper.site/img/mobile.jpg">
+<img width="350" src="https://daytripper.site/img/mobile-2.jpg">
 
 # ページの概要
 ページ上部にある各メニューから城、文化財のページへ遷移します。  
@@ -20,8 +20,7 @@ https://daytripper.site/
 - レイアウトはスマートフォンからの訪問をメインとして想定し、シングルカラムレイアウトを採用しました。
 
 # 今後の追加実装について
-- 検索結果ページのページネーションの追加。現在、検索結果が膨大に表示されることはないですが、技術の一環として実装を検討しています。
-- ナビゲーションについて見やすさを重視した表示への変更を検討しています。
+- 管理ページのページネーションの仕様変更。ページ数増大のため検討。
 
 # 洗い出した要件
 | 優先順位<br>（高：3、中：2、低：1） | 機能 | 目的 | 詳細 | ストーリー(ユースケース) | 見積もり（所要時間） |
