@@ -24,8 +24,6 @@
     <?php
     if($s != ''){
       echo "<div class='s'> 「{$s}」の検索結果</div>";
-    }else{
-      echo "<div class='s'>キーワードを入力してください</div>";
     }
 
     if($_GET["s"] != ''){
