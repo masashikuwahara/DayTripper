@@ -311,16 +311,23 @@ p.intro {
 }
 
 .btn {
-  background-color: #ffa500;
-  border-radius: 20px;
+  background-color: #fff4e1 ;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow:  20px 20px 60px #bebebe,
+              -20px -20px 60px #ffffff;
   border: none;
-  color: #fff;
   width: 70px;
-  height: 35px;
+  height: 30px;
+  color: #000;
 }
 
-.btn:hover {
-  background-color: #d2691e;
+.btn:active {
+  border-radius: 50px;
+  background: #e0e0e08a;
+  box-shadow: inset 20px 20px 60px #bebebe,
+              inset -20px -20px 60px #ffffff;
+  color: #000;
 }
 
 .btn:active {
