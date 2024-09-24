@@ -109,8 +109,12 @@ echo '<input class="btn" type="submit" name="edit" value="修正">';
 echo '<input disabled class="btn" type="submit" name="delete" value="削除">';
 echo '</form>';
 ?>
+<div>城名で検索する</div>
+  <form action="castles_search.php" method="get">
+    <input class="sea" type="text" name="s" placeholder="例:姫路城">
+    <input class="btn" type="submit" value="検索">
+  </form>
 
-<br />
 <a href="../top.php">トップメニューへ</a><br />
 
 </body>
