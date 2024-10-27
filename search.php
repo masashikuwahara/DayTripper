@@ -30,7 +30,7 @@
 
     if($_GET["s"] != ''){
       if($_GET['select'] === 'castle'){
-        $stmt=$dbh->prepare("SELECT * FROM castles WHERE title like '%$my_sea%'");
+        $stmt=$dbh->prepare("SELECT * FROM castles WHERE title OR structure like '%$my_sea%'");
         $stmt->execute();
         $t = $stmt->rowCount();
         if($t > 0){
@@ -65,8 +65,8 @@
             $a = mb_convert_encoding($a, "UTF-8", "auto");
             echo $a;
             echo '<div class="detail">';
-            echo "{$r['specify']}"."<br />".
-            "<br />"."{$r['explan']}"."<hr>";
+            echo "指定文化財："."{$r['specify']}"."<br />".
+            "{$r['explan']}"."<hr>";
             echo '</div>';
             echo '</div>';
           } 
@@ -82,7 +82,7 @@
     <form  style="text-align: center;" class="cp_ipradio" action="search.php" method="get">
       <label><input type="radio" class="option-input" name="select" value="castle" checked>城を検索する</label>
       <label><input type="radio" class="option-input" name="select" value="culture" >文化財を検索する</label><br />
-      <input class="sea" type="text" name="s" placeholder="例:姫路城、出雲大社">
+      <input class="sea" type="text" name="s" placeholder="例:姫路城、平山城、出雲大社">
       <input class="btn" type="submit" value="検索する">
     </form>
   </div>

@@ -38,9 +38,15 @@
   <form  style="text-align: center;" class="cp_ipradio" action="search.php" method="get">
     <label><input type="radio" class="option-input" name="select" value="castle" checked>城を検索する</label>
     <label><input type="radio" class="option-input" name="select" value="culture" >文化財を検索する</label><br />
-    <input class="sea" type="text" name="s" placeholder="例:姫路城、出雲大社">
+    <input class="sea" type="text" name="s" placeholder="例:姫路城、平山城、出雲大社">
     <input class="btn" type="submit" value="検索する">
   </form>
+  <div class="ad">
+    <P>
+      城名、文化財の名前を入れてください。また城は城郭構造でも検索が可能です。<br />
+      城郭構造は梯郭式、渦郭式みたいな検索方法も可能です。
+    </P>
+  </div>
   <h2 class="front">地図で城を検索</h2><p style="text-align: center;">↓をクリック！<br></p>
   <div class="rand" style="text-align: center;"><a href="map/"><img style="width:360px" src="img/map.png"></a></div>
   <h2 class="front" >今のあなたにおすすめな城</h2><br />
@@ -177,4 +183,4 @@
 </div>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-v.3.2.0
+v.3.3.0
