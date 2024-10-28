@@ -3,82 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>result</title>
+    <title>検索結果</title>
 </head>
 <body>
-    <?php
-// データベースに接続
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "search_test";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// 接続確認
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+<?php
+// データベース接続情報
+try {
+    require('connect.php');
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
 }
 
-// キーワードを取得
-$keyword = $_GET['keyword'];
+// 1ページあたりの表示件数
+$items_per_page = 3;
 
-// ページングに関連する変数
-$pageSize = 10; // 1ページに表示する件数
-$page = isset($_GET['page']) ? $_GET['page'] : 1; // 現在のページ（デフォルトは1）
+// 現在のページ番号（デフォルトは1）
+$current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
-// キーワードを含むデータの総数を取得
-$countSql = "SELECT COUNT(*) AS total FROM members WHERE name LIKE '%$keyword%'";
-$countResult = $conn->query($countSql);
-$countRow = $countResult->fetch_assoc();
-$totalResults = $countRow['total'];
+// 検索クエリの取得
+$search_query = isset($_GET['query']) ? trim($_GET['query']) : '';
 
-// ページングの計算
-$totalPages = ceil($totalResults / $pageSize);
-$offset = ($page - 1) * $pageSize;
+// エラーメッセージの初期化
+$error_message = '';
 
-// キーワードを含むデータをページングして検索
-$sql = "SELECT * FROM members WHERE name LIKE '%$keyword%' LIMIT $pageSize OFFSET $offset";
-$result = $conn->query($sql);
-
-// 検索結果を表示
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo "ID: " . $row["id"]. " - Name: " . $row["name"]. "<br>";
-    }
-    // ページネーションリンクの表示
-    echo "<br>";
-    // 最初のページへのリンク
-if ($page > 1) {
-    echo "<a href='?keyword=$keyword&page=1'>First</a> ";
-}
-
-// 省略記号の表示
-if ($page > 2) {
-    echo "... ";
-}
-
-// ページ番号の表示
-for ($i = max(1, $page - 2); $i <= min($page + 2, $totalPages); $i++) {
-    echo "<a href='?keyword=$keyword&page=$i'>$i</a> ";
-}
-
-// 省略記号の表示
-if ($page < $totalPages - 1) {
-    echo "... ";
-}
-
-// 最後のページへのリンク
-if ($page < $totalPages) {
-    echo "<a href='?keyword=$keyword&page=$totalPages'>Last</a> ";
-}
+// 検索クエリが空でない場合のみ検索処理を実行
+if ($search_query === '') {
+    $error_message = 'キーワードを入力してください';
 } else {
-    echo "検索結果がありません";
-}
+    // ページネーションの設定と検索処理
+    $offset = ($current_page - 1) * $items_per_page;
 
-// データベース接続を閉じる
-$conn->close();
+    // 検索とページネーションのSQLクエリ
+    $sql = "SELECT * FROM castles WHERE title LIKE :search_query OR structure LIKE :search_query LIMIT :offset, :items_per_page";
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindValue(':search_query', '%' . $search_query . '%', PDO::PARAM_STR);
+    $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+    $stmt->bindValue(':items_per_page', $items_per_page, PDO::PARAM_INT);
+    $stmt->execute();
+    $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // 総データ件数を取得
+    $total_items_sql = "SELECT COUNT(*) FROM castles WHERE title LIKE :search_query OR structure LIKE :search_query";
+    $total_stmt = $dbh->prepare($total_items_sql);
+    $total_stmt->bindValue(':search_query', '%' . $search_query . '%', PDO::PARAM_STR);
+    $total_stmt->execute();
+    $total_items = $total_stmt->fetchColumn();
+
+    $total_pages = ceil($total_items / $items_per_page);
+}
 ?>
+
+<!-- エラーメッセージの表示 -->
+<?php if ($error_message): ?>
+    <p><?php echo htmlspecialchars($error_message); ?></p>
+<?php else: ?>
+    <!-- 検索結果の表示 -->
+    <?php if (!empty($items)): ?>
+        <?php foreach ($items as $item): ?>
+            <?php echo '<div class="f">' ?>
+            <?php $img_name='<img style="width:120px" src="img/'.$item['img1'].'">' ?>
+            <?php $a = '<a href="detail.php?id='.$item['id'].'">'.$img_name."{$item['title']}"."</a>"?>
+            <?php $a = mb_convert_encoding($a, "UTF-8", "auto")?>
+            <?php echo $a?>
+            <?php echo '<div class="detail">'?>
+            <?php echo "指定文化財："."{$item['specify1']}"."<br />"."おすすめ度："."{$item['recommend']}"."<br />"."{$item['explan']}"."<hr>"?>
+            <?php echo '</div>'?>
+            <?php echo '</div>'?>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <p>検索結果が見つかりませんでした。</p>
+    <?php endif; ?>
+
+    <!-- ページネーションリンク -->
+    <div class="pagination">
+        <?php if ($current_page > 1): ?>
+            <a href="?query=<?php echo urlencode($search_query); ?>&page=<?php echo $current_page - 1; ?>">前のページ</a>
+        <?php endif; ?>
+
+        <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+            <a href="?query=<?php echo urlencode($search_query); ?>&page=<?php echo $i; ?>" <?php if ($i == $current_page) echo 'class="active"'; ?>>
+                <?php echo $i; ?>
+            </a>
+        <?php endfor; ?>
+
+        <?php if ($current_page < $total_pages): ?>
+            <a href="?query=<?php echo urlencode($search_query); ?>&page=<?php echo $current_page + 1; ?>">次のページ</a>
+        <?php endif; ?>
+    </div>
+<?php endif; ?>
 
 </body>
 </html>
