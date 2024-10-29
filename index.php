@@ -35,11 +35,9 @@
   </div>
 
   <h2 class="front">城や文化財を検索</h2>
-  <form  style="text-align: center;" class="cp_ipradio" action="search.php" method="get">
-    <label><input type="radio" class="option-input" name="select" value="castle" checked>城を検索する</label>
-    <label><input type="radio" class="option-input" name="select" value="culture" >文化財を検索する</label><br />
-    <input class="sea" type="text" name="s" placeholder="例:姫路城、平山城、出雲大社">
-    <input class="btn" type="submit" value="検索する">
+  <form style="text-align: center;" class="cp_ipradio" method="GET" action="search.php">
+    <input type="text" class="sea" name="s" placeholder="検索キーワードを入力">
+    <button class="btn" type="submit">検索</button>
   </form>
   <div class="ad">
     <P>
