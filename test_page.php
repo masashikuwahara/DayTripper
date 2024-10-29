@@ -8,7 +8,7 @@
 <body>
   <h1 class="front">城や文化財を検索</h1>
   <form method="GET" action="search_test.php">
-    <input type="text" name="query" placeholder="検索キーワードを入力">
+    <input type="text" name="s" placeholder="検索キーワードを入力">
     <button type="submit">検索</button>
   </form>
 </body>

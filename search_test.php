@@ -21,7 +21,7 @@ $items_per_page = 3;
 $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
 // 検索クエリの取得
-$search_query = isset($_GET['query']) ? trim($_GET['query']) : '';
+$search_query = isset($_GET['s']) ? trim($_GET['s']) : '';
 
 // エラーメッセージの初期化
 $error_message = '';
@@ -77,17 +77,17 @@ if ($search_query === '') {
     <!-- ページネーションリンク -->
     <div class="pagination">
         <?php if ($current_page > 1): ?>
-            <a href="?query=<?php echo urlencode($search_query); ?>&page=<?php echo $current_page - 1; ?>">前のページ</a>
+            <a href="?s=<?php echo urlencode($search_query); ?>&page=<?php echo $current_page - 1; ?>">前のページ</a>
         <?php endif; ?>
 
         <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-            <a href="?query=<?php echo urlencode($search_query); ?>&page=<?php echo $i; ?>" <?php if ($i == $current_page) echo 'class="active"'; ?>>
+            <a href="?s=<?php echo urlencode($search_query); ?>&page=<?php echo $i; ?>" <?php if ($i == $current_page) echo 'class="active"'; ?>>
                 <?php echo $i; ?>
             </a>
         <?php endfor; ?>
 
         <?php if ($current_page < $total_pages): ?>
-            <a href="?query=<?php echo urlencode($search_query); ?>&page=<?php echo $current_page + 1; ?>">次のページ</a>
+            <a href="?s=<?php echo urlencode($search_query); ?>&page=<?php echo $current_page + 1; ?>">次のページ</a>
         <?php endif; ?>
     </div>
 <?php endif; ?>
