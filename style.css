@@ -299,43 +299,42 @@ p.intro {
 
 /* 検索 */
 .sea {  
-  background-color: #fff4e1 ;
-  border-radius: 10px;
-  background: #fff4e1;
-  box-shadow: inset 7px 7px 14px #e8decd,
-              inset -7px -7px 14px #fffff5;
-  border: none;
-  width: 350px;
-  height: 30px;
-  margin-bottom: 10px;
+  background-color: #fffbf7;
+  border: 1px solid #fcdcc8;
+  border-radius: 8px;
+  width: 300px;
+  height: 35px;
+  padding: 0 15px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.sea:focus {
+  box-shadow: 0 0 8px rgba(252, 236, 215, 0.5);
+  outline: none;
 }
 
 .btn {
-  background-color: #fff4e1 ;
-  border-radius: 50px;
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  box-shadow:  20px 20px 60px #bebebe,
-              -20px -20px 60px #ffffff;
+  background-color: #d97a8b;
   border: none;
-  width: 70px;
-  height: 30px;
-  color: #000;
+  border-radius: 8px;
+  width: 80px;
+  height: 35px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c66a7a;
 }
 
 .btn:active {
-  border-radius: 50px;
-  background: #e0e0e08a;
-  box-shadow: inset 20px 20px 60px #bebebe,
-              inset -20px -20px 60px #ffffff;
-  color: #000;
+  background-color: #b35965;
 }
-
-.btn:active {
-  background-color: #87ceeb;
-  position: relative;
-  top: 2px;
-}
-
 
 .cp_ipradio {
   margin-bottom: -50px;
@@ -820,35 +819,41 @@ th {
 
   /* 検索 */
 .sea {  
-  background-color: #fff4e1 ;
-  border-radius: 10px;
-  background: #fff4e1;
-  box-shadow: inset 7px 7px 14px #e8decd,
-              inset -7px -7px 14px #fffff5;
-  border: none;
-  width: 350px;
-  height: 30px;
-  margin-bottom: 10px;
+  background-color: #fffbf7;
+  border: 1px solid #fcdcc8;
+  border-radius: 8px;
+  width: 300px;
+  height: 35px;
+  padding: 0 15px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.sea:focus {
+  box-shadow: 0 0 8px rgba(252, 236, 215, 0.5);
+  outline: none;
 }
 
 .btn {
-  background-color: #fff4e1 ;
-  border-radius: 50px;
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  box-shadow:  20px 20px 60px #bebebe,
-              -20px -20px 60px #ffffff;
+  background-color: #d97a8b;
   border: none;
-  width: 70px;
-  height: 30px;
-  color: #000;
+  border-radius: 8px;
+  width: 80px;
+  height: 35px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c66a7a;
 }
 
 .btn:active {
-  border-radius: 50px;
-  background: #e0e0e08a;
-  box-shadow: inset 20px 20px 60px #bebebe,
-              inset -20px -20px 60px #ffffff;
-  color: #000;
+  background-color: #b35965;
 }
 
 .cp_ipradio {
