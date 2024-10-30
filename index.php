@@ -36,9 +36,10 @@
 
   <h2 class="front">城や文化財を検索</h2>
   <form style="text-align: center;" class="cp_ipradio" method="GET" action="search.php">
-    <input type="text" class="sea" name="s" placeholder="検索キーワードを入力">
+    <input type="text" class="sea" name="s" placeholder="例：姫路城、山城">
     <button class="btn" type="submit">検索</button>
   </form>
+
   <div class="ad">
     <P>
       城名、文化財の名前を入れてください。また城は城郭構造でも検索が可能です。<br />
@@ -181,4 +182,5 @@
 </div>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-v.3.3.0
+現行バージョン3.3.0
+更改後バージョン4.0.0
