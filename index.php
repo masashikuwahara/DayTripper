@@ -54,7 +54,7 @@
   try{
     require('connect.php');
     $dbh->query('SET NAMES utf8');
-    $sql='SELECT * FROM castles ORDER BY RAND() ';
+    $sql='SELECT id, title, img1 FROM castles ORDER BY RAND() ';
     $stmt=$dbh->prepare($sql);
     $stmt->execute();
   
@@ -75,7 +75,7 @@
     <h2 class="front">城ビギナーへおすすめの城</h2>
       <ul class="front_r">
         <?php
-        $sql='SELECT * FROM castles WHERE recnumber= 5 ORDER BY cas ASC limit 3';
+        $sql='SELECT id, title, img1 FROM castles WHERE recnumber= 5 ORDER BY cas ASC limit 3';
         $stmt=$dbh->prepare($sql);
         $stmt->execute();
   
