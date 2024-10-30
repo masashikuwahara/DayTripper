@@ -12,14 +12,12 @@
   <br />
   <div class="search">
   <?php
-// データベース接続情報
 try {
     require('connect.php');
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
 
-// 1ページあたりの表示件数
 $items_per_page = 3;
 
 // 現在のページ番号（デフォルトは1）
@@ -65,7 +63,7 @@ if ($search_query === '') {
 
 <!-- エラーメッセージの表示 -->
 <?php if ($error_message): ?>
-    <p><?php echo htmlspecialchars($error_message); ?></p>
+    <div class="result"><?php echo htmlspecialchars($error_message); ?></div>
 <?php else: ?>
     <!-- 検索結果の表示 -->
     <?php if (!empty($items)): ?>
@@ -82,7 +80,7 @@ if ($search_query === '') {
             <?php echo '</div>'?>
         <?php endforeach; ?>
     <?php else: ?>
-        <p>検索結果が見つかりませんでした。</p>
+        <div class="result">そのキーワードでは見つかりませんでした</div>
 <?php endif; ?>
 
 <!-- ページネーションリンク -->
@@ -104,7 +102,7 @@ if ($search_query === '') {
 <?php endif; ?>
     <p style="text-align: center;">もう一度検索する</p>
     <form style="text-align: center;" class="cp_ipradio" method="GET" action="search.php">
-      <input type="text" class="sea" name="s" placeholder="検索キーワードを入力">
+      <input type="text" class="sea" name="s" placeholder="例：姫路城、山城">
       <button class="btn" type="submit">検索</button>
     </form>
   </div>
