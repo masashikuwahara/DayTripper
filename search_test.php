@@ -34,7 +34,8 @@ if ($search_query === '') {
     $offset = ($current_page - 1) * $items_per_page;
 
     // 検索とページネーションのSQLクエリ
-    $sql = "SELECT * FROM castles WHERE title LIKE :search_query OR structure LIKE :search_query LIMIT :offset, :items_per_page";
+    $sql = "SELECT id,title,specify1,recommend,explan,img1 FROM castles WHERE title LIKE :search_query OR structure 
+    LIKE :search_query LIMIT :offset, :items_per_page";
     $stmt = $dbh->prepare($sql);
     $stmt->bindValue(':search_query', '%' . $search_query . '%', PDO::PARAM_STR);
     $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
