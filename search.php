@@ -18,7 +18,7 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
-$items_per_page = 3;
+$items_per_page = 10;
 
 // 現在のページ番号（デフォルトは1）
 $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
