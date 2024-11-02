@@ -1,0 +1,537 @@
+@charset "UTF-8";
+html {
+  /* 指定した文字サイズを正しく反映 */
+  font-size: 100%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  /* 行の高さ */
+  line-height: 1.7;
+  color: #000;
+}
+a {
+  text-decoration: none;
+}
+p {
+  color: #000;
+  text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+              -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+              0px 1px 0 #FFF,  0-1px 0 #FFF,
+              -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+/* ロゴのサイズと余白の調整 */
+.logo {
+  width: 210px;
+  margin-top: 14px;
+}
+
+/* ナビゲーションメニューの装飾 */
+header {
+  display: flex;
+}
+
+.logo {
+  width: auto;
+  font-size: 30px;
+  font-family: "Philosopher", serif;
+  margin: 5px;
+}
+.logo {
+  color: #000;
+  text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+              -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+              0px 1px 0 #FFF,  0-1px 0 #FFF,
+              -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+.logo a{
+  color: inherit;
+}
+/* ハンバーガーボタン
+==============================　*/
+.toggle-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.toggle-btn__line {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: absolute;
+  transition: transform 0.5s;
+  width: 100%;
+}
+
+.toggle-btn__line--top {
+  top: 3px;
+}
+
+.toggle-btn__line--center {
+  top: 15px;
+}
+
+.toggle-btn__line--bottom {
+  top: 27px;
+}
+
+.toggle-btn__line--top.active {
+  top: 15px;
+  transform: rotate(45deg);
+}
+.toggle-btn__line--center.active {
+  transform: scaleX(0);
+}
+.toggle-btn__line--bottom.active {
+  top: 15px;
+  transform: rotate(135deg);
+}
+
+/* ナビゲーションメニュー
+==============================　*/
+.global-nav {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.global-nav__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.global-nav__item {
+  margin-bottom: 30px;
+}
+
+.global-nav__item a {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.global-nav__item a:hover {
+  opacity: 0.7;
+}
+
+
+
+.page-header {
+  /* 横に並べる */
+  display: flex;
+  /* 両端に設置する */
+  justify-content: space-between;
+}
+
+
+/* HOME
+------------------------------------ */
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
+/* 見出し 大きくする、Google Fontsを使用 大文字 */
+.page-title {
+  font-size: 2rem;
+  font-family: "Philosopher", serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #000;
+  text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+              -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+              0px 1px 0 #FFF,  0-1px 0 #FFF,
+              -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+
+#home .page-title {
+  text-transform: none;
+}
+.fab {
+  color: #fff;
+  margin-left: 30px;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+}
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+
+#splash {
+  /*fixedで全面に固定*/
+position: fixed;
+z-index: 999;
+width: 100%;
+height: 100%;
+background:#333;
+text-align:center;
+color:#fff;
+}
+
+/* Loadingバー中央配置　*/
+#splash_text {
+position: absolute;
+top: 50%;
+left: 50%;
+  z-index: 999;
+width: 100%;
+transform: translate(-50%, -50%);
+color: #fff;
+}
+/*==================================================
+スライダーのためのcss
+===================================*/
+#slider {
+  width: 100%;
+  height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+/* ページ紹介 */
+.about {
+  margin: auto;
+  padding-top: 20px;
+  width:500px;
+  font-family: "Philosopher", serif;
+}
+.full {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(img/himeji.jpg);
+}
+
+/* 日本地図 */
+
+@media screen and (min-width:400px) {
+html {
+  /* 指定した文字サイズを正しく反映 */
+  font-size: 100%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  /* 行の高さ */
+  line-height: 1.7;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: #000;
+  text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+              -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+              0px 1px 0 #FFF,  0-1px 0 #FFF,
+              -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ロゴのサイズと余白の調整 */
+.logo {
+  width: 210px;
+  margin-top: 14px;
+}
+
+/* ナビゲーションメニューの装飾 */
+header {
+  display: flex;
+}
+
+.logo {
+  width: auto;
+  font-size: 30px;
+  font-family: "Philosopher", serif;
+  margin: 5px;
+}
+.logo {
+  color: #000;
+  text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+              -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+              0px 1px 0 #FFF,  0-1px 0 #FFF,
+              -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+.logo a{
+  color: inherit;
+}
+/* ハンバーガーボタン
+==============================　*/
+.toggle-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 11;
+}
+
+.toggle-btn__line {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: absolute;
+  transition: transform 0.5s;
+  width: 100%;
+}
+
+.toggle-btn__line--top {
+  top: 3px;
+}
+
+.toggle-btn__line--center {
+  top: 15px;
+}
+
+.toggle-btn__line--bottom {
+  top: 27px;
+}
+
+.toggle-btn__line--top.active {
+  top: 15px;
+  transform: rotate(45deg);
+}
+.toggle-btn__line--center.active {
+  transform: scaleX(0);
+}
+.toggle-btn__line--bottom.active {
+  top: 15px;
+  transform: rotate(135deg);
+}
+
+/* ナビゲーションメニュー
+==============================　*/
+.global-nav {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.global-nav__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.global-nav__item {
+  margin-bottom: 30px;
+}
+
+.global-nav__item a {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.global-nav__item a:hover {
+  opacity: 0.7;
+}
+
+
+
+.page-header {
+  /* 横に並べる */
+  display: flex;
+  /* 両端に設置する */
+  justify-content: space-between;
+}
+
+
+/* HOME
+------------------------------------ */
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
+/* 見出し 大きくする、Google Fontsを使用 大文字 */
+.page-title {
+  font-size: 5rem;
+  font-family: "Philosopher", serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #000;
+  text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+              -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+              0px 1px 0 #FFF,  0-1px 0 #FFF,
+              -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+
+#home .page-title {
+  text-transform: none;
+}
+.fab {
+  color: #fff;
+  margin-left: 30px;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+}
+
+/*========= ここから文化財ページ関連 ===============*/
+
+.castle_page{
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.title {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.about {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ .img_style{
+  display: inline-block;
+  margin: 10px;
+}
+
+.overall {
+  width: 800px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.cas_title {
+  margin-top: 100px;
+ }
+
+.swiperOptions .swiper-slide img,
+.swiperThumbs .swiper-slide img{width: 80%;}
+/* .swiperThumbs {background-color: #fbfaf5;} */
+.swiperOptions .swiper-slide {text-align: center;}
+
+.swiperThumbs .swiper-slide {
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  width: 90px;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-top: solid 1px #778ca3;
+ }
+ .table tr:nth-child(2n+1) {
+  background: #f3f3f2;
+ }
+ .table th,.table td {
+  padding: 10px;
+  border-bottom: solid 1px #778ca3;
+ }
+
+ .access {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 550;
+  text-decoration:underline double #4CB9F6;;
+ }
+
+ .map {
+  margin-bottom: 50px;
+ }
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+
+#splash {
+  /*fixedで全面に固定*/
+position: fixed;
+z-index: 999;
+width: 100%;
+height: 100%;
+background:#333;
+text-align:center;
+color:#fff;
+}
+
+/* Loadingバー中央配置　*/
+#splash_text {
+position: absolute;
+top: 50%;
+left: 50%;
+  z-index: 999;
+width: 100%;
+transform: translate(-50%, -50%);
+color: #fff;
+}
+/*==================================================
+スライダーのためのcss
+===================================*/
+#slider {
+  width: 100%;
+  height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+/* ページ紹介 */
+.about {
+  margin: auto;
+  padding-top: 20px;
+  width:500px;
+  font-family: "Philosopher", serif;
+}
+.full {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(img/himeji.jpg);
+}
+
+/* 日本地図 */
+#map-container {
+  margin: auto;
+  width:  500px;
+  font-family: "Philosopher", serif;
+}
+}
