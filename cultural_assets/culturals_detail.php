@@ -43,7 +43,6 @@ $culturals_img3=$cul['img3'];
     <br />
     <?php
     try{
-
         if($culturals_img1 === '')
         {
             $disp_img1 = '';
@@ -60,7 +59,6 @@ $culturals_img3=$cul['img3'];
     }
 
     try{
-
         if($culturals_img2 === '')
         {
             $disp_img2 = '';
@@ -77,7 +75,6 @@ $culturals_img3=$cul['img3'];
     }
 
     try{
-
         $dbh = null;
 
         if($culturals_img3 === '')
@@ -124,8 +121,6 @@ $culturals_img3=$cul['img3'];
     </swiper>
     </div>
 
-    
-
     <table class="table">
         <tbody>
             <tr>
@@ -151,5 +146,5 @@ $culturals_img3=$cul['img3'];
         <?php echo $culturals_access;?>
     </div>
   </div>
-  <script type="text/javascript" src="gallery.js"></script>
+  <script src="gallery.js"></script>
   <?php require('footer.php'); ?>
