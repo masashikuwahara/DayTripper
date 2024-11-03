@@ -28,8 +28,51 @@
           </div>
           <div class="icon">
             <a href="https://twitter.com/sakamichiiwlu4e" target="blank"><i class="fab fa-twitter fa-3x"></i></a>
-            <a href="https://www.instagram.com/day_____tripper/" target="blank"><i class="fab fa-instagram fa-3x"></i></a>
+            <a href="https://www.instagram.com/day_____tripper_official/" target="blank"><i class="fab fa-instagram fa-3x"></i></a>
           </div>
+          <?php
+    try
+    {
+      require('connect.php');
+      $sql='SELECT * FROM info ORDER BY id DESC limit 3 ';
+      $stmt=$dbh->prepare($sql);
+      $stmt->execute();
+    ?>
+    
+    <p class="update">更新情報</p>
+    <div class="info">
+      <ul class="info2">
+        <?php 
+        while(true){
+          $rec=$stmt->fetch(PDO::FETCH_ASSOC);
+          if(!$rec)
+          {
+            break;
+          }
+
+          if(!$rec['number']){
+            echo '<li class="info3">'.
+            '<a href="'.$rec['url'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
+            '</li>';
+          }elseif($rec['kinds'] === 1){
+            echo '<li class="info3">'.
+            '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
+            '</li>';
+          }else{
+            echo '<li class="info3">'.
+            '<a href="culturals_detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
+            '</li>';
+          }
+        }
+      }
+      catch (Exception $e)
+      {
+        echo 'ただいま障害により大変ご迷惑をお掛けしております。';
+        exit();
+      }
+      ?>
+      </ul>
+    </div>
       </div>
     </div>
     <?php include('footer.php'); ?>
