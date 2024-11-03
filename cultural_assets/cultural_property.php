@@ -9,15 +9,13 @@
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>その他文化財</title>
+  <title>文化財一覧</title>
 </head>
-<body>
+<body background="" bgcolor="#A3A3A2">
 <?php include('menu.php'); ?>
 <div class="castle_page">
-  <h1 class="title">その他文化財</h1>
+  <h1 class="title">文化財一覧</h1>
   <div class="about">
-    城周辺、もしくはその道中には様々な文化財や昔の暮らしの名残みたいなのが残っています。
-    その中で気になったものをまとめてみました。
   </div>
   <hr>
   <?php
