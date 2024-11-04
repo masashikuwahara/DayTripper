@@ -30,11 +30,11 @@
             <a href="https://twitter.com/sakamichiiwlu4e" target="blank"><i class="fab fa-twitter fa-3x"></i></a>
             <a href="https://www.instagram.com/day_____tripper_official/" target="blank"><i class="fab fa-instagram fa-3x"></i></a>
           </div>
-          <?php
+   <?php
     try
     {
       require('connect.php');
-      $sql='SELECT * FROM info ORDER BY id DESC limit 3 ';
+      $sql='SELECT * FROM info_c ORDER BY id DESC limit 3 ';
       $stmt=$dbh->prepare($sql);
       $stmt->execute();
     ?>
@@ -42,7 +42,7 @@
     <p class="update">更新情報</p>
     <div class="info">
       <ul class="info2">
-        <?php 
+      <?php 
         while(true){
           $rec=$stmt->fetch(PDO::FETCH_ASSOC);
           if(!$rec)
@@ -50,17 +50,13 @@
             break;
           }
 
-          if(!$rec['number']){
+          if($rec['kinds'] === 1){
             echo '<li class="info3">'.
-            '<a href="'.$rec['url'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
-            '</li>';
-          }elseif($rec['kinds'] === 1){
-            echo '<li class="info3">'.
-            '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
+            '<a href="culturals_detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['content'].'</a>'.
             '</li>';
           }else{
             echo '<li class="info3">'.
-            '<a href="culturals_detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
+            '<a href="'.$rec['url'].'">'.$rec['day'].'&nbsp;'.$rec['content'].'</a>'.
             '</li>';
           }
         }
