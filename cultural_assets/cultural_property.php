@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <title>文化財一覧</title>
 </head>
-<body background="" bgcolor="#A3A3A2">
+<body>
 <?php include('menu.php'); ?>
 <div class="castle_page">
   <h1 class="title">文化財一覧</h1>
