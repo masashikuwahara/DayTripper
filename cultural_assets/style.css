@@ -336,13 +336,6 @@ color: #fff;
   height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
 }
 
-/* ページ紹介 */
-/* .about {
-  margin: auto;
-  padding-top: 20px;
-  width:500px;
-  font-family: "Philosopher", serif;
-} */
 .full {
   width: 100%;
   min-height: 100vh;
@@ -575,7 +568,6 @@ header {
 
 .swiperOptions .swiper-slide img,
 .swiperThumbs .swiper-slide img{width: 80%;}
-/* .swiperThumbs {background-color: #fbfaf5;} */
 .swiperOptions .swiper-slide {text-align: center;}
 
 .swiperThumbs .swiper-slide {

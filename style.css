@@ -481,8 +481,6 @@ th {
   padding: 10px;
 }
 
-/* .swiperThumbs .swiper-slide-active {background-color: #fbfaf5;} */
-
  /* 城一覧のページ */
  .header_text{
   margin-left: 10px;
@@ -533,7 +531,6 @@ th {
   background-color: #2ea2e6;
   color: #fff;
 }
-
 
  .castle_page{
   width: 390px;
@@ -694,7 +691,6 @@ th {
     background: linear-gradient(transparent 90%, #1fb42bfd 70%);
   }
   
-  
     /* スライダー */
     @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400|Roboto:400,700&display=swap");
 
@@ -763,12 +759,6 @@ th {
     text-decoration:underline;
     border-bottom:1px solid #000;
   }
-
-  .info4{
-    display: flex;
-    padding:15px;
-    border-bottom:1px solid #000;
-    }
 
   .insta {
     text-align: center;
@@ -1013,9 +1003,6 @@ th {
   text-align: center;
   padding: 10px;
 }
-
-/* .swiperThumbs .swiper-slide-active {background-color: #fbfaf5;} */
-
 
 .container{
   display: grid;
