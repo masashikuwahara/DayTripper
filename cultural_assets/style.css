@@ -12,15 +12,21 @@ body {
   background-image: linear-gradient(
     rgb(217, 238, 197) 65%, rgb(236, 205, 231));
 }
+
 a {
   text-decoration: none;
 }
+
 p {
   color: #000;
   text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
               -1px 1px 0 #FFF, 1px -1px 0 #FFF,
               0px 1px 0 #FFF,  0-1px 0 #FFF,
               -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+
+ul {
+  list-style: none;
 }
 /* ロゴのサイズと余白の調整 */
 .logo {
@@ -57,7 +63,7 @@ header {
   position: absolute;
   right: 20px;
   top: 20px;
-  z-index: 2;
+  z-index: 5;
   cursor: pointer;
   cursor: hand;
 }
@@ -103,7 +109,7 @@ header {
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 
 .global-nav__inner {
@@ -212,6 +218,24 @@ header {
   border-bottom:1px solid #000;
   }
 
+/* 城一覧ページ */
+.img_style{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+}
+
+.img_style img{
+  width: 350px;
+  display: block;
+  margin: auto;
+}
+
+.castle_page{
+  width: auto;
+  height: 100%;
+  margin: 15px;
+}
+
 /* 詳細ページ */
 th {
   width: 90px;
@@ -313,12 +337,12 @@ color: #fff;
 }
 
 /* ページ紹介 */
-.about {
+/* .about {
   margin: auto;
   padding-top: 20px;
   width:500px;
   font-family: "Philosopher", serif;
-}
+} */
 .full {
   width: 100%;
   min-height: 100vh;
