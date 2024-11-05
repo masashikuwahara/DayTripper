@@ -14,9 +14,7 @@
 <body>
 <?php include('menu.php'); ?>
 <div class="castle_page">
-  <h1 class="title">文化財一覧</h1>
-  <div class="about">
-  </div>
+  <h1 class="cas_title">文化財一覧</h1>
   <hr>
   <?php
     try
@@ -43,17 +41,16 @@
         }
         else
         {
-          $img_name='<img style="width:360px" src="img/'.$rec['img1'].'">';
+          $img_name='<img src="img/'.$rec['img1'].'">';
         }
 
-        echo '<span class="img_style">'.
+        echo '<div class="img_style">'.
             '<a href="culturals_detail.php?id='.$rec['id'].'">'.
             $img_name.
-            '<br />'.
             $rec['title'].
               '</a>'.
             '<br />'.
-            '</span>';
+            '</div>';
       }
 
       }
