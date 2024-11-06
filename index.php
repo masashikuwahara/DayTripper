@@ -177,5 +177,5 @@
 </div>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-現行バージョン3.3.0
+現行バージョン3.3.1
 更改後バージョン4.0.0
