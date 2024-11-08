@@ -46,7 +46,7 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 				{ src: 'img/10.jpg'}
 			];
 		} else {
-			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
+			var responsiveImage = [//タブレットサイズ以下用の画像
 				{ src: 'img/01.jpg'},
 				{ src: 'img/02.jpg'},
 				{ src: 'img/03.jpg'},
