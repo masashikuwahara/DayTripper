@@ -34,23 +34,29 @@ bar.animate(1.0, function () {//バーを描画する割合を指定します 1.
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 		if (windowwidth > 768){
 			var responsiveImage = [//PC用の画像
-				{ src: 'img/img_01.jpg'},
-				{ src: 'img/img_02.jpg'},
-				{ src: 'img/img_03.jpg'},
-				{ src: 'img/img_04.jpg'},
-				{ src: 'img/img_05.jpg'},
-				{ src: 'img/img_06.jpg'},
-				{ src: 'img/img_07.jpg'}
+				{ src: 'img/01.jpg'},
+				{ src: 'img/02.jpg'},
+				{ src: 'img/03.jpg'},
+				{ src: 'img/04.jpg'},
+				{ src: 'img/05.jpg'},
+				{ src: 'img/06.jpg'},
+				{ src: 'img/07.jpg'},
+				{ src: 'img/08.jpg'},
+				{ src: 'img/09.jpg'},
+				{ src: 'img/10.jpg'}
 			];
 		} else {
 			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
-				{ src: 'img/img_01.jpg'},
-				{ src: 'img/img_02.jpg'},
-				{ src: 'img/img_03.jpg'},
-        { src: 'img/img_04.jpg'},
-				{ src: 'img/img_05.jpg'},
-				{ src: 'img/img_06.jpg'},
-				{ src: 'img/img_07.jpg'}
+				{ src: 'img/01.jpg'},
+				{ src: 'img/02.jpg'},
+				{ src: 'img/03.jpg'},
+        { src: 'img/04.jpg'},
+				{ src: 'img/05.jpg'},
+				{ src: 'img/06.jpg'},
+				{ src: 'img/07.jpg'},
+				{ src: 'img/08.jpg'},
+				{ src: 'img/09.jpg'},
+				{ src: 'img/10.jpg'}
 			];
 		}
 
