@@ -40,7 +40,7 @@
         <a class="acordion-btn" href="recommend.php">城ビギナーへおすすめの城</a>
       </li>
       <li class="hamburger-window__link">
-        <a class="acordion-btn" href="cultural_property.php">その他文化財</a>
+        <a class="acordion-btn" href="cultural_assets" target="blank">その他文化財</a>
       </li>
     </ul>
   </div>
