@@ -64,9 +64,7 @@
     echo '<div class="rand" style="text-align: center;">'.'<a href="detail.php?id='.$rec['id'].'">'.
     $img_name.'<br />'.$rec['title'].'</a>'.'</div>';
   
-  }
-  catch (Exception $e)
-  {
+  }catch (Exception $e){
     echo 'ただいま障害により大変ご迷惑をお掛けしております。';
     exit();
   }
@@ -79,23 +77,17 @@
         $stmt=$dbh->prepare($sql);
         $stmt->execute();
   
-        while(true)
-        {
+        while(true){
           $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-          if(!$rec)
-          {
+          if(!$rec){
             break;
           }
   
-          if($rec['img1'] === '')
-          {
+          if($rec['img1'] === ''){
             $img_name = '';
-          }
-          else
-          {
+          }else{
             $img_name = '<img style="width:360px" src="img/'.$rec['img1'].'">';
           }
-  
           echo '<span class="img_style">'.
               '<a href="detail.php?id='.$rec['id'].'">'.
               $img_name.
@@ -117,8 +109,7 @@
         <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=3TF2AW+CSTJ02+14CS+6HMHT" alt="">
     </div>
     <?php
-    try
-    {
+    try{
       $sql='SELECT * FROM info ORDER BY id DESC limit 3 ';
       $stmt=$dbh->prepare($sql);
       $stmt->execute();
@@ -128,11 +119,9 @@
     <div class="info">
       <ul class="info2">
         <?php 
-        while(true)
-        {
+        while(true){
           $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-          if(!$rec)
-          {
+          if(!$rec){
             break;
           }
           if($rec['kinds'] === 1){
@@ -146,8 +135,7 @@
           }
         }
       }
-      catch (Exception $e)
-      {
+      catch (Exception $e){
         echo 'ただいま障害により大変ご迷惑をお掛けしております。';
         exit();
       }
@@ -177,5 +165,5 @@
 </div>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-現行バージョン3.3.1
-更改後バージョン4.0.0
+<!-- current version 3.3.1 -->
+<!-- after renewal 4.0.0 -->

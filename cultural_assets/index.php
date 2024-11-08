@@ -31,8 +31,7 @@
             <a href="https://www.instagram.com/day_____tripper_official/" target="blank"><i class="fab fa-instagram fa-3x"></i></a>
           </div>
    <?php
-    try
-    {
+    try{
       require('connect.php');
       $sql='SELECT * FROM info_c ORDER BY id DESC limit 3 ';
       $stmt=$dbh->prepare($sql);
@@ -45,11 +44,9 @@
       <?php 
         while(true){
           $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-          if(!$rec)
-          {
+          if(!$rec){
             break;
           }
-
           if($rec['kinds'] === 1){
             echo '<li class="info3">'.
             '<a href="culturals_detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['content'].'</a>'.
@@ -61,8 +58,7 @@
           }
         }
       }
-      catch (Exception $e)
-      {
+      catch (Exception $e){
         echo 'ただいま障害により大変ご迷惑をお掛けしております。';
         exit();
       }
