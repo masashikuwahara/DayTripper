@@ -28,7 +28,7 @@
           </div>
           <div class="icon">
             <a href="https://twitter.com/sakamichiiwlu4e" target="blank"><i class="fab fa-twitter fa-3x"></i></a>
-            <a href="https://www.instagram.com/day_____tripper_official/" target="blank"><i class="fab fa-instagram fa-3x"></i></a>
+            <a href="https://www.instagram.com/day_tripper_official/" target="blank"><i class="fab fa-instagram fa-3x"></i></a>
           </div>
    <?php
     try{
