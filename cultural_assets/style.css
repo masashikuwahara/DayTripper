@@ -11,6 +11,7 @@ body {
   color: #000;
   background-image: linear-gradient(
     rgb(217, 238, 197) 65%, rgb(236, 205, 231));
+  background-attachment: fixed;
 }
 
 a {
@@ -214,18 +215,23 @@ header {
 .img_style{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  gap: 10px;
 }
 
-.img_style img{
-  width: 350px;
-  display: block;
-  margin: auto;
+.img_style{
+  display: inline-block;
+  margin: 15px;
+}
+
+.img_style a{
+  text-decoration: none;
 }
 
 .castle_page{
-  width: auto;
-  height: 100%;
-  margin: 15px;
+  width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
 }
 
 /* 詳細ページ */
@@ -512,9 +518,9 @@ header {
 
 .castle_page{
   width: 1600px;
-  height: 100dvh;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
 }
 
 .title {
