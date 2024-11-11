@@ -46,7 +46,7 @@ session();
     説明を入力してください。<br />
     <textarea class="textb" type="text" name="explan" ></textarea><br />
     アクセスを入力してください。<br />
-    <input class="texta" type="text" name="access" ><br />
+    <textarea class="texta" type="text" name="access" ></textarea><br />
     画像を選んでください。<br />
     <input type="file" name="img1" ><br /><br />
     <input type="file" name="img2" ><br /><br />
