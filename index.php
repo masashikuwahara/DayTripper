@@ -130,7 +130,7 @@
             '</li>';
           }else{
             echo '<li class="info3">'.
-            '<a href="detail.php?id='.$rec['number'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
+            '<a href="'.$rec['url'].'">'.$rec['day'].'&nbsp;'.$rec['information'].'</a>'.
             '</li>';
           }
         }
@@ -165,5 +165,4 @@
 </div>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-<!-- current version 3.3.1 -->
-<!-- after renewal 4.0.0 -->
+<!-- after renewal 4.1.0 -->
