@@ -10,7 +10,7 @@
         <ul class="global-nav__list">
           <li class="global-nav__item"><a href="cultural_property.php">文化財一覧</a></li>
           <!-- <li class="global-nav__item"><a href="#">京都の文化財</a></li> -->
-          <li class="global-nav__item"><a href="#">旅先で出会った猫</a></li>
+          <li class="global-nav__item"><a href="cat.php">旅先で出会った猫</a></li>
         </ul>
       </div>
     </nav>
