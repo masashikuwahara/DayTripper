@@ -21,7 +21,7 @@
     {
       require('connect.php');
       $dbh->query('SET NAMES utf8');
-      $sql='SELECT id,title,img1 FROM cultures ';
+      $sql='SELECT id,title,img1 FROM cats';
       $stmt=$dbh->prepare($sql);
       $stmt->execute();
 
@@ -45,7 +45,7 @@
         }
 
         echo '<span class="img_style">'.
-            '<a href="culturals_detail.php?id='.$rec['id'].'">'.
+            '<a href="cat_detail.php?id='.$rec['id'].'">'.
             $img_name.
             '<br />'.
             $rec['title'].
