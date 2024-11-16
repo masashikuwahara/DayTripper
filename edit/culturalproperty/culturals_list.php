@@ -111,7 +111,7 @@ echo '</form>';
 ?>
 
 <br />
-<a href="../top.php">トップメニューへ</a><br />
+<a href="../index.php">トップメニューへ</a><br />
 
 </body>
 </html>

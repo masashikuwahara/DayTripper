@@ -115,7 +115,7 @@ echo '</form>';
     <input class="btn" type="submit" value="検索">
   </form>
 
-<a href="../top.php">トップメニューへ</a><br />
+<a href="../index.php">トップメニューへ</a><br />
 
 </body>
 </html>

@@ -108,7 +108,7 @@ echo '<input class="btn" type="submit" name="delete" value="削除">';
 echo '</form>';
 ?>
 
-<a href="../top.php">トップメニューへ</a><br />
+<a href="../index.php">トップメニューへ</a><br />
 
 </body>
 </html>
