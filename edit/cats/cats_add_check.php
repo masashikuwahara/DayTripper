@@ -25,116 +25,147 @@ session();
     <?php
 
     $post=sanitize($_POST);
-    $culturals_title=$post['title'];
-    $culturals_year=$post['year'];
-    $culturals_specify=$post['specify'];
-    $culturals_explan=$post['explan'];
-    $culturals_access=$post['access'];
-    $culturals_img1=$_FILES['img1'];
-    $culturals_img2=$_FILES['img2'];
-    $culturals_img3=$_FILES['img3'];
+    $cat_title=$post['title'];
+    $cat_kind=$post['kind'];
+    $cat_color=$post['color'];
+    $cat_feature=$post['feature'];
+    $cat_place=$post['place'];
+    $cat_comment=$post['comment'];
+    $cat_img1=$_FILES['img1'];
+    $cat_img2=$_FILES['img2'];
+    $cat_img3=$_FILES['img3'];
+    $cat_img4=$_FILES['img4'];
+    $cat_img5=$_FILES['img5'];
 
-    if($culturals_title === '')
+    if($cat_title === '')
     {
         echo'<p style="color:#ff0000">文化財名が入力されていません。</p><br />';
     }
     else
     {
         echo'文化財名:';
-        echo$culturals_title;
+        echo$cat_title;
         echo'<br />';
     }
 
-    if($culturals_year === '')
+    if($cat_kind === '')
     {
         echo'<p style="color:#ff0000">制作年が入力されていません。</p><br />';
     }
     else
     {
         echo'制作年:';
-        echo$culturals_year;
+        echo$cat_kind;
         echo'<br />';
     }
 
-    if($culturals_specify === '')
+    if($cat_color === '')
     {
         echo'<p style="color:#ff0000">指定文化財が入力されていません。</p><br />';
     }
     else
     {
         echo'指定文化財:';
-        echo$culturals_specify;
+        echo$cat_color;
         echo'<br />';
     }
 
-    if($culturals_explan === '')
+    if($cat_feature === '')
     {
         echo'<p style="color:#ff0000">説明が入力されていません。</p><br />';
     }
     else
     {
         echo'説明:';
-        echo$culturals_explan;
+        echo$cat_feature;
         echo'<br />';
     }    
 
     
-    if($culturals_access === '')
+    if($cat_place === '')
     {
         echo'<p style="color:#ff0000">アクセスが入力されていません。</p><br />';
     }
     else
     {
         echo'アクセス:';
-        echo$culturals_access;
+        echo$cat_place;
         echo'<br />';
     }    
 
-    if( $culturals_img1['size']>0)
+    if( $cat_img1['size']>0)
     {
-        if( $culturals_img1['size']>1000000)
+        if( $cat_img1['size']>1000000)
         {
             echo'<p style="color:#ff0000">画像が大きすぎます。</p><br />';
         }
         else
         {
-            move_uploaded_file($culturals_img1['tmp_name'],'../../cultural_assets/img/'.$culturals_img1['name']);
-            echo'<img src="../../cultural_assets/img/'.$culturals_img1['name'].'" width="250" >';
+            move_uploaded_file($cat_img1['tmp_name'],'../../cultural_assets/img/'.$cat_img1['name']);
+            echo'<img src="../../cultural_assets/img/'.$cat_img1['name'].'" width="250" >';
             echo'<br />';
         }
     }
 
-    if( $culturals_img2['size']>0)
+    if( $cat_img2['size']>0)
     {
-        if( $culturals_img2['size']>1000000)
+        if( $cat_img2['size']>1000000)
         {
             echo'<p style="color:#ff0000">画像が大きすぎます。</p><br />';
         }
         else
         {
-            move_uploaded_file($culturals_img2['tmp_name'],'../../cultural_assets/img/'.$culturals_img2['name']);
-            echo'<img src="../../cultural_assets/img/'.$culturals_img2['name'].'" width="250" >';
+            move_uploaded_file($cat_img2['tmp_name'],'../../cultural_assets/img/'.$cat_img2['name']);
+            echo'<img src="../../cultural_assets/img/'.$cat_img2['name'].'" width="250" >';
             echo'<br />';
         }
     }
 
-    if( $culturals_img3['size']>0)
+    if( $cat_img3['size']>0)
     {
-        if( $culturals_img3['size']>1000000)
+        if( $cat_img3['size']>1000000)
         {
             echo'<p style="color:#ff0000">画像が大きすぎます。</p><br />';
         }
         else
         {
-            move_uploaded_file($culturals_img3['tmp_name'],'../../cultural_assets/img/'.$culturals_img3['name']);
-            echo'<img src="../../cultural_assets/img/'.$culturals_img3['name'].'" width="250" >';
+            move_uploaded_file($cat_img3['tmp_name'],'../../cultural_assets/img/'.$cat_img3['name']);
+            echo'<img src="../../cultural_assets/img/'.$cat_img3['name'].'" width="250" >';
+            echo'<br />';
+        }
+    }
+
+    if( $cat_img4['size']>0)
+    {
+        if( $cat_img4['size']>1000000)
+        {
+            echo'<p style="color:#ff0000">画像が大きすぎます。</p><br />';
+        }
+        else
+        {
+            move_uploaded_file($cat_img4['tmp_name'],'../../cultural_assets/img/'.$cat_img4['name']);
+            echo'<img src="../../cultural_assets/img/'.$cat_img4['name'].'" width="250" >';
+            echo'<br />';
+        }
+    }
+
+    if( $cat_img5['size']>0)
+    {
+        if( $cat_img5['size']>1000000)
+        {
+            echo'<p style="color:#ff0000">画像が大きすぎます。</p><br />';
+        }
+        else
+        {
+            move_uploaded_file($cat_img5['tmp_name'],'../../cultural_assets/img/'.$cat_img5['name']);
+            echo'<img src="../../cultural_assets/img/'.$cat_img5['name'].'" width="250" >';
             echo'<br />';
         }
     }
     
-    if($culturals_title === ''||$culturals_year === ''||$culturals_specify === ''||
-    $culturals_explan === ''||$culturals_access === ''||
-    $culturals_img1['size']>1000000)
+    if($cat_title === ''||$cat_kind === ''||$cat_color === ''||
+    $cat_feature === ''||$cat_place === ''||
+    $cat_img1['size']>1000000)
     {
         echo'<form>';
         echo'<input class="btn" type="button" onclick="history.back()" value="戻る">';
@@ -143,15 +174,18 @@ session();
     else
     {
         echo'上記の内容を追加します。<br />';
-        echo'<form method="post" action="culturals_add_done.php">';
-        echo'<input type="hidden" name="title" value="'.$culturals_title.'">';
-        echo'<input type="hidden" name="year" value="'.$culturals_year.'">';
-        echo'<input type="hidden" name="specify" value="'.$culturals_specify.'">';
-        echo'<input type="hidden" name="explan" value="'.$culturals_explan.'">';
-        echo'<input type="hidden" name="access" value="'.$culturals_access.'">';
-        echo'<input type="hidden" name="img1" value="'.$culturals_img1['name'].'">';
-        echo'<input type="hidden" name="img2" value="'.$culturals_img2['name'].'">';
-        echo'<input type="hidden" name="img3" value="'.$culturals_img3['name'].'">';
+        echo'<form method="post" action="cats_add_done.php">';
+        echo'<input type="hidden" name="title" value="'.$cat_title.'">';
+        echo'<input type="hidden" name="kind" value="'.$cat_kind.'">';
+        echo'<input type="hidden" name="color" value="'.$cat_color.'">';
+        echo'<input type="hidden" name="feature" value="'.$cat_feature.'">';
+        echo'<input type="hidden" name="place" value="'.$cat_place.'">';
+        echo'<input type="hidden" name="comment" value="'.$cat_comment.'">';
+        echo'<input type="hidden" name="img1" value="'.$cat_img1['name'].'">';
+        echo'<input type="hidden" name="img2" value="'.$cat_img2['name'].'">';
+        echo'<input type="hidden" name="img3" value="'.$cat_img3['name'].'">';
+        echo'<input type="hidden" name="img4" value="'.$cat_img4['name'].'">';
+        echo'<input type="hidden" name="img5" value="'.$cat_img5['name'].'">';
         echo'<br />';
         echo'<input class="btn" type="button" onclick="history.back()" value="戻る">&nbsp;';
         echo'<input class="btn" type="submit" value="決定する">';
