@@ -33,7 +33,7 @@ try
         $_SESSION['login']=1;
         $_SESSION['user_id']=$user_id;
         $_SESSION['user_name']=$rec['name'];
-        header('Location:top.php');
+        header('Location:index.php');
         exit();
     }
 
