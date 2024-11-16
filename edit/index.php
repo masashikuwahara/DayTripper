@@ -16,6 +16,8 @@ session();
     <br />
     <a href="culturalproperty/culturals_list.php">その他文化財</a><br />
     <br />
+    <a href="cats/">猫ページ管理(仮)</a><br />
+    <br />
     <a href="update/update_list.php">城郭更新情報</a><br />
     <br />
     <a href="update_c/update_list.php">文化財更新情報</a><br />
