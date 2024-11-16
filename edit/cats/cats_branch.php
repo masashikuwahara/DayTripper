@@ -5,18 +5,18 @@ if(isset($_POST['disp']) === true)
 {
 	if(isset($_POST['id']) === false)
 	{
-		header('Location:culturals_ng.php');
+		header('Location:cats_ng.php');
 		exit();
 	}
 	$id=$_POST['id'];
-	header('Location: culturals_disp.php?id='.$id);
+	header('Location: cats_disp.php?id='.$id);
 	exit();
 }
 
 // 城追加
 if(isset($_POST['add']) === true)
 {
-	header('Location: culturals_add.php');
+	header('Location: cats_add.php');
 	exit();
 }
 
@@ -25,11 +25,11 @@ if(isset($_POST['edit']) === true)
 {
 	if(isset($_POST['id']) === false)
 	{
-		header('Location:culturals_ng.php');
+		header('Location:cats_ng.php');
 		exit();
 	}
 	$id=$_POST['id'];
-	header('Location:culturals_edit.php?id='.$id);
+	header('Location:cats_edit.php?id='.$id);
 	exit();
 }
 
@@ -38,7 +38,7 @@ if(isset($_POST['delete']) === true)
 {
 	if(isset($_POST['id']) === false)
 	{
-		header('Location:culturals_ng.php');
+		header('Location:cats_ng.php');
 		exit();
 	}
 	$id=$_POST['id'];
