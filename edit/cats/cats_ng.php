@@ -8,8 +8,8 @@ session();
     <title>選択されていません</title>
 </head>
 <body>
-    文化財が選択されていません。 <br />
+    選択されていません。 <br />
     <br />
-    <a href="culturals_list.php">戻る</a>
+    <a href="index.php">戻る</a>
 </body>
 </html>
