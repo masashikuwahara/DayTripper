@@ -3,8 +3,7 @@ $cat_id=$_GET['id'];
 
 require('connect.php');
 $dbh->query('SET NAMES utf8');
-$sql = 'SELECT title, kind, color, feature, place,
-img1, img2, img3, img4 ,img5
+$sql = 'SELECT title, kind, color, feature, place, comment, img1, img2, img3, img4 ,img5
 FROM cats WHERE id=?';
 $stmt = $dbh->prepare($sql);
 $data[]=$cat_id;
@@ -16,6 +15,7 @@ $cat_kind=$cat['kind'];
 $cat_color=$cat['color'];
 $cat_feature=$cat['feature'];
 $cat_place=$cat['place'];
+$cat_comment=$cat['comment'];
 $cat_img1=$cat['img1'];
 $cat_img2=$cat['img2'];
 $cat_img3=$cat['img3'];
@@ -39,7 +39,7 @@ $cat_img5=$cat['img5'];
   <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@4.1.1/dist/vue-awesome-swiper.js"></script>
   <title><?php echo $cat_title;?></title>
   <style>
-        body {
+        .cat_page {
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
@@ -156,7 +156,7 @@ $cat_img5=$cat['img5'];
       }
       else
       {
-          $disp_img3="img/$cat_img5";
+          $disp_img5="img/$cat_img5";
       }
     }
     catch (Exception $e)
@@ -165,16 +165,24 @@ $cat_img5=$cat['img5'];
         exit();
     }
     ?>
-    <img id="largeImage" src="https://48pedia.org/images/5/50/2024%E5%B9%B4%E6%AB%BB%E5%9D%8246%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB_%E6%A3%AE%E7%94%B0%E3%81%B2%E3%81%8B%E3%82%8B_3.jpg" alt="Large Display">
-    
-    <div class="thumbnail-container">
-      <img src="https://48pedia.org/images/5/50/2024%E5%B9%B4%E6%AB%BB%E5%9D%8246%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB_%E6%A3%AE%E7%94%B0%E3%81%B2%E3%81%8B%E3%82%8B_3.jpg" class="thumbnail" onclick="showImage(this)">
-      <img src="https://48pedia.org/images/6/6a/2024%E5%B9%B4%E6%AB%BB%E5%9D%8246%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB_%E5%B1%B1%EF%A8%91%E5%A4%A9_3.jpg" class="thumbnail" onclick="showImage(this)">
-      <img src="https://48pedia.org/images/c/c4/2024%E5%B9%B4%E6%AB%BB%E5%9D%8246%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB_%E5%B1%B1%E4%B8%8B%E7%9E%B3%E6%9C%88_3.jpg" class="thumbnail" onclick="showImage(this)">
-      <img src="https://48pedia.org/images/2/23/2024%E5%B9%B4%E6%AB%BB%E5%9D%8246%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB_%E5%A4%A7%E5%9C%92%E7%8E%B2_3.jpg" class="thumbnail" onclick="showImage(this)">
-      <img src="https://48pedia.org/images/e/ec/2024%E5%B9%B4%E6%AB%BB%E5%9D%8246%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB_%E7%9A%84%E9%87%8E%E7%BE%8E%E9%9D%92_3.jpg" class="thumbnail" onclick="showImage(this)">
+    <div class="cat_page">
+        <img id="largeImage" src="<?php echo $disp_img1 ?>" alt="Large Display">
+        <div class="thumbnail-container">
+            <img src="<?php echo $disp_img1 ?>" class="thumbnail" onclick="showImage(this)">
+            <?php if ($disp_img2): ?>
+                <img src="<?php echo $disp_img2 ?>" class="thumbnail" onclick="showImage(this)">
+            <?php endif; ?>
+            <?php if ($disp_img3): ?>
+                <img src="<?php echo $disp_img3 ?>" class="thumbnail" onclick="showImage(this)">
+            <?php endif; ?>
+            <?php if ($disp_img4): ?>
+                <img src="<?php echo $disp_img4 ?>" class="thumbnail" onclick="showImage(this)">
+            <?php endif; ?>
+            <?php if ($disp_img5): ?>
+                <img src="<?php echo $disp_img5 ?>" class="thumbnail" onclick="showImage(this)">
+            <?php endif; ?>
+        </div>
     </div>
-
     <script>
         // 画像をクリックしたときに大きな画像を更新する関数
         function showImage(thumbnail) {
