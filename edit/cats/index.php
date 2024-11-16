@@ -7,7 +7,7 @@ session();
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>その他文化財一覧</title>
+	<title>猫管理ページ</title>
 	<style>
 	.btn{
         width: 50px;
@@ -51,7 +51,7 @@ try
 
 require('../connect.php');
 $dbh->query('SET NAMES utf8');
-$sql='SELECT id,title FROM cultures WHERE 1';
+$sql='SELECT id,title FROM cats WHERE 1';
 $stmt=$dbh->prepare($sql);
 $stmt->execute();
 
@@ -67,11 +67,11 @@ if ($page > 1) {
 	$start = 0;
 }
 
-$castles = $dbh->prepare(" SELECT id, title FROM cultures LIMIT {$start}, 10 ");
+$castles = $dbh->prepare(" SELECT id, title FROM cats LIMIT {$start}, 10 ");
 
-echo 'その他文化財一覧<br/><br/>';
+echo '猫管理ページ<br/><br/>';
 
-echo '<form method="post" action="culturals_branch.php">';
+echo '<form method="post" action="cats_branch.php">';
 echo '<input class="add" type="submit" name="add" value="文化財を追加"><br />';
 
 $castles->execute();
@@ -82,7 +82,7 @@ foreach ($castles as $post) {
 	echo $post['title']. '<br>';
 }
 
-$page_num = $dbh->prepare(" SELECT COUNT(*) id FROM cultures ");
+$page_num = $dbh->prepare(" SELECT COUNT(*) id FROM cats ");
 $page_num->execute();
 $page_num = $page_num->fetchColumn();
 
