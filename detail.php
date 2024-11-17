@@ -172,9 +172,7 @@ $castles_img5=$cas['img5'];
         </swiper-slide>
     </swiper>
     </div>
-
     
-
     <table class="table">
         <tbody>
             <tr>
