@@ -82,13 +82,16 @@ $cat_img5=$cat['img5'];
         .table {
             width: auto;
             text-align: center;
+            white-space: pre-line;
             border-collapse: collapse;
             border-spacing: 0;
             border-top: solid 1px #778ca3;
         }
+
         .table tr:nth-child(2n+1) {
         background: #f3f3f2;
         }
+        
         .table th,.table td {
         padding: 10px;
         border-bottom: solid 1px #778ca3;
