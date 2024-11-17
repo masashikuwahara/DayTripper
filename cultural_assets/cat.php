@@ -14,7 +14,7 @@
 <body>
 <?php include('menu.php'); ?>
 <div class="castle_page">
-  <h1 class="cas_title">旅先で出会った猫</h1>
+  <h1 class="cas_title">旅先で出会った猫たち</h1>
   <hr>
   <?php
     try
