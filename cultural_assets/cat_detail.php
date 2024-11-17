@@ -78,6 +78,21 @@ $cat_img5=$cat['img5'];
             transform: scale(1.1);
             border-color: #333;
         }
+
+        .table {
+            width: auto;
+            text-align: center;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border-top: solid 1px #778ca3;
+        }
+        .table tr:nth-child(2n+1) {
+        background: #f3f3f2;
+        }
+        .table th,.table td {
+        padding: 10px;
+        border-bottom: solid 1px #778ca3;
+        }
   </style>
 </head>
 <body>
@@ -182,6 +197,30 @@ $cat_img5=$cat['img5'];
                 <img src="<?php echo $disp_img5 ?>" class="thumbnail" onclick="showImage(this)">
             <?php endif; ?>
         </div>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>種類</th>
+                    <td><?php echo $cat_kind;?></td>
+                </tr>
+                <tr>
+                    <th>色</th>
+                    <td><?php echo $cat_color;?></td>
+                </tr>
+                <tr>
+                    <th>特徴</th>
+                    <td><?php echo $cat_feature;?></td>
+                </tr>
+                <tr>
+                    <th>発見場所</th>
+                    <td><?php echo $cat_place;?></td>
+                </tr>
+                <tr>
+                    <th>コメント</th>
+                    <td><?php echo $cat_comment;?></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <script>
         // 画像をクリックしたときに大きな画像を更新する関数
