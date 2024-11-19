@@ -2,31 +2,32 @@
 require_once('../library.php');
 session();
 
-$culturals_id=$_GET['id'];
+$cat_id=$_GET['id'];
 
 require('../connect.php');
 $dbh->query('SET NAMES utf8');
-$sql = 'SELECT title,year,specify,explan,access,
-img1,img2,img3 FROM cultures WHERE id=?';
+$sql = 'SELECT title, kind, color, feature, place, comment,
+img1,img2,img3 FROM cats WHERE id=?';
 $stmt = $dbh->prepare($sql);
-$data[]=$culturals_id;
+$data[]=$cat_id;
 $stmt->execute($data);
 
 $cul =$stmt->fetch(PDO::FETCH_ASSOC);
-$culturals_title=$cul['title'];
-$culturals_year=$cul['year'];
-$culturals_specify=$cul['specify'];
-$culturals_explan=$cul['explan'];
-$culturals_access=$cul['access'];
-$culturals_img1=$cul['img1'];
-$culturals_img2=$cul['img2'];
-$culturals_img3=$cul['img3'];
+$cat_title=$cul['title'];
+$cat_kind=$cul['kind'];
+$cat_color=$cul['color'];
+$cat_feature=$cul['feature'];
+$cat_place=$cul['place'];
+$cat_comment=$cul['comment'];
+$cat_img1=$cul['img1'];
+$cat_img2=$cul['img2'];
+$cat_img3=$cul['img3'];
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $culturals_title; ?></title>
+    <title><?php echo $cat_title; ?></title>
     <style>
         .btn{
             width: 100px;
@@ -42,20 +43,20 @@ $culturals_img3=$cul['img3'];
     </style>
 </head>
 <body>
-    <h1><?php echo $culturals_title; ?></h1>
+    <h1><?php echo $cat_title; ?></h1>
     <br />
     <?php
     try{
 
         $dbh = null;
 
-        if($culturals_img1 === '')
+        if($cat_img1 === '')
         {
             $disp_img1='';
         }
         else
         {
-            $disp_img1='<img src="../../img/'.$culturals_img1.'">';
+            $disp_img1='<img src="../../cultural_assets/img/'.$cat_img1.'">';
         }
     }
     catch (Exception $e)
@@ -68,13 +69,13 @@ $culturals_img3=$cul['img3'];
 
         $dbh = null;
 
-        if($culturals_img2 === '')
+        if($cat_img2 === '')
         {
             $disp_img2='';
         }
         else
         {
-            $disp_img2='<img src="../../img/'.$culturals_img2.'">';
+            $disp_img2='<img src="../../cultural_assets/img/'.$cat_img2.'">';
         }
     }
     catch (Exception $e)
@@ -87,13 +88,13 @@ $culturals_img3=$cul['img3'];
 
         $dbh = null;
 
-        if($culturals_img3 === '')
+        if($cat_img3 === '')
         {
             $disp_img3='';
         }
         else
         {
-            $disp_img3='<img src="../../img/'.$culturals_img3.'">';
+            $disp_img3='<img src="../../cultural_assets/img/'.$cat_img3.'">';
         }
     }
     catch (Exception $e)
@@ -107,18 +108,20 @@ $culturals_img3=$cul['img3'];
     <?php echo $disp_img2;?>
     <?php echo $disp_img3;?>
     <br />
-    <h2>作成年</h2>
-    <?php echo $culturals_year;?>
+    <h2>種類</h2>
+    <?php echo $cat_kind;?>
     <br />
-    <h2>指定文化財</h2>
-    <?php echo $culturals_specify;?>
+    <h2>毛色・柄</h2>
+    <?php echo $cat_color;?>
     <br />
-    <h2>解説</h2>
-    <?php echo $culturals_explan;?>
+    <h2>特徴</h2>
+    <?php echo $cat_feature;?>
     <br />
-    <h2>アクセス</h2>
-    <?php echo $culturals_access;?>
+    <h2>目撃場所</h2>
+    <?php echo $cat_place;?>
     <br />
+    <h2>コメント</h2>
+    <?php echo $cat_comment;?>
     <form>
     <input class="btn" type="button" onclick="history.back()" value="戻る">
     </form>
