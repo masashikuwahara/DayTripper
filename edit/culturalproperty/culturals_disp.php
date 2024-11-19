@@ -55,7 +55,7 @@ $culturals_img3=$cul['img3'];
         }
         else
         {
-            $disp_img1='<img src="../../img/'.$culturals_img1.'">';
+            $disp_img1='<img src="../../cultural_assets/img/'.$culturals_img1.'">';
         }
     }
     catch (Exception $e)
@@ -74,7 +74,7 @@ $culturals_img3=$cul['img3'];
         }
         else
         {
-            $disp_img2='<img src="../../img/'.$culturals_img2.'">';
+            $disp_img2='<img src="../../cultural_assets/img/'.$culturals_img2.'">';
         }
     }
     catch (Exception $e)
@@ -93,7 +93,7 @@ $culturals_img3=$cul['img3'];
         }
         else
         {
-            $disp_img3='<img src="../../img/'.$culturals_img3.'">';
+            $disp_img3='<img src="../../cultural_assets/img/'.$culturals_img3.'">';
         }
     }
     catch (Exception $e)
