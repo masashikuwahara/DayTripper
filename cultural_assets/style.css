@@ -301,6 +301,50 @@ th {
   padding: 10px;
 }
 
+/*========= ここから猫ページ ===============*/
+
+.cat_page {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+#largeImage {
+  width: 80%;
+  width: 350px;
+  height: auto;
+  margin-bottom: 20px;
+  border: 3px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 70px;
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  border-color: #333;
+}
+
 /*========= LoadingのためのCSS ===============*/
 
 /* Loading背景画面設定　*/
@@ -565,12 +609,14 @@ th {
 }
 
 .table {
-  width: 100%;
+  width: auto;
   text-align: center;
+  white-space: pre-line;
   border-collapse: collapse;
   border-spacing: 0;
   border-top: solid 1px #778ca3;
- }
+}
+
  .table tr:nth-child(2n+1) {
   background: #f3f3f2;
  }
@@ -594,6 +640,10 @@ th {
  .map {
   margin-bottom: 50px;
  }
+
+ .comment {
+  text-align: left;
+}
 
  /* 更新情報 */
  .update {
@@ -624,6 +674,50 @@ th {
   -1px 1px 0 #FFF, 1px -1px 0 #FFF,
   0px 1px 0 #FFF,  0-1px 0 #FFF,
   -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+
+/*========= ここから猫ページ ===============*/
+
+.cat_page {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+#largeImage {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 20px;
+  border: 3px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 70px;
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  border-color: #333;
 }
 
 /*========= LoadingのためのCSS ===============*/
