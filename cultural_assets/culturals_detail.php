@@ -133,11 +133,7 @@ $culturals_img3=$cul['img3'];
             </tr>
             <tr>
                 <th>解説</th>
-                <td>
-                    <div class='comment'>
-                        <?php echo $culturals_explan;?>
-                    </div>
-                </td>
+                <td class="comment"><?php echo $culturals_explan;?></td>
             </tr>
         </tbody>
     </table>
@@ -148,3 +144,5 @@ $culturals_img3=$cul['img3'];
   </div>
   <script src="gallery.js"></script>
   <?php require('footer.php'); ?>
+</body>
+</html>
