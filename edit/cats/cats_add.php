@@ -67,7 +67,7 @@ session();
         <option>飼い猫</option>
         <option>不明</option>
       </select><br />
-      毛色<br />
+      毛色・色柄<br />
       <input class="tex" type="text" name="color" ><br />
       特徴<br />
       <input class="tex" type="text" name="feature" ><br />
