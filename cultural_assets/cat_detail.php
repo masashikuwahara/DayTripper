@@ -31,71 +31,10 @@ $cat_img5=$cat['img5'];
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Philosopher" rel="stylesheet" />
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/swiper@5.3.6/css/swiper.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@5.3.6/js/swiper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@4.1.1/dist/vue-awesome-swiper.js"></script>
   <title><?php echo $cat_title;?></title>
   <style>
-        .cat_page {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
-        }
 
-        #largeImage {
-            width: 80%;
-            max-width: 600px;
-            height: auto;
-            margin-bottom: 20px;
-            border: 3px solid #ccc;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-
-        .thumbnail-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .thumbnail {
-            width: 100px;
-            height: 70px;
-            cursor: pointer;
-            object-fit: cover;
-            border: 2px solid transparent;
-            border-radius: 4px;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-
-        .thumbnail:hover {
-            transform: scale(1.1);
-            border-color: #333;
-        }
-
-        .table {
-            width: auto;
-            text-align: center;
-            white-space: pre-line;
-            border-collapse: collapse;
-            border-spacing: 0;
-            border-top: solid 1px #778ca3;
-        }
-
-        .table tr:nth-child(2n+1) {
-        background: #f3f3f2;
-        }
-        
-        .table th,.table td {
-        padding: 10px;
-        border-bottom: solid 1px #778ca3;
-        }
   </style>
 </head>
 <body>
@@ -207,7 +146,7 @@ $cat_img5=$cat['img5'];
                     <td><?php echo $cat_kind;?></td>
                 </tr>
                 <tr>
-                    <th>色</th>
+                    <th>毛色・柄</th>
                     <td><?php echo $cat_color;?></td>
                 </tr>
                 <tr>
@@ -220,7 +159,7 @@ $cat_img5=$cat['img5'];
                 </tr>
                 <tr>
                     <th>コメント</th>
-                    <td><?php echo $cat_comment;?></td>
+                    <td class="comment"><?php echo $cat_comment;?></td>
                 </tr>
             </tbody>
         </table>
@@ -241,3 +180,5 @@ $cat_img5=$cat['img5'];
     </script>
   
   <?php require('footer.php'); ?>
+</body>
+</html>
