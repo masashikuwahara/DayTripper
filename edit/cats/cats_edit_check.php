@@ -39,44 +39,44 @@ session();
 
     if($cat_title === '')
     {
-        echo'<p style="color:#ff0000">文化財名が入力されていません。</p><br />';
+        echo'<p style="color:#ff0000">タイトルが入力されていません。</p><br />';
     }
     else
     {
-        echo'文化財名:';
+        echo'タイトル:';
         echo$cat_title;
         echo'<br />';
     }
 
     if($cat_kind === '')
     {
-        echo'<p style="color:#ff0000">制作年が入力されていません。</p><br />';
+        echo'<p style="color:#ff0000">種類が入力されていません。</p><br />';
     }
     else
     {
-        echo'制作年:';
+        echo'種類:';
         echo$cat_kind;
         echo'<br />';
     }
 
     if($cat_color === '')
     {
-        echo'<p style="color:#ff0000">指定文化財が入力されていません。</p><br />';
+        echo'<p style="color:#ff0000">毛色・柄が入力されていません。</p><br />';
     }
     else
     {
-        echo'指定文化財:';
+        echo'毛色・柄が';
         echo$cat_color;
         echo'<br />';
     }
 
     if($cat_feature === '')
     {
-        echo'<p style="color:#ff0000">説明が入力されていません。</p><br />';
+        echo'<p style="color:#ff0000">特徴が入力されていません。</p><br />';
     }
     else
     {
-        echo'説明:';
+        echo'特徴:';
         echo$cat_feature;
         echo'<br />';
     }    
@@ -84,11 +84,11 @@ session();
     
     if($cat_place === '')
     {
-        echo'<p style="color:#ff0000">アクセスが入力されていません。</p><br />';
+        echo'<p style="color:#ff0000">目撃場所が入力されていません。</p><br />';
     }
     else
     {
-        echo'アクセス:';
+        echo'目撃場所:';
         echo$cat_place;
         echo'<br />';
     }    
