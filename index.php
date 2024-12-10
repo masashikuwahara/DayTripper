@@ -165,5 +165,4 @@
 </div>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-<!-- version.4.2.0 -->
-<!-- next-> version.4.3.0 -->
+<!-- version.4.3.0 -->
