@@ -26,14 +26,21 @@
       margin-top: 20px;
       font-size: 15px;
     }
+
+    
   </style>
 </head>
 <body>
   <?php require('header.php'); ?>
+  <div class="scroll-down">
+      <span class="arrow">&#x2193;</span>
+      <p>Scroll Down</p>
+  </div>
   <div class="fade-bg">
     <div class="fade-bg__inner" id="js-fade-bg__inner"></div>
   </div>
-
+  <!-- ターゲット -->
+  <div id="target-section"></div>
   <h2 class="front">城や文化財を検索</h2>
   <form style="text-align: center;" class="cp_ipradio" method="GET" action="search.php">
     <input type="text" class="sea" name="s" placeholder="例：姫路城、山城">
@@ -163,6 +170,12 @@
 <div class="query">
   <a href="contact/">お問い合わせ</a>
 </div>
+<script>
+  document.querySelector('.scroll-down').addEventListener('click', () => {
+    const targetElement = document.getElementById('target-section');
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-<!-- version.4.3.0 -->
+<!-- version.4.3.1 -->
