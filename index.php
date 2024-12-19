@@ -4,8 +4,8 @@
   <meta name="description" content="DayTripperの旅の記録を集めたサイトです。城や文化財を中心に訪れておりカテゴリー別に分けて紹介しています。">
   <meta name="format-detection" content="email=no,telephone=no,address=no">
   <meta property="og:title" content="DayTripperの記録">
-  <meta property="og:description" content="DayTripperの旅の記録を集めたサイトです。城や文化財を中心に訪れておりカテゴリー別に分けて紹介しています。">
-  <meta property="og:image" content="サムネイル画像までのURL">
+  <meta property="og:description" content="旅の記録を集めたwebサイトです。城や文化財を中心に訪れておりカテゴリー別に分けて紹介しています。">
+  <meta property="og:image" content="https://daytripper.site/img/himejicastle.jpg">
   <meta property="og:url" content="https://daytripper.site"> 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DayTripperの記録">
@@ -41,6 +41,13 @@
   </div>
   <!-- ターゲット -->
   <div id="target-section"></div>
+  <!-- ここからテストページ -->
+  <div class="ad">
+    <a style="color: #ff00ff;" href="vr.php">VRテストページ</a><br>
+    ヘッダーのはじめにのページを削除、VRのページを新設
+    ロジック等は既存のページを転用し、修正
+  </div>
+  <!-- ここまで -->
   <h2 class="front">城や文化財を検索</h2>
   <form style="text-align: center;" class="cp_ipradio" method="GET" action="search.php">
     <input type="text" class="sea" name="s" placeholder="例：姫路城、山城">
@@ -178,4 +185,4 @@
 </script>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-<!-- version.4.3.1 -->
+<!-- version.4.3.2 -->
