@@ -1,7 +1,7 @@
 <?php
 // ユーザー名とパスワードを設定
-$valid_username = 'admin';
-$valid_password = '1111';
+$valid_username = '';
+$valid_password = '';
 
 // Basic認証の実施
 if (!isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']) ||
