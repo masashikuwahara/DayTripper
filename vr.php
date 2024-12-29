@@ -1,102 +1,70 @@
+<?php
+// ユーザー名とパスワードを設定
+$valid_username = 'admin';
+$valid_password = '1111';
+
+// Basic認証の実施
+if (!isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']) ||
+    $_SERVER['PHP_AUTH_USER'] !== $valid_username ||
+    $_SERVER['PHP_AUTH_PW'] !== $valid_password) {
+    // 認証情報が正しくない場合、認証要求のレスポンスを送信
+    header('WWW-Authenticate: Basic realm="Protected Area"');
+    header('HTTP/1.0 401 Unauthorized');
+    echo '認証が必要です';
+    exit;
+}
+?>
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>360度映像の埋め込みテストページ</title>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-  </head>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>VR</title>
   <style>
-    #time {
-      position: absolute; /* A-Frameのシーン上に重ねる */
-      bottom: 50px; /* 表示位置を調整 */
-      width: 100%;
-      color: white; /* 白色で表示 */
-      text-align: center;
-      z-index: 999; /* シーンより前面に表示 */
+    span {
+      width: 360px;
     }
   </style>
-  <body>
-    <a-scene>
-        <a-videosphere src="#video"></a-videosphere>
-        <a-camera position="0 1.6 0">
-          <a-cursor></a-cursor>
-        </a-camera>
-        <video id="video" autoplay loop muted crossorigin="anonymous" playsinline>
-          <source src="movie.mp4" type="video/mp4" />
-        </video>
-        <!-- シークバー -->
-        <div id="controls" style="position: absolute; bottom: 10px; left: 10px; right: 10px; z-index: 999;">
-          <input id="seekbar" type="range" min="0" max="100" value="0" style="width: 100%;">
-        </div>
-          <!-- 再生・停止ボタン -->
-        <div id="controls" style="position: absolute; top: 10px; left: 10px; z-index: 999;">
-            <button id="play">再生</button>
-            <button id="pause">停止</button>
-        </div>
-      </a-scene>
+</head>
+<body>
+<?php include('header.php'); ?>
+<div class="castle_page">
+  <h1 class="title">VR</h1>
+  
+  <div class="about">
+  </div>
+  <hr>
+  <?php
+    try
+    {
+      include('connect.php');
+      $dbh->query('SET NAMES utf8');
+      $sql='SELECT id, title, description, img FROM vrvideo ';
+      $stmt=$dbh->prepare($sql);
+      $stmt->execute();
+      $dbh = null;
 
-      <!-- 再生時間表示 -->
-      <div id="time" style="color: white; text-align: center; position: absolute; bottom: 50px; width: 100%; z-index: 999;">
-        <span id="current-time">0:00</span> / <span id="total-time">0:00</span>
-      </div>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const video = document.querySelector("#video");
-          video.play().catch((error) => {
-            console.error("動画の自動再生がブロックされました:", error);
-          });
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-        const video = document.querySelector("#video");
-        const playButton = document.querySelector("#play");
-        const pauseButton = document.querySelector("#pause");
-
-        // 再生ボタンのクリックイベント
-        playButton.addEventListener("click", () => {
-          video.play().catch((error) => {
-            console.error("再生エラー:", error);
-          });
-        });
-
-        // 停止ボタンのクリックイベント
-        pauseButton.addEventListener("click", () => {
-          video.pause();
-          });
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-        const video = document.querySelector("#video");
-        const seekbar = document.querySelector("#seekbar");
-        const currentTimeDisplay = document.querySelector("#current-time");
-        const totalTimeDisplay = document.querySelector("#total-time");
-
-        // 総時間を表示
-        video.addEventListener("loadedmetadata", () => {
-          totalTimeDisplay.textContent = formatTime(video.duration);
-        });
-
-        // 現在の時間を更新
-        video.addEventListener("timeupdate", () => {
-          currentTimeDisplay.textContent = formatTime(video.currentTime);
-          const progress = (video.currentTime / video.duration) * 100;
-          seekbar.value = progress;
-        });
-
-        // シークバーで再生位置を変更
-        seekbar.addEventListener("input", () => {
-          const newTime = (seekbar.value / 100) * video.duration;
-          video.currentTime = newTime;
-        });
-
-        // 時間フォーマット関数
-        function formatTime(seconds) {
-          const mins = Math.floor(seconds / 60);
-          const secs = Math.floor(seconds % 60).toString().padStart(2, "0");
-          return `${mins}:${secs}`;
+      while(true){
+        $rec=$stmt->fetch(PDO::FETCH_ASSOC);
+        if(!$rec){
+          break;
         }
-      });
-      </script>
-  </body>
-</html>
+        
+        if($rec['img'] === ''){
+          $img_name = '';
+        }else{
+          $img_name = '<img style="width:360px" src="img/'.$rec['img'].'">';
+        }
+        echo '<span class="img_style">'.'<a href="vrtest.php?id='.$rec['id'].'">'.
+            $img_name.'<br />'.$rec['title'].'</a>'.'<br />'.$rec['description'].'</span>';
+      }
+      }catch (Exception $e){
+        echo 'ただいま障害により大変ご迷惑をお掛けしております。';
+        exit();
+      }
+      ?>
+</div>
+<script type="text/javascript" src="menu.js"></script>
+<?php include('footer.php'); ?>
