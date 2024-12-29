@@ -20,14 +20,14 @@
       text-align: center;
       margin-bottom: 30px;
     }
-
     .query {
       text-align: center;
       margin-top: 20px;
       font-size: 15px;
     }
-
-    
+    .se{
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -54,10 +54,9 @@
     <button class="btn" type="submit">検索</button>
   </form>
 
-  <div class="ad">
+  <div class="se">
     <P>
-      城名や城郭構造で検索が可能です。<br />
-      城郭構造は山城、梯郭式、渦郭式みたいな検索方法も可能です。
+      城名や城郭構造(山城、梯郭式、渦郭式など)で検索が可能です。
     </P>
   </div>
   <h2 class="front">地図で城を検索</h2><p style="text-align: center;">↓をクリック！<br></p>
@@ -185,4 +184,4 @@
 </script>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-<!-- version.4.3.2 -->
+<!-- ver.4.4.0 -->
