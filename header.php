@@ -8,7 +8,6 @@
     </div>
     <div class="logo"><a href="index.php">DayTripper</a></div>
     <div class="menu">
-      <!-- <a class="menu-btn" href="intro.php">はじめに</a> -->
       <a class="menu-btn" href="genzon.php">現存天守</a>
       <a class="menu-btn" href="100_castles.php">100名城</a>
       <a class="menu-btn" href="sequel_100_castles.php">続100名城</a>
@@ -21,9 +20,6 @@
   <!-- ハンバーガーウィンドウ -->
   <div id="hamburger-window">
     <ul class="hamburger-window__nav-list">
-      <!-- <li class="hamburger-window__link">
-        <a class="acordion-btn" href="intro.php">はじめに</a>
-      </li> -->
       <li class="hamburger-window__link">
         <a class="acordion-btn" href="genzon.php">現存天守</a>
       </li>
