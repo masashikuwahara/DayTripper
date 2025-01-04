@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+}
+.accordion {
+  margin-left: 10%;
+  margin-right: 10%;
+  cursor: pointer;
+  padding: 1em;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+.accordion.active {
+  background-color: #e0e0e0;
+}
+
+.panel {
+  margin-left: 10%;
+  margin-right: 10%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #f1f1f1;
+  padding: 0 1em;
+}
+
+.panel.show {
+  padding: 1em;
+}
