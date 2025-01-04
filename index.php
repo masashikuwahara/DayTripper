@@ -25,7 +25,7 @@
       margin-top: 20px;
       font-size: 15px;
     }
-    .se{
+    .banner {
       text-align: center;
     }
   </style>
@@ -54,13 +54,15 @@
     <button class="btn" type="submit">検索</button>
   </form>
 
-  <div class="se">
+  <div class="ad">
     <P>
       城名や城郭構造(山城、梯郭式、渦郭式など)で検索が可能です。
     </P>
   </div>
-  <h2 class="front">地図で城を検索</h2><p style="text-align: center;">↓をクリック！<br></p>
-  <div class="rand" style="text-align: center;"><a href="map/"><img style="width:360px" src="img/map.png"></a></div>
+  <h2 class="front">都道府県別で城を検索</h2>
+  <div class="banner">
+    <a href="prefectures/"><img src="img/prefectures.jpg" alt="都道府県別" ></a>
+  </div>
   <h2 class="front" >今のあなたにおすすめな城</h2><br />
         
   <?php
@@ -184,4 +186,4 @@
 </script>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-<!-- ver.4.4.0 -->
+<!-- ver.4.5.0 -->
