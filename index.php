@@ -61,7 +61,7 @@
   </div>
   <h2 class="front">都道府県別で城を検索</h2>
   <div class="banner">
-    <a href="prefectures/"><img src="img/prefectures.jpg" alt="都道府県別" ></a>
+    <a href="prefectures/" target="_blank" rel="noopener noreferrer"><img src="img/prefectures.jpg" alt="都道府県別" ></a>
   </div>
   <h2 class="front" >今のあなたにおすすめな城</h2><br />
         
