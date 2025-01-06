@@ -5,16 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>都道府県別城紹介ページ</title>
-  <style>
-    body {
-      background-image: linear-gradient(
-        rgb(184, 226, 214) 55%, rgb(187, 194, 235));
-        background-attachment: fixed;
-    }
-  </style>
 </head>
 <body>
   <h1>都道府県別城紹介ページ</h1>
+  <p>これまで訪れた城を都道府県別に表示しました。</p>
   <?php
   include('../connect.php');
   $dbh->query('SET NAMES utf8');
