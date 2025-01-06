@@ -1,6 +1,13 @@
-h1 {
+body {
+  background-image: linear-gradient(
+    rgb(184, 226, 214) 55%, rgb(187, 194, 235));
+    background-attachment: fixed;
+}
+
+h1,P {
   text-align: center;
 }
+
 .accordion {
   margin-left: 10%;
   margin-right: 10%;
