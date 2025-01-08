@@ -34,6 +34,7 @@
     echo '</div>';
   }
   ?>
+  <div class="bot">ver.1.0.0</div>
   <script src="script.js"></script>
 </body>
 </html>

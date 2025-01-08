@@ -36,3 +36,7 @@ h1,P {
 .panel.show {
   padding: 1em;
 }
+
+.bot {
+  margin-top: 100px;
+}
