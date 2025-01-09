@@ -161,9 +161,13 @@
     <div class="mo">
       <a href="info.php">更新履歴を見る</a>
     </div>
-<div class="ad">
+<!-- <div class="ad">
   <a href="milestones/" target="_blank" rel="noopener noreferrer"><img src="milestones/1000posts.png" width="234px" alt="インスタ"></a>
   <p>1000投稿記念ページのアーカイブです</p>
+</div> -->
+
+<div class="ad">
+  <a href="archive/">archive</a>
 </div>
 
 <div class="insta">
