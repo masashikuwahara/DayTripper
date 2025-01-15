@@ -51,7 +51,7 @@ try
 
 require('../../connect.php');
 $dbh->query('SET NAMES utf8');
-$sql='SELECT id,day FROM info WHERE 1';
+$sql='SELECT id,day FROM info_c WHERE 1';
 $stmt=$dbh->prepare($sql);
 $stmt->execute();
 
@@ -67,7 +67,7 @@ if ($page > 1) {
 	$start = 0;
 }
 
-$info = $dbh->prepare(" SELECT id, day, information FROM info ORDER BY id DESC LIMIT {$start}, 10  ");
+$info = $dbh->prepare(" SELECT id, day, content FROM info_c ORDER BY id DESC LIMIT {$start}, 10  ");
 
 echo '更新情報一覧<br/><br/>';
 
@@ -80,10 +80,10 @@ $info = $info->fetchAll(PDO::FETCH_ASSOC);
 foreach ($info as $post) {
 	echo '<input type="radio" name="id" value="'.$post['id'].'">';
 	echo $post['day']. '<br>';
-	echo $post['information']. '<br>';
+	echo $post['content']. '<br>';
 }
 
-$page_num = $dbh->prepare(" SELECT COUNT(*) id FROM info ");
+$page_num = $dbh->prepare(" SELECT COUNT(*) id FROM info_c ");
 $page_num->execute();
 $page_num = $page_num->fetchColumn();
 
