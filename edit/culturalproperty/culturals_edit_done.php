@@ -77,6 +77,6 @@ session();
         exit();
     }
     ?>
-    <a href="culturals_list.php">戻る</a>
+    <a href="index.php">戻る</a>
 </body>
 </html>
