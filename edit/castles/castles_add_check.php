@@ -23,7 +23,6 @@ session();
 </head>
 <body>
     <?php
-
     $post=sanitize($_POST);
     $castles_cas=$post['cas'];
     $castles_title=$post['title'];
@@ -35,6 +34,7 @@ session();
     $castles_remains=$post['remains'];
     $castles_specify1=$post['specify1'];
     $castles_recommend=$post['recommend'];
+    $castles_prefectures=$post['prefectures'];
     $castles_explan=$post['explan'];
     $castles_access=$post['access'];
     $castles_img1=$_FILES['img1'];
@@ -162,6 +162,17 @@ session();
         echo'<br />';
     }    
 
+    if($castles_prefectures === '')
+    {
+        echo'<p style="color:#ff0000">所在地が入力されていません。</p><br />';
+    }
+    else
+    {
+        echo'所在地:';
+        echo$castles_prefectures;
+        echo'<br />';
+    }    
+
     
     if($castles_explan === '')
     {
@@ -258,7 +269,7 @@ session();
     
     if($castles_title === ''||$count !== 0||$castles_structure === ''||$castles_builder === ''||
     $castles_year === ''||$castles_lord === ''||$castles_specify1 === ''||$castles_recommend === ''||
-    $castles_explan === ''||$castles_access === ''||
+    $castles_prefectures === ''||$castles_explan === ''||$castles_access === ''||
     $castles_img1['size']>1000000)
     {
         echo'<form>';
@@ -279,6 +290,7 @@ session();
         echo'<input type="hidden" name="remains" value="'.$castles_remains.'">';
         echo'<input type="hidden" name="specify1" value="'.$castles_specify1.'">';
         echo'<input type="hidden" name="recommend" value="'.$castles_recommend.'">';
+        echo'<input type="hidden" name="prefectures" value="'.$castles_prefectures.'">';
         echo'<input type="hidden" name="explan" value="'.$castles_explan.'">';
         echo'<input type="hidden" name="access" value="'.$castles_access.'">';
         echo'<input type="hidden" name="img1" value="'.$castles_img1['name'].'">';

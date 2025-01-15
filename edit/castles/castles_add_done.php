@@ -23,6 +23,7 @@ session();
         $castles_remains=$post['remains'];
         $castles_specify1=$post['specify1'];
         $castles_recommend=$post['recommend'];
+        $castles_prefectures=$post['prefectures'];
         $castles_explan=$post['explan'];
         $castles_access=$post['access'];
         $castles_img1=$post['img1'];
@@ -34,8 +35,8 @@ session();
         require('../../connect.php');
 
         $sql = 'INSERT INTO castles (cas,title,structure,tenshu,builder,year,lord,
-        remains,specify1,recommend,explan,access,img1,img2,img3,img4,img5) 
-        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+        remains,specify1,recommend,prefectures,explan,access,img1,img2,img3,img4,img5) 
+        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
         $stmt = $dbh->prepare($sql);
         $data[] = $castles_cas;
         $data[] = $castles_title;
@@ -47,6 +48,7 @@ session();
         $data[] = $castles_remains;
         $data[] = $castles_specify1;
         $data[] = $castles_recommend;
+        $data[] = $castles_prefectures;
         $data[] = $castles_explan;
         $data[] = $castles_access;
         $data[] = $castles_img1;
@@ -67,6 +69,6 @@ session();
         exit();
     }
     ?>
-    <a href="castles_list.php">戻る</a>
+    <a href="/index.php">戻る</a>
 </body>
 </html>

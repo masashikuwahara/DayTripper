@@ -63,6 +63,8 @@ session();
       <option>★★★★☆</option>
       <option>★★★★★</option>
     </select><br />
+    所在地を入力してください。<br />
+    <input class="tex" type="text" name="prefectures" ><br />
     説明を入力してください。<br />
     <textarea class="textb" type="text" name="explan" ></textarea><br />
     アクセスを入力してください。widthを600から100%に変更。<br />
