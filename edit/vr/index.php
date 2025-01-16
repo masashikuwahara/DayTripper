@@ -7,7 +7,7 @@ session();
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>城一覧</title>
+	<title>VR</title>
 	<style>
 	.btn{
         width: 50px;
@@ -51,7 +51,7 @@ try
 
 require('../../connect.php');
 $dbh->query('SET NAMES utf8');
-$sql='SELECT id,title FROM castles WHERE 1';
+$sql='SELECT id,title FROM vrvideo WHERE 1';
 $stmt=$dbh->prepare($sql);
 $stmt->execute();
 
@@ -67,11 +67,11 @@ if ($page > 1) {
 	$start = 0;
 }
 
-$castles = $dbh->prepare(" SELECT id, title FROM castles LIMIT {$start}, 10 ");
+$castles = $dbh->prepare(" SELECT id, title FROM vrvideo LIMIT {$start}, 10 ");
 
 echo '城一覧<br/><br/>';
 
-echo '<form method="post" action="castles_branch.php">';
+echo '<form method="post" action="vr_branch.php">';
 echo '<input class="add" type="submit" name="add" value="城を追加"><br />';
 
 $castles->execute();
@@ -82,7 +82,7 @@ foreach ($castles as $post) {
 	echo $post['title']. '<br>';
 }
 
-$page_num = $dbh->prepare(" SELECT COUNT(*) id FROM castles ");
+$page_num = $dbh->prepare(" SELECT COUNT(*) id FROM vrvideo ");
 $page_num->execute();
 $page_num = $page_num->fetchColumn();
 
@@ -109,9 +109,9 @@ echo '<input class="btn" type="submit" name="edit" value="修正">';
 echo '<input disabled class="btn" type="submit" name="delete" value="削除">';
 echo '</form>';
 ?>
-<div>城名で検索する</div>
+<div>タイトルで検索する</div>
   <form action="castles_search.php" method="get">
-    <input class="sea" type="text" name="s" placeholder="例:姫路城">
+    <input class="sea" type="text" name="s" placeholder="">
     <input class="btn" type="submit" value="検索">
   </form>
 
