@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 $video_id=$_GET['id'];
 
 require('connect.php');
@@ -11,7 +11,7 @@ $stmt->execute($data);
 $vi =$stmt->fetch(PDO::FETCH_ASSOC);
 $vt=$vi['title'];
 $vr=$vi['video'];
-?>
+?> -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -47,7 +47,7 @@ $vr=$vi['video'];
         </a-camera>
         <!-- 映像ソースはここ -->
         <video id="video" autoplay loop crossorigin="anonymous" playsinline>
-          <source src="video/<?php echo $vr ?>" type="video/mp4" />
+          <source src="video/movie01.mp4" type="video/mp4" />
         </video>
         <!-- シークバー -->
         <div id="controls" style="position: absolute; bottom: 10px; left: 10px; right: 10px; z-index: 999;">
