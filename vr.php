@@ -1,19 +1,3 @@
-<?php
-// ユーザー名とパスワードを設定
-$valid_username = '';
-$valid_password = '';
-
-// Basic認証の実施
-if (!isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']) ||
-    $_SERVER['PHP_AUTH_USER'] !== $valid_username ||
-    $_SERVER['PHP_AUTH_PW'] !== $valid_password) {
-    // 認証情報が正しくない場合、認証要求のレスポンスを送信
-    header('WWW-Authenticate: Basic realm="Protected Area"');
-    header('HTTP/1.0 401 Unauthorized');
-    echo '認証が必要です';
-    exit;
-}
-?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
