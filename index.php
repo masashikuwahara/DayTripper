@@ -43,7 +43,8 @@
   <!-- ターゲット -->
   <div id="target-section"></div>
   <div class="banner">
-    <a href="vrplay.php" target="_blank" rel="noopener noreferrer"><img src="img/vrbanner.png" alt="" ></a>
+    <a href="vrplay.php" target="_blank" rel="noopener noreferrer"><img src="img/vrbanner.png" alt="" ></a><br>
+    皇居の二重橋から桜田門まで歩いた動画をテスト公開しています
   </div>
   <h2 class="front">城や文化財を検索</h2>
   <form style="text-align: center;" class="cp_ipradio" method="GET" action="search.php">
@@ -187,4 +188,4 @@
 </script>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-<!-- ver.4.7.1 -->
+<!-- ver.4.7.3 -->
