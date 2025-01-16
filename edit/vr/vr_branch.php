@@ -5,18 +5,18 @@ if(isset($_POST['disp']) === true)
 {
 	if(isset($_POST['id']) === false)
 	{
-		header('Location:castles_ng.php');
+		header('Location:vr_ng.php');
 		exit();
 	}
 	$id=$_POST['id'];
-	header('Location: castles_disp.php?id='.$id);
+	header('Location: vr_disp.php?id='.$id);
 	exit();
 }
 
 // 城追加
 if(isset($_POST['add']) === true)
 {
-	header('Location: castles_add.php');
+	header('Location: vr_add.php');
 	exit();
 }
 
@@ -25,11 +25,11 @@ if(isset($_POST['edit']) === true)
 {
 	if(isset($_POST['id']) === false)
 	{
-		header('Location:castles_ng.php');
+		header('Location:vr_ng.php');
 		exit();
 	}
 	$id=$_POST['id'];
-	header('Location:castles_edit.php?id='.$id);
+	header('Location:vr_edit.php?id='.$id);
 	exit();
 }
 
@@ -38,7 +38,7 @@ if(isset($_POST['delete']) === true)
 {
 	if(isset($_POST['id']) === false)
 	{
-		header('Location:castles_ng.php');
+		header('Location:vr_ng.php');
 		exit();
 	}
 	$id=$_POST['id'];
