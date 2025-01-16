@@ -26,6 +26,7 @@
       font-size: 15px;
     }
     .banner {
+      margin-top: 10px;
       text-align: center;
     }
   </style>
@@ -41,13 +42,9 @@
   </div>
   <!-- ターゲット -->
   <div id="target-section"></div>
-  <!-- ここからテストページ -->
-  <div class="ad">
-    <a style="color: #ff00ff;" href="vr.php">VRテストページ</a><br>
-    ヘッダーのはじめにのページを削除、VRのページを新設
-    ロジック等は既存のページを転用し、修正
+  <div class="banner">
+    <a href="vrplay.php" target="_blank" rel="noopener noreferrer"><img src="img/vrbanner.png" alt="" ></a>
   </div>
-  <!-- ここまで -->
   <h2 class="front">城や文化財を検索</h2>
   <form style="text-align: center;" class="cp_ipradio" method="GET" action="search.php">
     <input type="text" class="sea" name="s" placeholder="例：姫路城、山城">
@@ -190,4 +187,4 @@
 </script>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-<!-- ver.4.6.0 -->
+<!-- ver.4.7.1 -->
