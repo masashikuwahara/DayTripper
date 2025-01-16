@@ -41,7 +41,7 @@
         }else{
           $img_name = '<img style="width:360px" src="img/'.$rec['img'].'">';
         }
-        echo '<span class="img_style">'.'<a href="vrtest.php?id='.$rec['id'].'">'.
+        echo '<span class="img_style">'.'<a href="vrplay.php?id='.$rec['id'].'">'.
             $img_name.'<br />'.$rec['title'].'</a>'.'<br />'.$rec['description'].'</span>';
       }
       }catch (Exception $e){
