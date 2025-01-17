@@ -1,5 +1,5 @@
 <?php
-require_once('../library.php');
+include('../library.php');
 session();
 ?>
 <!DOCTYPE html>
@@ -49,7 +49,7 @@ session();
 try
 {
 
-require('../../connect.php');
+include('../../connect.php');
 $dbh->query('SET NAMES utf8');
 $sql='SELECT id,title FROM vrvideo WHERE 1';
 $stmt=$dbh->prepare($sql);
@@ -69,10 +69,10 @@ if ($page > 1) {
 
 $castles = $dbh->prepare(" SELECT id, title FROM vrvideo LIMIT {$start}, 10 ");
 
-echo '城一覧<br/><br/>';
+echo 'VR動画一覧<br/><br/>';
 
 echo '<form method="post" action="vr_branch.php">';
-echo '<input class="add" type="submit" name="add" value="城を追加"><br />';
+echo '<input class="add" type="submit" name="add" value="動画を追加"><br />';
 
 $castles->execute();
 $castles = $castles->fetchAll(PDO::FETCH_ASSOC);
@@ -109,11 +109,11 @@ echo '<input class="btn" type="submit" name="edit" value="修正">';
 echo '<input disabled class="btn" type="submit" name="delete" value="削除">';
 echo '</form>';
 ?>
-<div>タイトルで検索する</div>
+<!-- <div>タイトルで検索する</div>
   <form action="castles_search.php" method="get">
     <input class="sea" type="text" name="s" placeholder="">
     <input class="btn" type="submit" value="検索">
-  </form>
+  </form> -->
 
 <a href="../index.php">トップメニューへ</a><br />
 
