@@ -1,11 +1,12 @@
 <?php
-require_once('../library.php');
+include('../library.php');
 session();
 ?>
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>城追加</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規動画投稿</title>
     <style>
       .form {
         text-align: center;
@@ -35,46 +36,18 @@ session();
 </head>
 <body>  
 <div class="form">
-  <h1>城追加</h1>
-  <form method="post" action="castles_add_check.php" enctype="multipart/form-data">
-    城番号を入力してください。100名城001～、続100名城101～、その他城201～<br />
-    <input class="tex" type="text" name="cas" ><br />
-    城名を入力してください。<br />
+  <h1>動画投稿</h1>
+  <form method="post" action="vr_add_check.php" enctype="multipart/form-data">
+    タイトルを入力してください。<br />
     <input class="tex" type="text" name="title" ><br />
-    城郭構造を入力してください。<br />
-    <input class="tex" type="text" name="structure" ><br />
-    天守構造を入力してください。<br />
-    <input class="tex" type="text" name="tenshu" ><br />
-    築城主を入力してください。<br />
-    <input class="tex" type="text" name="builder" ><br />
-    築城年を入力してください。<br />
-    <input class="tex" type="text" name="year" ><br />
-    主な城主を入力してください。<br />
-    <input class="tex" type="text" name="lord" ><br />
-    遺構を入力してください。<br />
-    <input class="tex" type="text" name="remains" ><br />
-    指定文化財を入力してください。<br />
-    <input class="tex" type="text" name="specify1" ><br />
-    おすすめ度を入力してください。<br />
-    <select class="tex" name="recommend" id="" >
-      <option>★☆☆☆☆</option>
-      <option>★★☆☆☆</option>
-      <option>★★★☆☆</option>
-      <option>★★★★☆</option>
-      <option>★★★★★</option>
-    </select><br />
-    所在地を入力してください。<br />
-    <input class="tex" type="text" name="prefectures" ><br />
     説明を入力してください。<br />
     <textarea class="textb" type="text" name="explan" ></textarea><br />
-    アクセスを入力してください。widthを600から100%に変更。<br />
-    <textarea class="texta" type="text" name="access" ></textarea><br />
-    画像を選んでください。<br />
-    <input type="file" name="img1" ><br /><br />
-    <input type="file" name="img2" ><br /><br />
-    <input type="file" name="img3" ><br /><br />
-    <input type="file" name="img4" ><br /><br />
-    <input type="file" name="img5" ><br /><br />
+    動画のファイル名を入力してください。<br />
+    <input class="tex" type="text" name="movie" ><br />
+    サムネイル画像のファイル名を入力してください。<br />
+    <input class="tex" type="text" name="thumb" ><br />
+    動画を選んでください。<br />
+    <input disabled type="file" name="img1" ><br /><br />
     <input class="btn" type="button" onclick="history.back()"value="戻る">
     <input class="btn" type="submit" value="次のページへ">
   </form>
