@@ -18,7 +18,7 @@ session();
     <br />
     <a href="cats/">猫ページ管理</a><br />
     <br />
-    <a href="vr/">VRページ</a><br />
+    <a href="vr/">VR動画管理</a><br />
     <br />
     <a href="update/">城郭更新情報</a><br />
     <br />

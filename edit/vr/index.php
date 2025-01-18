@@ -7,7 +7,7 @@ session();
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>VR</title>
+	<title>VR動画管理</title>
 	<style>
 	.btn{
         width: 50px;
