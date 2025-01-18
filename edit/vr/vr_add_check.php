@@ -15,21 +15,21 @@ session();
         border-radius: 20px;
         border: none;
         color: #ffffff;
-        }
+    }
     .btn:hover {
-            background-color: #ed6fb5;
-        }
+        background-color: #ed6fb5;
+    }
     </style>
 </head>
 <body>
     <?php
     $post=sanitize($_POST);
     $vr_title=$post['title'];
-    $vr_explan=$post['explan'];
-    $vr_movie=$post['movie'];
-    $vr_thumb=$post['thumb'];
+    $vr_desc=$post['desc'];
+    $vr_video=$post['video'];
+    $vr_img=$post['img'];
 
-    require('../../connect.php');
+    include('../../connect.php');
     $stmt = $dbh->prepare('SELECT COUNT(*) FROM vrvideo ');
     $stmt->execute();
     $count = $stmt->fetchColumn();
@@ -42,31 +42,31 @@ session();
         echo'<br />';
     }
 
-    if($vr_explan  === ''){
+    if($vr_desc  === ''){
         echo'<p style="color:#ff0000">説明が入力されていません。</p><br />';
     }else{
         echo'説明:';
-        echo$vr_explan;
+        echo$vr_desc;
         echo'<br />';
     }
 
-    if($vr_movie === ''){
+    if($vr_video === ''){
         echo'<p style="color:#ff0000">動画ファイルが入力されていません。</p><br />';
     }else{
         echo'動画ファイル:';
-        echo$vr_movie;
+        echo$vr_video;
         echo'<br />';
     }
 
-    if($vr_thumb === ''){
+    if($vr_img === ''){
         echo'<p style="color:#ff0000">サムネイルが入力されていません。</p><br />';
     }else{
         echo'サムネイル:';
-        echo$vr_thumb;
+        echo$vr_img;
         echo'<br />';
     }
     
-    if($vr_title === ''||$vr_explan === ''||$vr_movie === ''||$vr_thumb === ''){
+    if($vr_title === ''||$vr_desc === ''||$vr_video === ''||$vr_img === ''){
         echo'<form>';
         echo'<input class="btn" type="button" onclick="history.back()" value="戻る">';
         echo'</form>';
@@ -74,9 +74,9 @@ session();
         echo'上記の内容を追加します。<br />';
         echo'<form method="post" action="vr_add_done.php">';
         echo'<input type="hidden" name="title" value="'.$vr_title.'">';
-        echo'<input type="hidden" name="explan" value="'.$vr_explan.'">';
-        echo'<input type="hidden" name="explan" value="'.$vr_movie.'">';
-        echo'<input type="hidden" name="explan" value="'.$vr_thumb.'">';
+        echo'<input type="hidden" name="desc" value="'.$vr_desc.'">';
+        echo'<input type="hidden" name="video" value="'.$vr_video.'">';
+        echo'<input type="hidden" name="img" value="'.$vr_img.'">';
         echo'<br />';
         echo'<input class="btn" type="button" onclick="history.back()" value="戻る">&nbsp;';
         echo'<input class="btn" type="submit" value="決定する">';
