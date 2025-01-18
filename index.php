@@ -43,8 +43,8 @@
   <!-- ターゲット -->
   <div id="target-section"></div>
   <div class="banner">
-    <a href="vrplay.php" target="_blank" rel="noopener noreferrer"><img src="img/vrbanner.png" alt="" ></a><br>
-    皇居の二重橋から桜田門まで歩いた動画をテスト公開しています
+    <a href="vr.php" rel="noopener noreferrer"><img src="img/vrbanner.png" alt="" ></a><br>
+    VR動画をテスト公開しています
   </div>
   <h2 class="front">城や文化財を検索</h2>
   <form style="text-align: center;" class="cp_ipradio" method="GET" action="search.php">
@@ -159,17 +159,13 @@
     <div class="mo">
       <a href="info.php">更新履歴を見る</a>
     </div>
+
 <!-- <div class="ad">
-  <a href="milestones/" target="_blank" rel="noopener noreferrer"><img src="milestones/1000posts.png" width="234px" alt="インスタ"></a>
-  <p>1000投稿記念ページのアーカイブです</p>
+  <a href="archive/">archive</a>
 </div> -->
 
-<div class="ad">
-  <a href="archive/">archive</a>
-</div>
-
 <div class="insta">
-  <a href="https://www.instagram.com/day_____tripper_official/" target="_blank" rel="noopener noreferrer"><img src="img/insta.png" width="30px" alt="インスタ"></a>
+  <a href="https://www.instagram.com/day_tripper_official/" target="_blank" rel="noopener noreferrer"><img src="img/insta.png" width="30px" alt="インスタ"></a>
 </div>
 
 <div class="ad">
@@ -188,4 +184,4 @@
 </script>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-<!-- ver.4.7.3 -->
+<!-- ver.4.8.0 -->
