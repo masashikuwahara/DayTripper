@@ -6,13 +6,16 @@ $vr_id=$_GET['id'];
 
 include('../../connect.php');
 $dbh->query('SET NAMES utf8');
-$sql = 'SELECT title FROM vrvideo WHERE id=?';
+$sql = 'SELECT title, description, video, img FROM vrvideo WHERE id=?';
 $stmt = $dbh->prepare($sql);
 $data[]=$vr_id;
 $stmt->execute($data);
 
 $vr =$stmt->fetch(PDO::FETCH_ASSOC);
 $vr_title=$vr['title'];
+$vr_desc=$vr['description'];
+$vr_video=$vr['video'];
+$vr_img=$vr['img'];
 
 ?>
 <!DOCTYPE html>
@@ -37,8 +40,12 @@ $vr_title=$vr['title'];
 </head>
 <body>
     <h1><?php echo $vr_title; ?></h1><br />
-    <h2>動画</h2><br />
-    
+    <h2>説明</h2>
+    <h3><?php echo $vr_desc; ?></h3><br />
+    <h2>動画ファイル名</h2>
+    <h3><?php echo $vr_video; ?></h3><br />
+    <h2>サムネイルファイル名</h2>
+    <h3><?php echo $vr_img; ?></h3><br />
     <form>
     <input class="btn" type="button" onclick="history.back()" value="戻る">
     </form>
