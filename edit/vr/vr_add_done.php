@@ -14,16 +14,18 @@ session();
         $post = ($_POST);
         $vr_title = $post['title'];
         $vr_desc = $post['desc'];
+        $vr_time = $post['time'];
         $vr_video = $post['video'];
         $vr_img = $post['img'];
 
         include('../../connect.php');
 
-        $sql = 'INSERT INTO vrvideo (title, description, video, img) 
+        $sql = 'INSERT INTO vrvideo (title, description, time, video, img) 
         VALUES (?, ?, ?, ?)';
         $stmt = $dbh->prepare($sql);
         $data[] = $vr_title;
         $data[] = $vr_desc;
+        $data[] = $vr_time;
         $data[] = $vr_video;
         $data[] = $vr_img;
         $stmt->execute($data);

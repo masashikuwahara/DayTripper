@@ -42,6 +42,8 @@ session();
     <input class="tex" type="text" name="title" ><br />
     説明を入力してください。(20文字以内)<br />
     <textarea class="textb" type="text" name="desc" ></textarea><br />
+    動画の再生時間を入力してください。(mm:ss)<br />
+    <input class="tex" type="text" name="time" ><br />
     動画のファイル名を拡張子まで含めて入力してください。<br />
     <input class="tex" type="text" name="video" ><br />
     サムネイル画像のファイル名を拡張子まで含めて入力してください。<br />

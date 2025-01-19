@@ -26,6 +26,7 @@ session();
     $post=sanitize($_POST);
     $vr_title=$post['title'];
     $vr_desc=$post['desc'];
+    $vr_time=$post['time'];
     $vr_video=$post['video'];
     $vr_img=$post['img'];
 
@@ -47,6 +48,14 @@ session();
     }else{
         echo'説明:';
         echo$vr_desc;
+        echo'<br />';
+    }
+
+    if($vr_time  === ''){
+        echo'<p style="color:#ff0000">再生時間が入力されていません。</p><br />';
+    }else{
+        echo'再生時間:';
+        echo$vr_time;
         echo'<br />';
     }
 
@@ -75,6 +84,7 @@ session();
         echo'<form method="post" action="vr_add_done.php">';
         echo'<input type="hidden" name="title" value="'.$vr_title.'">';
         echo'<input type="hidden" name="desc" value="'.$vr_desc.'">';
+        echo'<input type="hidden" name="time" value="'.$vr_time.'">';
         echo'<input type="hidden" name="video" value="'.$vr_video.'">';
         echo'<input type="hidden" name="img" value="'.$vr_img.'">';
         echo'<br />';
