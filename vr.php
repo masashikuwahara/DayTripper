@@ -24,7 +24,7 @@
     try{
       include('connect.php');
       $dbh->query('SET NAMES utf8');
-      $sql='SELECT id, title, description, img FROM vrvideo ';
+      $sql='SELECT id, title, description, time, img FROM vrvideo ';
       $stmt=$dbh->prepare($sql);
       $stmt->execute();
       $dbh = null;
@@ -41,7 +41,7 @@
           $img_name = '<img style="width:360px" src="img/'.$rec['img'].'">';
         }
         echo '<span class="img_style">'.'<a href="vrplay.php?id='.$rec['id'].'">'.
-        $img_name.'<br />'.$rec['title'].'</a>'.'<br />'.$rec['description'].'</span>';
+        $img_name.'<br />'.$rec['title'].'</a>'.$rec['time'].'<br />'.$rec['description'].'</span>';
       }
       }catch (Exception $e){
         echo 'ただいま障害により大変ご迷惑をお掛けしております。';
