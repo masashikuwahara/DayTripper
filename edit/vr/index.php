@@ -105,7 +105,7 @@ catch (Exception $e)
 echo '<br/>';
 echo '<br/>';
 echo '<input class="btn" type="submit" name="disp" value="参照">';
-echo '<input class="btn" type="submit" name="edit" value="修正">';
+echo '<input disabled class="btn" type="submit" name="edit" value="修正">';
 echo '<input disabled class="btn" type="submit" name="delete" value="削除">';
 echo '</form>';
 ?>
