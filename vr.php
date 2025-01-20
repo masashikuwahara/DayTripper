@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>VR</title>
+  <title>VR動画</title>
   <style>
     span {
       width: 360px;
@@ -15,7 +15,7 @@
 <body>
 <?php include('header.php'); ?>
 <div class="castle_page">
-  <h1 class="title">VR</h1>
+  <h1 class="title">VR動画</h1>
   
   <div class="about">
   </div>
