@@ -47,7 +47,7 @@ $vr=$vi['video'];
         </a-camera>
         <!-- 映像ソースはここ -->
         <video id="video" autoplay loop crossorigin="anonymous" playsinline>
-          <source src="mov/<?php echo $vr ?>" type="video/mp4" />
+          <source src="vid/<?php echo $vr ?>" type="video/mp4" />
         </video>
         <!-- シークバー -->
         <div id="controls" style="position: absolute; bottom: 10px; left: 10px; right: 10px; z-index: 999;">
