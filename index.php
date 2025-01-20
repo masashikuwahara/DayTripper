@@ -44,7 +44,6 @@
   <div id="target-section"></div>
   <div class="banner">
     <a href="vr.php" rel="noopener noreferrer"><img src="img/vrbanner.png" alt="" ></a><br>
-    VR動画をテスト公開しています
   </div>
   <h2 class="front">城や文化財を検索</h2>
   <form style="text-align: center;" class="cp_ipradio" method="GET" action="search.php">
