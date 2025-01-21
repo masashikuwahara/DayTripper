@@ -21,7 +21,7 @@ session();
         include('../../connect.php');
 
         $sql = 'INSERT INTO vrvideo (title, description, time, video, img) 
-        VALUES (?, ?, ?, ?)';
+        VALUES (?, ?, ?, ?, ?)';
         $stmt = $dbh->prepare($sql);
         $data[] = $vr_title;
         $data[] = $vr_desc;
