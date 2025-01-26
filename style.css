@@ -1,7 +1,7 @@
   body {
-    margin: 0 auto;
-    background-image: radial-gradient(circle at 85% 15%, 
-		rgb(252, 236, 215) 65%, rgb(255, 220, 240));
+    margin: 0;
+    background-image: radial-gradient(circle at 30% 25%, 
+		rgb(240, 238, 224) 25%, rgb(235, 198, 224));
     background-attachment: fixed;
     color: #000b00;
     font-family: cursive ;
@@ -634,8 +634,9 @@ th {
 @media screen and (min-width: 1270px) {
   body {
     margin: 0;
-    background-image: radial-gradient(circle at 85% 15%, 
-		rgb(252, 236, 215) 65%, rgb(255, 220, 240));
+    background-image: radial-gradient(circle at 50% 45%, 
+		rgb(240, 238, 224) 65%, rgb(235, 198, 224));
+    background-attachment: fixed;
     color: #000b00;
     font-family: cursive ;
   }
