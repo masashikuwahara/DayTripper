@@ -42,6 +42,7 @@
   </div>
   <!-- ターゲット -->
   <div id="target-section"></div>
+  <h2 class="front">VRっぽい動画</h2>
   <div class="banner">
     <a href="vr.php" rel="noopener noreferrer"><img src="img/vrbanner.png" alt="" ></a><br>
   </div>
