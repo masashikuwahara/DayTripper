@@ -13,6 +13,7 @@
       <a class="menu-btn" href="sequel_100_castles.php">続100名城</a>
       <a class="menu-btn" href="other_castles.php">その他の城</a>
       <a class="menu-btn" href="recommend.php">城ビギナーへおすすめの城</a>
+      <a class="menu-btn" href="vr.php">VR動画</a>
       <a class="menu-btn" href="cultural_assets" target="blank">その他文化財</a>
     </div>
   </div>
@@ -34,6 +35,9 @@
       </li>
       <li class="hamburger-window__link">
         <a class="acordion-btn" href="recommend.php">城ビギナーへおすすめの城</a>
+      </li>
+      <li class="hamburger-window__link">
+        <a class="acordion-btn" href="vr.php">VR動画</a>
       </li>
       <li class="hamburger-window__link">
         <a class="acordion-btn" href="cultural_assets" target="blank">その他文化財</a>
