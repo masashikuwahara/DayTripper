@@ -16,7 +16,7 @@
 <?php include('header.php'); ?>
 <div class="castle_page">
   <h1 class="title">VR動画</h1>
-  
+  <div class="info">最新版のChrome、Edgeでの視聴を推奨します</div>
   <div class="about">
   </div>
   <hr>
