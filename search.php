@@ -90,11 +90,24 @@ if ($search_query === '') {
         <a href="?s=<?php echo urlencode($search_query); ?>&page=<?php echo $current_page - 1; ?>">前のページ</a>
     <?php endif; ?>
 
-    <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+    <?php
+    // 最初のページと最後のページを常に表示
+    $range = 2; // 現在のページからの表示範囲
+    for ($i = 1; $i <= $total_pages; $i++): 
+        if ($i == 1 || $i == $total_pages || ($i >= $current_page - $range && $i <= $current_page + $range)):
+    ?>
         <a href="?s=<?php echo urlencode($search_query); ?>&page=<?php echo $i; ?>" <?php if ($i === $current_page) echo 'class="active"'; ?>>
             <?php echo $i; ?>
         </a>
-    <?php endfor; ?>
+    <?php 
+        elseif ($i == $current_page - $range - 1 || $i == $current_page + $range + 1): 
+            // 省略部分に「...」を挿入
+    ?>
+        <span>...</span>
+    <?php 
+        endif;
+    endfor; 
+    ?>
 
     <?php if ($current_page < $total_pages): ?>
         <a href="?s=<?php echo urlencode($search_query); ?>&page=<?php echo $current_page + 1; ?>">次のページ</a>

@@ -42,7 +42,8 @@
   </div>
   <!-- ターゲット -->
   <div id="target-section"></div>
-  <h2 class="front">VRっぽい動画</h2>
+  <h2 class="front">VRっぽい動画<br>
+  </h2>
   <div class="banner">
     <a href="vr.php" rel="noopener noreferrer"><img src="img/vrbanner.png" alt="" ></a><br>
   </div>
@@ -181,7 +182,16 @@
     const targetElement = document.getElementById('target-section');
     targetElement.scrollIntoView({ behavior: 'smooth' });
   });
+  
+  // window.addEventListener('resize', function() {
+  //   const scrollDownElement = document.querySelector('.scroll-down'); 
+  //   if (window.innerWidth <= 1270) {
+  //     scrollDownElement.style.display = 'none';
+  //   } else {
+  //     scrollDownElement.style.display = 'block'; // 再表示する場合
+  //   }
+  // });
 </script>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-<!-- ver.4.10.1 -->
+<!-- ver.4.11.0 -->
