@@ -6,22 +6,14 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登録内容確認</title>
-    <style>
-    .btn{
-        width: 100px;
-        height: 50px;
-        background-color: #00bfff;
-        border-radius: 20px;
-        border: none;
-        color: #ffffff;
-        }
-    .btn:hover {
-            background-color: #ed6fb5;
-        }
-    </style>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<header>
+    <h1>登録内容確認</h1>
+</header>
     <?php
     $post=sanitize($_POST);
     $castles_cas=$post['cas'];

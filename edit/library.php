@@ -1,21 +1,14 @@
 <?php
-function session(){
+session_start();
+
+if (session_status() === PHP_SESSION_NONE) {
     session_start();
-    session_regenerate_id(true);
-    $user_name = $_SESSION['user_name'];
-    if(isset($_SESSION['login'])==false)
-    {
-        header("Content-Type: text/html; charset=UTF-8");
-        echo'ログインされていません。<br />';
-        echo'<a href="login.php">ログイン画面へ</a>';
+}
+
+function session() {
+    if (!isset($_SESSION['user_name'])) {
+        header("Location: login.php");
         exit();
-    }
-    else
-    {
-    $user_name = mb_convert_encoding($user_name, "UTF-8", "auto");
-    echo $user_name;
-    echo'さんログイン中<br />';
-    echo'<br />';
     }
 }
 
