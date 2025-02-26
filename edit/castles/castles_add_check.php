@@ -9,11 +9,19 @@ session();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登録内容確認</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .access {
+            display: inline-block;
+            width: 800px;
+            overflow-wrap: break-word;
+        }
+    </style>
 </head>
 <body>
 <header>
     <h1>登録内容確認</h1>
 </header>
+<main>
     <?php
     $post=sanitize($_POST);
     $castles_cas=$post['cas'];
@@ -185,7 +193,9 @@ session();
     else
     {
         echo'アクセス:';
-        echo$castles_access;
+        echo '<div class= "access">';
+        echo $castles_access;
+        echo'<div />';
         echo'<br />';
     }    
 
@@ -296,5 +306,9 @@ session();
         echo'</form>';
     }
     ?>
+</main>
+<footer>
+    <p>&copy; 城情報システム</p>
+</footer>
 </body>
 </html>

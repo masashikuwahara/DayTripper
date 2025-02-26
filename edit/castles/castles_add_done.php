@@ -6,9 +6,15 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登録しました</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<header>
+    <h1>登録しました</h1>
+</header>
+<main>
     <?php
     try
     {
@@ -68,7 +74,12 @@ session();
         echo('Error:'.$e->getMessage());
         exit();
     }
+    
     ?>
-    <a href="/index.php">戻る</a>
+    <p class="btn-group"><a href="index.php" class="btn">トップメニューへ</a></p>
+</main>
+<footer>
+    <p>&copy; 城情報システム</p>
+</footer>
 </body>
 </html>
