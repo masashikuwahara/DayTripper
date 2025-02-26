@@ -57,10 +57,10 @@ session();
             <input class="tex" type="text" name="prefectures"><br />
             
             <label>説明を入力してください。</label><br />
-            <textarea class="textb" name="explan"></textarea><br />
+            <textarea class="tex" name="explan"></textarea><br />
             
             <label>アクセスを入力してください。widthを600から100%に変更。</label><br />
-            <textarea class="textb" name="access"></textarea><br />
+            <textarea class="tex" name="access"></textarea><br />
             
             <label>画像を選んでください。</label><br />
             <input type="file" name="img1"><br />
