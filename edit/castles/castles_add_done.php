@@ -7,8 +7,8 @@ session();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登録しました</title>
     <link rel="stylesheet" href="../style.css">
+    <title>登録しました</title>
 </head>
 <body>
 <header>
@@ -67,7 +67,7 @@ session();
         $dbh = null;
         
         $castles_title = mb_convert_encoding($castles_title, "UTF-8", "auto");
-        echo $castles_title.'を追加しました。<br />';
+        echo $castles_title.'を登録しました。<br />';
     }
     catch (Exception $e)
     {
@@ -78,8 +78,6 @@ session();
     ?>
     <p class="btn-group"><a href="index.php" class="btn">トップメニューへ</a></p>
 </main>
-<footer>
-    <p>&copy; 城情報システム</p>
-</footer>
+<?php include("../footer.php") ?>
 </body>
 </html>

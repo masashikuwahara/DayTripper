@@ -7,8 +7,8 @@ session();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>城追加</title>
     <link rel="stylesheet" href="../style.css">
+    <title>城追加</title>
 </head>
 <body>
 <header>
@@ -76,8 +76,6 @@ session();
         </form>
     </div>
 </main>
-<footer>
-    <p>&copy; 城情報システム</p>
-</footer>
+<?php include("../footer.php") ?>
 </body>
 </html>

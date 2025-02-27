@@ -7,8 +7,8 @@ session();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登録内容確認</title>
     <link rel="stylesheet" href="../style.css">
+    <title>登録内容確認</title>
     <style>
         .access {
             display: inline-block;
@@ -307,8 +307,6 @@ session();
     }
     ?>
 </main>
-<footer>
-    <p>&copy; 城情報システム</p>
-</footer>
+<?php include("../footer.php") ?>
 </body>
 </html>
