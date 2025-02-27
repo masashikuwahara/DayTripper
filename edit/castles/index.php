@@ -7,8 +7,8 @@ session();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>城一覧</title>
     <link rel="stylesheet" href="../style.css">
+    <title>城一覧</title>
 </head>
 <body>
     <header>
@@ -77,9 +77,6 @@ session();
         
         <p class="btn-group"><a href="../index.php" class="btn">トップメニューへ</a></p>
     </main>
-    
-    <footer>
-        <p>&copy; 2025 城一覧システム</p>
-    </footer>
+    <?php include("../footer.php") ?>
 </body>
 </html>
