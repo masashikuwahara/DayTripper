@@ -64,8 +64,6 @@
     </form>
     <p class="btn-group"><a href="index.php" class="btn">トップメニューへ</a></p>
   </main>
-  <footer>
-    <p>&copy; 2025 城検索システム</p>
-  </footer>
+  <?php include("../footer.php") ?>
   </body>
 </html>
