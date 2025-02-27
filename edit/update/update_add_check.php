@@ -6,24 +6,17 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>登録内容確認</title>
-    <style>
-    .btn{
-        width: 100px;
-        height: 50px;
-        background-color: #00bfff;
-        border-radius: 20px;
-        border: none;
-        color: #ffffff;
-        }
-    .btn:hover {
-            background-color: #ed6fb5;
-        }
-    </style>
 </head>
 <body>
+    <header>
+        <h1>登録内容確認</h1>
+    </header>
+    <main>
+    <div class="content">
     <?php
-
     $post=sanitize($_POST);
     $update_day=$post['day'];
     $update_information=$post['information'];
@@ -107,5 +100,7 @@ session();
         echo'</form>';
     }
     ?>
+    </div>
+    </main>
 </body>
 </html>

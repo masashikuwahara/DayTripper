@@ -6,6 +6,8 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>削除しました</title>
 </head>
 <body>
@@ -30,7 +32,12 @@ session();
         exit();
     }
     ?>
-    削除しました<br />
-    <a href="index.php">戻る</a>
+    <main>
+        <div class="content">
+            削除しました
+        </div>
+    <p class="btn-group"><a href="index.php" class="btn">トップメニューへ</a></p>
+    </main>
+    <?php include("../footer.php") ?>
 </body>
 </html>

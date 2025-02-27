@@ -6,9 +6,15 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>登録しました</title>
 </head>
 <body>
+<header>
+    <h1>登録しました</h1>
+</header>
+<main>
     <?php
     try
     {
@@ -34,7 +40,7 @@ session();
         $dbh = null;
         
         $update_information = mb_convert_encoding($update_information, "UTF-8", "auto");
-        echo '追加しました。<br />';
+        echo '登録しました。<br />';
     }
     catch (Exception $e)
     {
@@ -42,6 +48,8 @@ session();
         exit();
     }
     ?>
-    <a href="index.php">戻る</a>
+    <p class="btn-group"><a href="index.php" class="btn">トップメニューへ</a></p>
+</main>
+<?php include("../footer.php") ?>
 </body>
 </html>

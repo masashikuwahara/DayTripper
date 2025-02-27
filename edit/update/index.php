@@ -5,47 +5,17 @@ session();
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>更新情報</title>
-	<style>
-	.btn{
-        width: 50px;
-        height: 30px;
-        background-color: #00bfff;
-        border-radius: 20px;
-        border: none;
-        color: #ffffff;
-        }
-
-  .btn:hover {
-            background-color: #ed6fb5;
-        }
-
-	.add{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		line-height: 1;
-		text-decoration: none;
-		color: #ffffff;
-		border-radius: 20px;
-		border: none;
-		width: 120px;
-		height: 40px;
-		transition: 0.3s;
-		background-image: radial-gradient(circle at 100% 0%, 
-		rgba(94, 138, 243, 1) 15%, rgba(243, 61, 223, 1));
-	}
-
-	.add:hover {
-		opacity: .5;
-        }
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>城一覧</title>
 </head>
 <body>
+<header>
+		<h1>城一覧</h1>
+</header>
+<main>
 <?php
-
 try
 {
 
@@ -69,10 +39,8 @@ if ($page > 1) {
 
 $info = $dbh->prepare(" SELECT id, day, information FROM info ORDER BY id DESC LIMIT {$start}, 10  ");
 
-echo '更新情報一覧<br/><br/>';
-
 echo '<form method="post" action="update_branch.php">';
-echo '<input class="add" type="submit" name="add" value="更新情報を追加"><br />';
+echo '<input class="btn" type="submit" name="add" value="更新情報を追加"><br />';
 
 $info->execute();
 $info = $info->fetchAll(PDO::FETCH_ASSOC);
@@ -107,8 +75,8 @@ echo '<br/>';
 echo '<input class="btn" type="submit" name="delete" value="削除">';
 echo '</form>';
 ?>
-
-<a href="../index.php">トップメニューへ</a><br />
-
+<p class="btn-group"><a href="../index.php" class="btn">トップメニューへ</a></p>
+</main>
+<?php include("../footer.php") ?>
 </body>
 </html>
