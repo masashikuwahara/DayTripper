@@ -194,4 +194,6 @@
 </script>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-<!-- ver.4.12.0 -->
+<!-- ver.4.12.0
+↓
+ver.5.0.0 -->
