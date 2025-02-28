@@ -6,9 +6,15 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>修正しました</title>
 </head>
 <body>
+<header>
+    <h1>修正しました</h1>
+</header>
+<main>
     <?php
     try
     {
@@ -77,6 +83,8 @@ session();
         exit();
     }
     ?>
-    <a href="index.php">戻る</a>
+    <p class="btn-group"><a href="index.php" class="btn">トップメニューへ</a></p>
+</main>
+<?php include("../footer.php") ?>
 </body>
 </html>

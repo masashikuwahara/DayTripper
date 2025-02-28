@@ -26,102 +26,95 @@ $culturals_img3=$cul['img3'];
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title><?php echo $culturals_title; ?></title>
-    <style>
-        .btn{
-            width: 100px;
-            height: 50px;
-            background-color: #00bfff;
-            border-radius: 20px;
-            border: none;
-            color: #ffffff;
-        }
-        .btn:hover {
-            background-color: #ed6fb5;
-        }
-    </style>
 </head>
 <body>
-    <h1><?php echo $culturals_title; ?></h1>
-    <br />
-    <?php
-    try{
+    <header>
+        <h1><?php echo $culturals_title; ?></h1>
+    </header>
+    <main>
+        <?php
+        try{
 
-        $dbh = null;
+            $dbh = null;
 
-        if($culturals_img1 === '')
-        {
-            $disp_img1='';
+            if($culturals_img1 === '')
+            {
+                $disp_img1='';
+            }
+            else
+            {
+                $disp_img1='<img src="../../cultural_assets/img/'.$culturals_img1.'" class="pic">';
+            }
         }
-        else
+        catch (Exception $e)
         {
-            $disp_img1='<img src="../../cultural_assets/img/'.$culturals_img1.'">';
+            echo'ただいま障害により大変ご迷惑をおかけしております。';
+            exit();
         }
-    }
-    catch (Exception $e)
-    {
-        echo'ただいま障害により大変ご迷惑をおかけしております。';
-        exit();
-    }
 
-    try{
+        try{
 
-        $dbh = null;
+            $dbh = null;
 
-        if($culturals_img2 === '')
+            if($culturals_img2 === '')
+            {
+                $disp_img2='';
+            }
+            else
+            {
+                $disp_img2='<img src="../../cultural_assets/img/'.$culturals_img2.'" class="pic">';
+            }
+        }
+        catch (Exception $e)
         {
-            $disp_img2='';
+            echo'ただいま障害により大変ご迷惑をおかけしております。';
+            exit();
         }
-        else
+
+        try{
+
+            $dbh = null;
+
+            if($culturals_img3 === '')
+            {
+                $disp_img3='';
+            }
+            else
+            {
+                $disp_img3='<img src="../../cultural_assets/img/'.$culturals_img3.'" class="pic">';
+            }
+        }
+        catch (Exception $e)
         {
-            $disp_img2='<img src="../../cultural_assets/img/'.$culturals_img2.'">';
+            echo'ただいま障害により大変ご迷惑をおかけしております。';
+            exit();
         }
-    }
-    catch (Exception $e)
-    {
-        echo'ただいま障害により大変ご迷惑をおかけしております。';
-        exit();
-    }
 
-    try{
-
-        $dbh = null;
-
-        if($culturals_img3 === '')
-        {
-            $disp_img3='';
-        }
-        else
-        {
-            $disp_img3='<img src="../../cultural_assets/img/'.$culturals_img3.'">';
-        }
-    }
-    catch (Exception $e)
-    {
-        echo'ただいま障害により大変ご迷惑をおかけしております。';
-        exit();
-    }
-
-    ?>
+        ?>
     <?php echo $disp_img1;?>
     <?php echo $disp_img2;?>
     <?php echo $disp_img3;?>
-    <br />
-    <h2>作成年</h2>
-    <?php echo $culturals_year;?>
-    <br />
-    <h2>指定文化財</h2>
-    <?php echo $culturals_specify;?>
-    <br />
-    <h2>解説</h2>
-    <?php echo $culturals_explan;?>
-    <br />
-    <h2>アクセス</h2>
-    <?php echo $culturals_access;?>
-    <br />
+    <div class="content">
+        <h2>作成年</h2>
+        <?php echo $culturals_year;?>
+        <br />
+        <h2>指定文化財</h2>
+        <?php echo $culturals_specify;?>
+        <br />
+        <h2>解説</h2>
+        <?php echo $culturals_explan;?>
+        <br />
+        <h2>アクセス</h2>
+        <?php echo $culturals_access;?>
+        <br />
+   </div>
     <form>
-    <input class="btn" type="button" onclick="history.back()" value="戻る">
+        <input class="btn" type="button" onclick="history.back()" value="戻る">
     </form>
-    
+    </main>
+    <?php include("../footer.php") ?>
 </body>
 </html>

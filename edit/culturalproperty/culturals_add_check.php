@@ -6,24 +6,23 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>登録内容確認</title>
     <style>
-    .btn{
-        width: 100px;
-        height: 50px;
-        background-color: #00bfff;
-        border-radius: 20px;
-        border: none;
-        color: #ffffff;
-        }
-    .btn:hover {
-            background-color: #ed6fb5;
+        .access {
+            display: inline-block;
+            width: 800px;
+            overflow-wrap: break-word;
         }
     </style>
 </head>
 <body>
+<header>
+    <h1>登録内容確認</h1>
+</header>
+<main>
     <?php
-
     $post=sanitize($_POST);
     $culturals_title=$post['title'];
     $culturals_year=$post['year'];
@@ -86,7 +85,9 @@ session();
     else
     {
         echo'アクセス:';
-        echo$culturals_access;
+        echo '<div class= "access">';
+        echo $culturals_access;
+        echo'<div />';
         echo'<br />';
     }    
 
@@ -158,5 +159,7 @@ session();
         echo'</form>';
     }
     ?>
+</main>
+<?php include("../footer.php") ?>
 </body>
 </html>

@@ -6,34 +6,9 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>記事修正</title>
-    <style>
-        .text{
-            width: 600px;
-            height: 200px;
-        }
-        .tex{
-            width:200px;
-        }
-        .texta{
-          width: 600px;
-        }
-        .textb{
-          width: 600px;
-          height: 200px;
-        }
-        .btn{
-            width: 100px;
-            height: 50px;
-            background-color: #00bfff;
-            border-radius: 20px;
-            border: none;
-            color: #ffffff;
-        }
-        .btn:hover {
-            background-color: #ed6fb5;
-        }
-    </style>
 </head>
 <body>
     <?php
@@ -96,14 +71,10 @@ session();
     }
 
     ?>
-
-    記事修正<br />
-    <br />
-    文化財名<br />
-    <?php echo $culturals_title;?>
-    <br />
-    <br />
-
+    <header>
+        <h1><?php echo $culturals_title; ?></h1>
+    </header>
+    <main>
     <form method="post" action="culturals_edit_check.php" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?php echo $culturals_id; ?>">
       <input name="img_name_old1" type="hidden" value="<?php echo $culturals_img1_old;?>">
@@ -118,7 +89,7 @@ session();
         説明を入力してください。<br />
         <textarea class="textb" type="text" name="explan" ><?php echo $culturals_explan; ?></textarea><br />
         アクセスを入力してください。<br />
-        <input class="texta" type="text" name="access" ><br />
+        <textarea class="textb" type="text" name="access" ><?php echo $culturals_access; ?></textarea><br />
         画像を選んでください。<br />
         <input type="file" name="img1" ><br /><br />
         <input type="file" name="img2" ><br /><br />
@@ -126,5 +97,7 @@ session();
       <input class="btn" type="button" onclick="history.back()"value="戻る">
       <input class="btn" type="submit" value="次のページへ">
     </form>
+    </main>
+<?php include("../footer.php") ?>
 </body>
 </html>
