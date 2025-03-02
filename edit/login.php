@@ -24,9 +24,7 @@
       <input class="btn" type="submit" value="ログイン">
     </form>
   </main>
-  <footer>
-    <p>&copy; 2025 ログインシステム</p>
-  </footer>
+  <?php include("../footer.php") ?>
   <script src="login.js"></script>
 </body>
 </html>

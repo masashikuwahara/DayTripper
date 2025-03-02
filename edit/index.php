@@ -29,8 +29,6 @@ $userName = $_SESSION['user_name'] ?? 'ゲスト';
             <li><a href="logout.php">ログアウト</a></li>
         </ul>
     </main>
-    <footer>
-        &copy; 2025 管理サイト
-    </footer>
+    <?php include("../footer.php") ?>
 </body>
 </html>
