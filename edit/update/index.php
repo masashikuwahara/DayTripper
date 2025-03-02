@@ -8,11 +8,11 @@ session();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>城一覧</title>
+    <title>城更新情報</title>
 </head>
 <body>
 <header>
-		<h1>城一覧</h1>
+		<h1>城更新情報</h1>
 </header>
 <main>
 <?php
