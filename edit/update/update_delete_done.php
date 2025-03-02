@@ -32,6 +32,9 @@ session();
         exit();
     }
     ?>
+    <header>
+      <h1>削除完了</h1>
+    </header>
     <main>
         <div class="content">
             削除しました
