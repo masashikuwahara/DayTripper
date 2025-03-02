@@ -22,6 +22,7 @@ session();
     <h1>登録内容確認</h1>
 </header>
 <main>
+<div class="content">
     <?php
     $post=sanitize($_POST);
     $culturals_title=$post['title'];
@@ -159,6 +160,7 @@ session();
         echo'</form>';
     }
     ?>
+    </div>
 </main>
 <?php include("../footer.php") ?>
 </body>
