@@ -6,31 +6,30 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>修正内容確認</title>
-    <style>
-    .btn{
-        width: 100px;
-        height: 50px;
-        background-color: #00bfff;
-        border-radius: 20px;
-        border: none;
-        color: #ffffff;
-        }
-    .btn:hover {
-            background-color: #ed6fb5;
-        }
-    </style>
 </head>
 <body>
+<header>
+    <h1>登録内容確認</h1>
+</header>
+<main>
+    <div class="content">
     <?php
 
     $post=sanitize($_POST);
+    $cat_id=$post['id'];
     $cat_title=$post['title'];
-    $cat_kind=$post['kind'];
     $cat_color=$post['color'];
     $cat_feature=$post['feature'];
     $cat_place=$post['place'];
     $cat_comment=$post['comment'];
+    $img_name1_old=$post['img_name_old1'];
+    $img_name2_old=$post['img_name_old2'];
+    $img_name3_old=$post['img_name_old3'];
+    $img_name4_old=$post['img_name_old4'];
+    $img_name5_old=$post['img_name_old5'];
     $cat_img1=$_FILES['img1'];
     $cat_img2=$_FILES['img2'];
     $cat_img3=$_FILES['img3'];
@@ -48,24 +47,13 @@ session();
         echo'<br />';
     }
 
-    if($cat_kind === '')
-    {
-        echo'<p style="color:#ff0000">種類が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'種類:';
-        echo$cat_kind;
-        echo'<br />';
-    }
-
     if($cat_color === '')
     {
         echo'<p style="color:#ff0000">毛色・柄が入力されていません。</p><br />';
     }
     else
     {
-        echo'毛色・柄が';
+        echo'毛色・柄';
         echo$cat_color;
         echo'<br />';
     }
@@ -90,6 +78,17 @@ session();
     {
         echo'目撃場所:';
         echo$cat_place;
+        echo'<br />';
+    }    
+
+    if($cat_comment === '')
+    {
+        echo'<p style="color:#ff0000">コメントが入力されていません。</p><br />';
+    }
+    else
+    {
+        echo'コメント:';
+        echo$cat_comment;
         echo'<br />';
     }    
 
@@ -163,8 +162,8 @@ session();
         }
     }
     
-    if($cat_title === ''||$cat_kind === ''||$cat_color === ''||
-    $cat_feature === ''||$cat_place === ''||
+    if($cat_title === ''||$cat_color === ''||
+    $cat_feature === ''||$cat_place === ''||$cat_place === ''||
     $cat_img1['size']>1000000)
     {
         echo'<form>';
@@ -174,13 +173,18 @@ session();
     else
     {
         echo'上記の内容を追加します。<br />';
-        echo'<form method="post" action="cats_add_done.php">';
+        echo'<form method="post" action="cats_edit_done.php">';
+        echo'<input type="hidden" name="id" value="'.$cat_id.'">';
         echo'<input type="hidden" name="title" value="'.$cat_title.'">';
-        echo'<input type="hidden" name="kind" value="'.$cat_kind.'">';
         echo'<input type="hidden" name="color" value="'.$cat_color.'">';
         echo'<input type="hidden" name="feature" value="'.$cat_feature.'">';
         echo'<input type="hidden" name="place" value="'.$cat_place.'">';
         echo'<input type="hidden" name="comment" value="'.$cat_comment.'">';
+        echo'<input type="hidden" name="img_name1_old" value="'.$img_name1_old.'">';
+        echo'<input type="hidden" name="img_name2_old" value="'.$img_name2_old.'">';
+        echo'<input type="hidden" name="img_name3_old" value="'.$img_name3_old.'">';
+        echo'<input type="hidden" name="img_name4_old" value="'.$img_name4_old.'">';
+        echo'<input type="hidden" name="img_name5_old" value="'.$img_name5_old.'">';
         echo'<input type="hidden" name="img1" value="'.$cat_img1['name'].'">';
         echo'<input type="hidden" name="img2" value="'.$cat_img2['name'].'">';
         echo'<input type="hidden" name="img3" value="'.$cat_img3['name'].'">';
@@ -191,7 +195,9 @@ session();
         echo'<input class="btn" type="submit" value="決定する">';
         echo'</form>';
     }
-    
     ?>
+    </div>
+    </main>
+    <?php include("../footer.php") ?>
 </body>
 </html>

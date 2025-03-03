@@ -6,16 +6,21 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>修正しました</title>
 </head>
 <body>
+<header>
+    <h1>修正しました</h1>
+</header>
+<main>
     <?php
     try
     {
         $post=($_POST);
         $cat_id=$post['id'];
         $cat_title=$post['title'];
-        $cat_kind=$post['kind'];
         $cat_color=$post['color'];
         $cat_feature=$post['feature'];
         $cat_place=$post['place'];
@@ -33,14 +38,14 @@ session();
 
         require('../connect.php');
 
-        $sql = 'UPDATE cats SET title=?, kind=?, color=?, feature=?,
+        $sql = 'UPDATE cats SET title=?, color=?, feature=?,
         place=?, comment=?, img1=?, img2=?, img3=?, img4=?, img5=? WHERE id=?';
         $stmt = $dbh->prepare($sql);
         $data[] = $cat_title;
-        $data[] = $cat_kind;
         $data[] = $cat_color;
         $data[] = $cat_feature;
         $data[] = $cat_place;
+        $data[] = $cat_comment;
         $data[] = $cat_img1;
         $data[] = $cat_img2;
         $data[] = $cat_img3;
@@ -77,7 +82,7 @@ session();
 
         if($img_name4_old !=$cat_img4)
         {
-            if($img_name3_old !='')
+            if($img_name4_old !='')
             {
                 unlink('../../cultural_assets/img/'.$img_name4_old);
             }
@@ -100,6 +105,8 @@ session();
         exit();
     }
     ?>
-    <a href="index.php">戻る</a>
+    <p class="btn-group"><a href="index.php" class="btn">トップメニューへ</a></p>
+</main>
+<?php include("../footer.php") ?>
 </body>
 </html>

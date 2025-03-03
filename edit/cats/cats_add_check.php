@@ -6,24 +6,17 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>登録内容確認</title>
-    <style>
-    .btn{
-        width: 100px;
-        height: 50px;
-        background-color: #00bfff;
-        border-radius: 20px;
-        border: none;
-        color: #ffffff;
-        }
-    .btn:hover {
-            background-color: #ed6fb5;
-        }
-    </style>
 </head>
 <body>
+<header>
+    <h1>登録内容確認</h1>
+</header>
+<main>
+<div class="content">
     <?php
-
     $post=sanitize($_POST);
     $cat_title=$post['title'];
     $cat_kind=$post['kind'];
@@ -39,59 +32,62 @@ session();
 
     if($cat_title === '')
     {
-        echo'<p style="color:#ff0000">文化財名が入力されていません。</p><br />';
+        echo'<p style="color:#ff0000">タイトルが入力されていません。</p><br />';
     }
     else
     {
-        echo'文化財名:';
+        echo'タイトル:';
         echo$cat_title;
         echo'<br />';
     }
 
-    if($cat_kind === '')
-    {
-        echo'<p style="color:#ff0000">制作年が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'制作年:';
+        echo'猫の種類:';
         echo$cat_kind;
         echo'<br />';
-    }
 
     if($cat_color === '')
     {
-        echo'<p style="color:#ff0000">指定文化財が入力されていません。</p><br />';
+        echo'<p style="color:#ff0000">毛色・色柄が入力されていません。</p><br />';
     }
     else
     {
-        echo'指定文化財:';
+        echo'毛色・色柄:';
         echo$cat_color;
         echo'<br />';
     }
 
     if($cat_feature === '')
     {
-        echo'<p style="color:#ff0000">説明が入力されていません。</p><br />';
+        echo'<p style="color:#ff0000">特徴が入力されていません。</p><br />';
     }
     else
     {
-        echo'説明:';
+        echo'特徴:';
         echo$cat_feature;
         echo'<br />';
     }    
 
-    
     if($cat_place === '')
     {
-        echo'<p style="color:#ff0000">アクセスが入力されていません。</p><br />';
+        echo'<p style="color:#ff0000">目撃場所が入力されていません。</p><br />';
     }
     else
     {
-        echo'アクセス:';
+        echo'目撃場所:';
         echo$cat_place;
         echo'<br />';
-    }    
+    }
+
+    if($cat_comment === '')
+    {
+        echo'<p style="color:#ff0000">コメントが入力されていません。</p><br />';
+    }
+    else
+    {
+        echo'コメント:';
+        echo$cat_comment;
+        echo'<br />';
+    }
 
     if( $cat_img1['size']>0)
     {
@@ -192,5 +188,8 @@ session();
         echo'</form>';
     }
     ?>
+    </div>
+</main>
+<?php include("../footer.php") ?>
 </body>
 </html>

@@ -6,34 +6,9 @@ session();
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>猫ページ修正</title>
-    <style>
-        .text{
-            width: 600px;
-            height: 200px;
-        }
-        .tex{
-            width:200px;
-        }
-        .texta{
-          width: 600px;
-        }
-        .textb{
-          width: 600px;
-          height: 200px;
-        }
-        .btn{
-            width: 100px;
-            height: 50px;
-            background-color: #00bfff;
-            border-radius: 20px;
-            border: none;
-            color: #ffffff;
-        }
-        .btn:hover {
-            background-color: #ed6fb5;
-        }
-    </style>
 </head>
 <body>
     <?php
@@ -117,29 +92,27 @@ session();
     }
 
     ?>
-
-    記事修正<br />
-    <br />
-    文化財名<br />
-    <?php echo $cat_title;?>
-    <br />
-    <br />
-
-    <form method="post" action="cat_edit_check.php" enctype="multipart/form-data">
+    <header>
+        <h1><?php echo $cat_title; ?></h1>
+    </header>
+    <main>
+    <form method="post" action="cats_edit_check.php" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?php echo $cat_id; ?>">
       <input name="img_name_old1" type="hidden" value="<?php echo $cat_img1_old;?>">
       <input name="img_name_old2" type="hidden" value="<?php echo $cat_img2_old;?>">
       <input name="img_name_old3" type="hidden" value="<?php echo $cat_img3_old;?>">
-      <input name="img_name_old3" type="hidden" value="<?php echo $cat_img4_old;?>">
-      <input name="img_name_old3" type="hidden" value="<?php echo $cat_img5_old;?>">
+      <input name="img_name_old4" type="hidden" value="<?php echo $cat_img4_old;?>">
+      <input name="img_name_old5" type="hidden" value="<?php echo $cat_img5_old;?>">
+        タイトル<br />
+        <input class="tex" type="text" name="title" value="<?php echo $cat_title; ?>"><br />
         毛色・色柄<br />
-        <input class="tex" type="text" name="color" value="<?php echo $cat_title; ?>"><br />
+        <input class="tex" type="text" name="color" value="<?php echo $cat_color; ?>"><br />
         特徴<br />
         <input class="tex" type="text" name="feature" value="<?php echo $cat_feature; ?>"><br />
         目撃場所<br />
         <input class="tex" type="text" name="place" value="<?php echo $cat_place; ?>"><br />
         一言<br />
-        <textarea class="textb" type="text" name="explan" ><?php echo $cat_comment; ?></textarea><br />
+        <textarea class="textb" type="text" name="comment" ><?php echo $cat_comment; ?></textarea><br />
         画像を選んでください。<br />
         <input type="file" name="img1" ><br /><br />
         <input type="file" name="img2" ><br /><br />
@@ -149,5 +122,7 @@ session();
       <input class="btn" type="button" onclick="history.back()"value="戻る">
       <input class="btn" type="submit" value="次のページへ">
     </form>
+    </main>
+    <?php include("../footer.php") ?>
 </body>
 </html>
