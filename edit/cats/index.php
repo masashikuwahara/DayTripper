@@ -38,9 +38,7 @@ session();
 			}
 
 			$castles = $dbh->prepare(" SELECT id, title FROM cats LIMIT {$start}, 10 ");
-
-			echo '猫管理ページ<br/><br/>';
-
+			
 			echo '<form method="post" action="cats_branch.php">';
 			echo '<input class="btn" type="submit" name="add" value="猫を追加"><br />';
 
