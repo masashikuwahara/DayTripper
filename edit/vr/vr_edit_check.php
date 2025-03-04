@@ -1,273 +1,94 @@
 <?php
-require_once('../library.php');
+include('../library.php');
 session();
 ?>
 <!DOCTYPE html>
-<html>
-<head>
     <meta charset="UTF-8">
-    <title>修正内容確認</title>
-    <style>
-    .btn{
-        width: 100px;
-        height: 50px;
-        background-color: #00bfff;
-        border-radius: 20px;
-        border: none;
-        color: #ffffff;
-        }
-    .btn:hover {
-            background-color: #ed6fb5;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>登録内容確認</title>
 </head>
 <body>
-    <?php
+<header>
+    <h1>登録内容確認</h1>
+</header>
+<main>
+    <div class="content">
+        <?php
+        $post=sanitize($_POST);
+        $vr_id=$post['id'];
+        $vr_title=$post['title'];
+        $vr_desc=$post['desc'];
+        $vr_time=$post['time'];
+        $vr_video=$post['video'];
+        $vr_img=$post['img'];
 
-    $post=sanitize($_POST);
-    $castles_id=$post['id'];
-    $castles_cas=$post['cas'];
-    $castles_title=$post['title'];
-    $castles_structure=$post['structure'];
-    $castles_builder=$post['builder'];
-    $castles_year=$post['year'];
-    $castles_lord=$post['lord'];
-    $castles_specify1=$post['specify1'];
-    $castles_recommend=$post['recommend'];
-    $castles_explan=$post['explan'];
-    $castles_access=$post['access'];
-    $img_name1_old=$post['img_name_old1'];
-    $img_name2_old=$post['img_name_old2'];
-    $img_name3_old=$post['img_name_old3'];
-    $img_name4_old=$post['img_name_old4'];
-    $img_name5_old=$post['img_name_old5'];
-    $castles_img1=$_FILES['img1'];
-    $castles_img2=$_FILES['img2'];
-    $castles_img3=$_FILES['img3'];
-    $castles_img4=$_FILES['img4'];
-    $castles_img5=$_FILES['img5'];
+        include('../../connect.php');
+        $stmt = $dbh->prepare('SELECT COUNT(*) FROM vrvideo ');
+        $stmt->execute();
+        $count = $stmt->fetchColumn();
 
-    if($castles_cas === '')
-    {
-        echo'<p style="color:#ff0000">城番号が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'城番号:';
-        echo$castles_cas;
-        echo'<br />';
-    }
-
-    if($castles_title === '')
-    {
-        echo'<p style="color:#ff0000">城名が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'城名:';
-        echo$castles_title;
-        echo'<br />';
-    }
-
-    if($castles_structure === '')
-    {
-        echo'<p style="color:#ff0000">城郭構造が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'城郭構造:';
-        echo$castles_structure;
-        echo'<br />';
-    }
-
-    if($castles_builder === '')
-    {
-        echo'<p style="color:#ff0000">築城主が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'築城主:';
-        echo$castles_builder;
-        echo'<br />';
-    }
-
-    if($castles_year === '')
-    {
-        echo'<p style="color:#ff0000">築城年が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'築城年:';
-        echo$castles_year;
-        echo'<br />';
-    }
-
-    if($castles_lord === '')
-    {
-        echo'<p style="color:#ff0000">主な城主が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'主な城主:';
-        echo$castles_lord;
-        echo'<br />';
-    }
-
-    if($castles_specify1 === '')
-    {
-        echo'<p style="color:#ff0000">指定文化財が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'指定文化財:';
-        echo$castles_specify1;
-        echo'<br />';
-    }
-
-    if($castles_recommend === '')
-    {
-        echo'<p style="color:#ff0000">おすすめ度が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'おすすめ度:';
-        echo$castles_recommend;
-        echo'<br />';
-    }    
-
-    
-    if($castles_explan === '')
-    {
-        echo'<p style="color:#ff0000">説明が入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'説明:';
-        echo$castles_explan;
-        echo'<br />';
-    }    
-
-    
-    if($castles_access === '')
-    {
-        echo'<p style="color:#ff0000">アクセスが入力されていません。</p><br />';
-    }
-    else
-    {
-        echo'アクセス:';
-        echo$castles_access;
-        echo'<br />';
-    }    
-
-    if( $castles_img1['size']>0)
-    {
-        if( $castles_img1['size']>1000000)
-        {
-            echo'<p style="color:#ff0000">画像が大きすぎます。</p><br />';
-        }
-        else
-        {
-            move_uploaded_file($castles_img1['tmp_name'],'../../img/'.$castles_img1['name']);
-            echo'<img src="../../img/'.$castles_img1['name'].'" width="250" >';
+        if($vr_title === ''){
+            echo'<p style="color:#ff0000">タイトルが入力されていません。</p><br />';
+        }else{
+            echo'タイトル:';
+            echo$vr_title;
             echo'<br />';
         }
-    }
 
-    if( $castles_img2['size']>0)
-    {
-        if( $castles_img2['size']>1000000)
-        {
-            echo'<p style="color:#ff0000">画像が大きすぎます。</p><br />';
-        }
-        else
-        {
-            move_uploaded_file($castles_img2['tmp_name'],'../../img/'.$castles_img2['name']);
-            echo'<img src="../../img/'.$castles_img2['name'].'" width="250" >';
+        if($vr_desc  === ''){
+            echo'<p style="color:#ff0000">説明が入力されていません。</p><br />';
+        }else{
+            echo'説明:';
+            echo$vr_desc;
             echo'<br />';
         }
-    }
 
-    if( $castles_img3['size']>0)
-    {
-        if( $castles_img3['size']>1000000)
-        {
-            echo'<p style="color:#ff0000">画像が大きすぎます。</p><br />';
-        }
-        else
-        {
-            move_uploaded_file($castles_img3['tmp_name'],'../../img/'.$castles_img3['name']);
-            echo'<img src="../../img/'.$castles_img3['name'].'" width="250" >';
+        if($vr_time  === ''){
+            echo'<p style="color:#ff0000">再生時間が入力されていません。</p><br />';
+        }else{
+            echo'再生時間:';
+            echo$vr_time;
             echo'<br />';
         }
-    }
 
-    if( $castles_img4['size']>0)
-    {
-        if( $castles_img4['size']>1000000)
-        {
-            echo'<p style="color:#ff0000">画像が大きすぎます。</p><br />';
-        }
-        else
-        {
-            move_uploaded_file($castles_img4['tmp_name'],'../../img/'.$castles_img4['name']);
-            echo'<img src="../../img/'.$castles_img4['name'].'" width="250" >';
+        if($vr_video === ''){
+            echo'<p style="color:#ff0000">動画ファイルが入力されていません。</p><br />';
+        }else{
+            echo'動画ファイル:';
+            echo$vr_video;
             echo'<br />';
         }
-    }
 
-    if( $castles_img5['size']>0)
-    {
-        if( $castles_img5['size']>1000000)
-        {
-            echo'<p style="color:#ff0000">画像が大きすぎます。</p><br />';
-        }
-        else
-        {
-            move_uploaded_file($castles_img5['tmp_name'],'../../img/'.$castles_img5['name']);
-            echo'<img src="../../img/'.$castles_img5['name'].'" width="250" >';
+        if($vr_img === ''){
+            echo'<p style="color:#ff0000">サムネイルが入力されていません。</p><br />';
+        }else{
+            echo'サムネイル:';
+            echo$vr_img;
             echo'<br />';
         }
-    }
-    
-    if($castles_title === ''||$castles_structure === ''||$castles_builder === ''||
-    $castles_year === ''||$castles_lord === ''||$castles_specify1 === ''||$castles_recommend === ''||
-    $castles_explan === ''||$castles_access === ''||
-    $castles_img1['size']>1000000)
-    {
-        echo'<form>';
-        echo'<input class="btn" type="button" onclick="history.back()" value="戻る">';
-        echo'</form>';
-    }
-    else
-    {
-        echo'上記の内容を追加します。<br />';
-        echo'<form method="post" action="castles_edit_done.php">';
-        echo'<input type="hidden" name="id" value="'.$castles_id.'">';
-        echo'<input type="hidden" name="cas" value="'.$castles_cas.'">';
-        echo'<input type="hidden" name="title" value="'.$castles_title.'">';
-        echo'<input type="hidden" name="structure" value="'.$castles_structure.'">';
-        echo'<input type="hidden" name="builder" value="'.$castles_builder.'">';
-        echo'<input type="hidden" name="year" value="'.$castles_year.'">';
-        echo'<input type="hidden" name="lord" value="'.$castles_lord.'">';
-        echo'<input type="hidden" name="specify1" value="'.$castles_specify1.'">';
-        echo'<input type="hidden" name="recommend" value="'.$castles_recommend.'">';
-        echo'<input type="hidden" name="explan" value="'.$castles_explan.'">';
-        echo'<input type="hidden" name="access" value="'.$castles_access.'">';
-        echo'<input type="hidden" name="img_name1_old" value="'.$img_name1_old.'">';
-        echo'<input type="hidden" name="img_name2_old" value="'.$img_name2_old.'">';
-        echo'<input type="hidden" name="img_name3_old" value="'.$img_name3_old.'">';
-        echo'<input type="hidden" name="img_name4_old" value="'.$img_name4_old.'">';
-        echo'<input type="hidden" name="img_name5_old" value="'.$img_name5_old.'">';
-        echo'<input type="hidden" name="img1" value="'.$castles_img1['name'].'">';
-        echo'<input type="hidden" name="img2" value="'.$castles_img2['name'].'">';
-        echo'<input type="hidden" name="img3" value="'.$castles_img3['name'].'">';
-        echo'<input type="hidden" name="img4" value="'.$castles_img4['name'].'">';
-        echo'<input type="hidden" name="img5" value="'.$castles_img5['name'].'">';
-        echo'<br />';
-        echo'<input class="btn" type="button" onclick="history.back()" value="戻る">&nbsp;';
-        echo'<input class="btn" type="submit" value="決定する">';
-        echo'</form>';
-    }
-    ?>
+        
+        if($vr_title === ''||$vr_desc === ''||$vr_video === ''||$vr_img === ''){
+            echo'<form>';
+            echo'<input class="btn" type="button" onclick="history.back()" value="戻る">';
+            echo'</form>';
+        }else{
+            echo'上記の内容を追加します。<br />';
+            echo'<form method="post" action="vr_edit_done.php">';
+            echo'<input type="hidden" name="id" value="'.$vr_id.'">';
+            echo'<input type="hidden" name="title" value="'.$vr_title.'">';
+            echo'<input type="hidden" name="desc" value="'.$vr_desc.'">';
+            echo'<input type="hidden" name="time" value="'.$vr_time.'">';
+            echo'<input type="hidden" name="video" value="'.$vr_video.'">';
+            echo'<input type="hidden" name="img" value="'.$vr_img.'">';
+            echo'<br />';
+            echo'<input class="btn" type="button" onclick="history.back()" value="戻る">&nbsp;';
+            echo'<input class="btn" type="submit" value="決定する">';
+            echo'</form>';
+        }
+        ?>
+    </div>
+</main>
+<?php include("../footer.php") ?>
 </body>
 </html>
