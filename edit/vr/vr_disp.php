@@ -23,32 +23,27 @@ $vr_img=$vr['img'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title><?php echo $vr_title; ?></title>
-    <style>
-        .btn{
-            width: 100px;
-            height: 50px;
-            background-color: #00bfff;
-            border-radius: 20px;
-            border: none;
-            color: #ffffff;
-        }
-        .btn:hover {
-            background-color: #ed6fb5;
-        }
-    </style>
 </head>
 <body>
-    <h1><?php echo $vr_title; ?></h1><br />
-    <h2>説明</h2>
-    <h3><?php echo $vr_desc; ?></h3><br />
-    <h2>動画ファイル名</h2>
-    <h3><?php echo $vr_video; ?></h3><br />
-    <h2>サムネイルファイル名</h2>
-    <h3><?php echo $vr_img; ?></h3><br />
-    <form>
-    <input class="btn" type="button" onclick="history.back()" value="戻る">
-    </form>
-    
+    <header>
+        <h1><?php echo $vr_title; ?></h1>
+    </header>
+        <main>
+        <div class="content">
+            <h1><?php echo $vr_title; ?></h1>
+            <h2>説明</h2>
+            <h3><?php echo $vr_desc; ?></h3>
+            <h2>動画ファイル名</h2>
+            <h3><?php echo $vr_video; ?></h3>
+            <h2>サムネイルファイル名</h2>
+            <h3><?php echo $vr_img; ?></h3>
+        </div>
+        <form>
+            <input class="btn" type="button" onclick="history.back()" value="戻る">
+        </form>
+    </main>
+    <?php include("../footer.php") ?>
 </body>
 </html>
