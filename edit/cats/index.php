@@ -65,9 +65,11 @@ session();
 
 		?>
 
-		<?php for ($x=1; $x <= $pagination ; $x++) { ?>
-			<a href="?page=<?php echo $x ?>"><?php echo $x; ?></a>
-		<?php } // End of for ?>
+		<div class="pagination">
+				<?php for ($x = 1; $x <= $pagination; $x++): ?>
+						<a href="?page=<?= $x ?>" class="btn"><?= $x ?></a>
+				<?php endfor; ?>
+		</div>
 
 		<?php
 			echo '<br/>';

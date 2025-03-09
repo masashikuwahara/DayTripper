@@ -29,7 +29,7 @@ $userName = $_SESSION['user_name'] ?? 'ゲスト';
             <li><a href="logout.php">ログアウト</a></li>
         </ul>
     </main>
-    System version 2.0.0
+    System version 2.0.1
     <?php include("footer.php") ?>
 </body>
 </html>
