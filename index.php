@@ -22,7 +22,6 @@
     }
     .query {
       text-align: center;
-      margin-top: 20px;
       font-size: 15px;
     }
     .banner {
@@ -169,13 +168,14 @@
   <a href="https://www.instagram.com/day_tripper_official/" target="_blank" rel="noopener noreferrer"><img src="img/insta.png" width="30px" alt="インスタ"></a>
 </div>
 
+<div class="query">
+  <a href="contact/">お問い合わせ</a>
+</div>
+
 <div class="ad">
 <a href="https://px.a8.net/svt/ejp?a8mat=3TF2AW+C210S2+455G+639IP" rel="nofollow">
   <img border="0" width="234" height="60" alt="" src="https://www25.a8.net/svt/bgt?aid=230810216729&wid=001&eno=01&mid=s00000019330001023000&mc=1"></a>
   <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3TF2AW+C210S2+455G+639IP" alt="">
-</div>
-<div class="query">
-  <a href="contact/">お問い合わせ</a>
 </div>
 <script>
   document.querySelector('.scroll-down').addEventListener('click', () => {
@@ -194,4 +194,4 @@
 </script>
 <script type="text/javascript" src="bg.js"></script>
 <?php require('footer.php'); ?>
-<!-- ver.4.12.0 -->
+<!-- ver.4.12.1 -->
