@@ -54,7 +54,7 @@ session();
         {
             if($img_name1_old !='')
             {
-                unlink('../../img/'.$img_name1_old);
+                unlink('../../cultural_assets/img/'.$img_name1_old);
             }
         }
 
@@ -62,7 +62,7 @@ session();
         {
             if($img_name2_old !='')
             {
-                unlink('../../img/'.$img_name2_old);
+                unlink('../../cultural_assets/img/'.$img_name2_old);
             }
         }
 
@@ -70,7 +70,7 @@ session();
         {
             if($img_name3_old !='')
             {
-                unlink('../../img/'.$img_name3_old);
+                unlink('../../cultural_assets/img/'.$img_name3_old);
             }
         }
         

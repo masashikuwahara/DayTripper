@@ -103,8 +103,8 @@ session();
         }
         else
         {
-            move_uploaded_file($culturals_img1['tmp_name'],'../../img/'.$culturals_img1['name']);
-            echo'<img src="../../img/'.$culturals_img1['name'].'" width="250" >';
+            move_uploaded_file($culturals_img1['tmp_name'],'../../cultural_assets/img/'.$culturals_img1['name']);
+            echo'<img src="../../cultural_assets/img/'.$culturals_img1['name'].'" width="250" >';
             echo'<br />';
         }
     }
@@ -117,8 +117,8 @@ session();
         }
         else
         {
-            move_uploaded_file($culturals_img2['tmp_name'],'../../img/'.$culturals_img2['name']);
-            echo'<img src="../../img/'.$culturals_img2['name'].'" width="250" >';
+            move_uploaded_file($culturals_img2['tmp_name'],'../../cultural_assets/img/'.$culturals_img2['name']);
+            echo'<img src="../../cultural_assets/img/'.$culturals_img2['name'].'" width="250" >';
             echo'<br />';
         }
     }
@@ -131,8 +131,8 @@ session();
         }
         else
         {
-            move_uploaded_file($culturals_img3['tmp_name'],'../../img/'.$culturals_img3['name']);
-            echo'<img src="../../img/'.$culturals_img3['name'].'" width="250" >';
+            move_uploaded_file($culturals_img3['tmp_name'],'../../cultural_assets/img/'.$culturals_img3['name']);
+            echo'<img src="../../cultural_assets/img/'.$culturals_img3['name'].'" width="250" >';
             echo'<br />';
         }
     }

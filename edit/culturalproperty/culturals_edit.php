@@ -42,7 +42,7 @@ session();
         }
         else
         {
-            $disp_img='<img src="../../img/'.$culturals_img1_old.'">';
+            $disp_img='<img src="../../cultural_assets/img/'.$culturals_img1_old.'">';
         }
 
         if($culturals_img2_old === '')
@@ -51,7 +51,7 @@ session();
         }
         else
         {
-            $disp_img='<img src="../../img/'.$culturals_img2_old.'">';
+            $disp_img='<img src="../../cultural_assets/img/'.$culturals_img2_old.'">';
         }
 
         if($culturals_img3_old === '')
@@ -60,7 +60,7 @@ session();
         }
         else
         {
-            $disp_img='<img src="../../img/'.$culturals_img3_old.'">';
+            $disp_img='<img src="../../cultural_assets/img/'.$culturals_img3_old.'">';
         }
 
     }
